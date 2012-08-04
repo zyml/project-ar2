@@ -1,0 +1,233 @@
+/* =CSS reset. Based on: TwentyEleven & http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =Global
+-------------------------------------------------------------- */
+html .mceContentBody {
+	max-width: 634px;
+}
+body {
+	background: #FFF;
+	color: #555;
+	font-size: 85%;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	line-height: 1.625;
+	padding: 1em;
+}
+a:link, a:visited {
+	color: #111;
+}
+a:hover {
+	color: #86C140;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4em;
+	font-weight: bold;
+	margin: .3em 0 1em;
+}
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 140%;
+}
+h3 {
+	font-size: 130%;
+}
+h4 {
+	font-size: 120%;
+}
+h5 {
+	font-size: 110%;
+}
+h6 {
+	font-size: 100%;
+}
+p, dd {
+	margin-bottom: 1.425em;
+}
+dl {
+	margin: 0 1.425em;
+}
+dt {
+	font-weight: bold;
+}
+ul, ol {
+	margin: 0 0 1.425em 1.8em; 
+}
+ul {
+	list-style: square;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ol, ul ul, ol ol, ol ul {
+	margin-bottom: 0;
+}
+hr {
+	border: none;
+	background: #CCC;
+	height: 1px;
+	margin-bottom: 1.625em;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+sup, sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: 1ex;
+}
+abbr {
+	border-bottom: 1px dotted #333;	
+}
+pre {
+	border: 1px dashed #CCC;
+	background: #F5F5F5;
+	padding: 10px;
+	margin-bottom: 1.625em;
+}
+code {
+	font: 80% Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: #EFEFEF;
+}
+table {
+	margin-bottom: 1.625em;
+	min-width: 50%;
+}
+th, td {
+	border-spacing: 3px;
+	padding: 0.5em;
+}
+th {
+	background: #333;
+	color: #F5F5F5;	
+	border: 1px solid #333;
+}
+tr:nth-child(odd) {
+	background: #F5F5F5;
+}
+blockquote {
+	margin: 0 1.625em 1.625em;
+	font-size: 100%;
+	font-style: italic;
+}
+blockquote cite {
+	font-size: 95%;
+}
+small {
+	font-size: 90%;
+}
+img {
+	max-width: 100%;
+	width: auto; /* IE8 */
+}
+del, ins {
+	color: #555;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 1em 1em 1em 0;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: 1em 0 1em 1em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+.alignnone  {
+	clear: both;
+	margin: 1em;
+}
+
+/* Captions */
+.wp-caption {
+	padding: 0.5em;
+	margin-bottom: 1.625em;
+	line-height: 1;
+}
+.wp-caption a {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #CCC;
+	box-shadow: 0 0 5px #EFEFEF;
+}
+.wp-caption a:hover {
+	background: #FFF;	
+}
+p.wp-caption-text {
+	font-size: 90%;
+	margin: 1em 0 0;
+	color: #646464;
+	text-align: center;
+}

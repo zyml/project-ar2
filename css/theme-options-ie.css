@@ -1,0 +1,15 @@
+/* Switch */
+#ar2-theme-options .switch {
+	margin: 0;
+}
+#ar2-theme-options .switch input {
+	display: inline-block;
+}
+#ar2-theme-options .switch label, #ar2-theme-options .switch-inner, #ar2-theme-options .switch-node {
+	display: none;
+}
+
+/* Color Switcher */
+.color-switch input {
+	display: inline;
+}
