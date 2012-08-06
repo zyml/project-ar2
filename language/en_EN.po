@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-05 03:18+0730\n"
+"POT-Creation-Date: 2012-08-06 21:23+0730\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Melvin Lee <zy@zy.sg>\n"
 "Language-Team:  <zy@zy.sg>\n"
@@ -119,7 +119,6 @@ msgstr ""
 #: ../content-audio.php:36
 #: ../content-image.php:36
 #: ../content-video.php:36
-#: ../content.php:32
 #: ../full-width-page.php:35
 #: ../image.php:15
 #, php-format
@@ -166,6 +165,11 @@ msgstr ""
 #: ../image.php:80
 #, php-format
 msgid "About %s"
+msgstr ""
+
+#: ../content.php:32
+#, php-format
+msgid "Posted by %1$s %2$s"
 msgstr ""
 
 #: ../footer.php:33
