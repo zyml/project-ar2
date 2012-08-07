@@ -17,17 +17,19 @@
 
 <?php ar2_render_zone( 'home' ) ?>
 
-<?php $sidebars = wp_get_sidebars_widgets(); ?>
-
+<?php if ( is_active_sidebar( 'Bottom Content #1' ) ) : ?>
 <div class="bottom-sidebar" id="bottom-content-1" role="complementary">
-	<?php if ( isset( $sidebars[ 'sidebar-3' ] ) && !dynamic_sidebar( 'Bottom Content #1' ) ) : ?>
+	<?php if ( !dynamic_sidebar( 'Bottom Content #1' ) ) : ?>
 	<?php endif; ?>
 </div>
+<?php endif ?>
 
+<?php if ( is_active_sidebar( 'Bottom Content #2' ) ) : ?>
 <div class="bottom-sidebar" id="bottom-content-2" role="complementary">
-	<?php if ( isset( $sidebars[ 'sidebar-3' ] ) && !dynamic_sidebar( 'Bottom Content #2' ) ) : ?>
+	<?php if ( !dynamic_sidebar( 'Bottom Content #2' ) ) : ?>
 	<?php endif; ?>
 </div>
+<?php endif ?>
 
 <?php else: ?>
 

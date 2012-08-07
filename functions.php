@@ -110,21 +110,24 @@ function ar2_add_sidebars() {
 	
 	/* Default sidebars */
 	register_sidebar( array(
-		'name' => 'Primary Sidebar',
+		'name' => __( 'Primary Sidebar', 'ar2' ),
+		'id' => 'primary-sidebar',
 		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
 	) );
 	register_sidebar( array(
-		'name' => 'Bottom Content #1',
+		'name' => __( 'Bottom Content #1', 'ar2' ),
+		'id' => 'bottom-content-1',
 		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
 	) );
 	register_sidebar( array(
-		'name' => 'Bottom Content #2',
+		'name' => __( 'Bottom Content #2', 'ar2' ),
+		'id' => 'bottom-content-2',
 		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -136,7 +139,8 @@ function ar2_add_sidebars() {
 	
 	for( $i = 1; $i < $footer_sidebars + 1; $i++ ) {
 		register_sidebar( array(
-			'name' => 'Footer Sidebar #' . $i,
+			'name' => sprintf( __( 'Footer Sidebar #%s', 'ar2' ), $i ),
+			'id' => 'footer-sidebar-' . $i,
 			'before_widget' => '<aside id="%1$s" class="widget clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',

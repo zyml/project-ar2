@@ -11,7 +11,7 @@
 				for ($i = 1; $i < $footer_sidebars + 1; $i++) : 
 			?>
 				<div id="footer-sidebar-<?php echo $i ?>" class="footer-sidebar clearfix xoxo">
-					<?php if ( !dynamic_sidebar('Footer Sidebar #' . $i) ) : ?>
+					<?php if ( !dynamic_sidebar( 'footer-sidebar-' . $i ) ) : ?>
 					<?php endif; ?>
 				</div>
 			<?php endfor; ?>

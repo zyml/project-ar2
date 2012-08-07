@@ -5,7 +5,7 @@
 <div id="primary" class="aside main-aside sidebar" role="complementary">
 <?php ar2_above_sidebar() ?>
 
-	<?php if ( !dynamic_sidebar( 'Primary Sidebar' ) ) : ?>
+	<?php if ( !dynamic_sidebar( 'primary-sidebar' ) ) : ?>
 	
 	<aside id="text-static" class="widget clearfix">
 		<h3 class="widget-title"><?php _e( 'Welcome to Project AR2!', 'ar2' ) ?></h3>
