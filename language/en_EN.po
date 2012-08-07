@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-06 21:23+0730\n"
+"POT-Creation-Date: 2012-08-08 02:42+0730\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Melvin Lee <zy@zy.sg>\n"
 "Language-Team:  <zy@zy.sg>\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../archive.php:24
 #: ../blog-archives.php:20
-#: ../home.php:34
+#: ../home.php:36
 msgid "Blog Archives"
 msgstr ""
 
@@ -190,6 +190,23 @@ msgstr ""
 
 #: ../functions.php:76
 msgid "Footer Navigation"
+msgstr ""
+
+#: ../functions.php:113
+msgid "Primary Sidebar"
+msgstr ""
+
+#: ../functions.php:121
+msgid "Bottom Content #1"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Bottom Content #2"
+msgstr ""
+
+#: ../functions.php:142
+#, php-format
+msgid "Footer Sidebar #%s"
 msgstr ""
 
 #: ../search.php:6
@@ -358,16 +375,16 @@ msgstr ""
 msgid "Color Schemes"
 msgstr ""
 
-#: ../library/styles.php:493
+#: ../library/styles.php:502
 #: ../library/admin/admin.php:18
 msgid "Layout"
 msgstr ""
 
-#: ../library/styles.php:505
+#: ../library/styles.php:514
 msgid "No. of Columns"
 msgstr ""
 
-#: ../library/styles.php:513
+#: ../library/styles.php:522
 msgid "Fonts"
 msgstr ""
 
@@ -874,6 +891,15 @@ msgstr ""
 msgid "You can save the code above into a text file and use it when you need to import them into another installation. Note that not all options (custom background, child theme settings, etc.) will be exported."
 msgstr ""
 
+#: ../library/admin/admin.php:237
+msgid "Custom Stylesheet"
+msgstr ""
+
+#: ../library/admin/admin.php:240
+#, php-format
+msgid "Stylesheets can be placed in %s."
+msgstr ""
+
 #: ../library/admin/admin.php:341
 msgid "Theme Options"
 msgstr ""
@@ -1023,6 +1049,10 @@ msgstr ""
 
 #: ../library/admin/admin.php:794
 msgid "Off"
+msgstr ""
+
+#: ../library/admin/admin.php:859
+msgid "Default Stylesheet (style.css)"
 msgstr ""
 
 #: ../library/classes/postviews-section.php:43
