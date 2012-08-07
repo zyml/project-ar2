@@ -231,15 +231,15 @@ function ar2_theme_options_default_fields() {
 		); 	
 	}
 	
-	/*if ( AR2_ALLOW_CUSTOM_STYLES ) {
-		$_defaults['style'] = array (
+	if ( AR2_ALLOW_CUSTOM_STYLES ) {
+		$_defaults[ 'style' ] = array (
 			'type'			=> 'dropdown',
 			'title'			=> __( 'Custom Stylesheet', 'ar2' ),
 			'section'		=> 'ar2_design_overall',
 			'options'		=> ar2_get_custom_css_files(),
-			'description'	=> sprintf( __( 'Stylesheets can be placed in %s.', 'ar2' ), '<code>wp-content/themes/' .get_stylesheet(). '/css/styles/</code>' )
+			'description'	=> sprintf( __( 'Stylesheets can be placed in %s.', 'ar2' ), '<code>wp-content/themes/' . get_stylesheet() . '/css/styles/</code>' )
 		);
-	}*/
+	}
 	
 	// Allow developers to add more fields
 	$_defaults = apply_filters( 'ar2_theme_options_fields', $_defaults );
@@ -855,16 +855,18 @@ function ar2_theme_options_render_field( $args = array() ) {
  * @since 1.6
  */
 function ar2_get_custom_css_files() {
-	$styles = array();
+
+	$styles = array( '_default' => __( 'Default Stylesheet (style.css)', 'ar2' ) );
 	
 	$style_dir = dir( get_template_directory() . '/css/styles/' );
 	if ( $style_dir ) {
 		while ( ( $file = $style_dir->read() ) !== false )
-			if ( is_valid_css_file( $file ) && strpos( $file, 'rtl' ) === false )
+			if ( is_valid_css_file( $file ) )
 				$styles[ substr( $file, 0, -4 ) ] = $file;
 	}
 	
 	return $styles;
+	
 }
 
 /**

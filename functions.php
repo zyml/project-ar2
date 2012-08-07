@@ -4,7 +4,7 @@ define ( 'AR2_VERSION' , wp_get_theme()->get( 'Version' ) );
 define ( 'AR2_LIB', get_template_directory() . '/library' );
 
 // Set this to true if you wish to use custom stylesheets.
-// CSS files have to be placed in /css/styles/ folder (not working atm).
+// CSS files have to be placed in /css/styles/ folder.
 define( 'AR2_ALLOW_CUSTOM_STYLES', false );
 
 do_action( 'ar2_init' );

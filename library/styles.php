@@ -419,7 +419,16 @@ final class AR2_Styles {
 	 */
 	public function load_styles() {
 	
-		wp_enqueue_style( 'ar2', get_stylesheet_uri(), false, '2011-12-05', 'screen' );
+		if ( !AR2_ALLOW_CUSTOM_STYLES || ( 
+			!ar2_get_theme_option( 'style' ) || 
+			ar2_get_theme_option( 'style' ) == '_default' || 
+			!file_exists( get_template_directory() . '/css/styles/' . ar2_get_theme_option( 'style' ) . '.css' )
+		) ) {
+			wp_enqueue_style( 'ar2', get_stylesheet_uri(), false, '2011-12-05', 'screen' );
+		} else {
+			wp_enqueue_style( 'ar2', get_template_directory_uri() . '/css/styles/' . ar2_get_theme_option( 'style' ) . '.css', false, '2012-08-07', 'screen' );
+		}
+		
 		wp_enqueue_style( 'ar2-user', get_template_directory_uri() . '/user.css', false, '2011-12-05', 'screen' ); 
 		
 		// custom fonts
