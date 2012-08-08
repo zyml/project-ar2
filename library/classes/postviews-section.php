@@ -221,6 +221,9 @@ class AR2_PostViews_Section {
 
 		if ( !$this->settings[ '_preview' ] && !$this->settings[ 'enabled' ] ) return false;
 		
+		// For developers to place code before the post section.
+		do_action( 'ar2_before_section-' . $this->id );
+		
 		if ( !is_a( $this->query, 'WP_Query' ) )
 			$this->prepare_query();
 		
@@ -316,6 +319,9 @@ class AR2_PostViews_Section {
 		
 		if ( $this->settings[ 'container' ] )
 			echo '</div><!-- #section-' . $this->id . '-->';
+			
+		// For developers to place code after the post section.
+		do_action( 'ar2_after_section-' . $this->id );
 			
 	}
 	
