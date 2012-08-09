@@ -1396,7 +1396,7 @@ article.page .entry-header h1.entry-title {
 
 /* =Comments
 -------------------------------------------------------------- */
-#comments {
+#comments, #disqus_thread {
 	margin: 1em .75em;	
 }
 #commentlist {
