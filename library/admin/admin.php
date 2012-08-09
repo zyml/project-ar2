@@ -698,6 +698,7 @@ add_action( 'wp_ajax_ar2_load_taxonomies', 'ar2_ajax_get_taxonomies_list' );
  * @since 1.6
  */
 function ar2_ajax_get_terms_list() {
+
 	global $wpdb;
 	
 	$limit		= esc_attr( $_POST['limit'] );
@@ -717,6 +718,7 @@ function ar2_ajax_get_terms_list() {
 	echo json_encode( $list );
 		
 	die();
+	
 }
 add_action( 'wp_ajax_ar2_load_terms', 'ar2_ajax_get_terms_list' );
 

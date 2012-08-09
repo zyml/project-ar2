@@ -504,77 +504,81 @@ class AR2_PostViews_Section {
 	public function customize_register( $wp_customize ) {
 		
 		require_once 'customize/terms-control.php';
+		
+		if ( $wp_customize->is_theme_active() ) {
 
-		$wp_customize->add_section( 'ar2_section_' . $this->id, array (
-			'title'		=> $this->settings[ 'label' ],
-			'priority'	=> 210 + ( 10 - $this->priority ),
-		) );
-		
-		// Settings
-		$wp_customize->add_setting( $this->get_field_name( 'enabled' ), array ( 
-			'default'	=> $this->settings[ 'enabled' ],
-			'type'		=> 'option',
-			'transport'	=> 'postMessage',
-		) );
-		$wp_customize->add_setting( $this->get_field_name( 'title' ), array ( 
-			'default'	=> $this->settings[ 'title' ],
-			'type'		=> 'option',
-			'transport'	=> 'postMessage',
-		) );
-		$wp_customize->add_setting( $this->get_field_name( 'type' ), array ( 
-			'default'	=> $this->settings[ 'type' ],
-			'type'		=> 'option',
-			'transport'	=> 'postMessage',
-		) );
-		$wp_customize->add_setting( $this->get_field_name( 'terms' ), array ( 
-			'default'	=> $this->settings[ 'terms' ],
-			'type'		=> 'option',
-			'transport'	=> 'postMessage',
-		) );
-		$wp_customize->add_setting( $this->get_field_name( 'count' ), array ( 
-			'default'	=> $this->settings[ 'count' ],
-			'type'		=> 'option',
-			'transport'	=> 'postMessage',
-		) );
-		
-		// Controls
-		$wp_customize->add_control( 'ar2_section-' . $this->id . '-enabled', array ( 
-			'settings'	=> $this->get_field_name( 'enabled' ),
-			'label'		=> sprintf( __( 'Enable %s', 'ar2' ), $this->settings[ 'label' ] ),
-			'type'		=> 'checkbox',
-			'section'	=> 'ar2_section_' . $this->id,
-		) );
-		$wp_customize->add_control( 'ar2_section-' . $this->id . '-title', array ( 
-			'settings'	=> $this->get_field_name( 'title' ),
-			'label'		=> __( 'Title', 'ar2' ),
-			'type'		=> 'text',
-			'section'	=> 'ar2_section_' . $this->id,
-		) );
-		$wp_customize->add_control( 'ar2_section-' . $this->id . '-type', array ( 
-			'settings'	=> $this->get_field_name( 'type' ),
-			'label'		=> __( 'Type', 'ar2' ),
-			'type'		=> 'select',
-			'section'	=> 'ar2_section_' . $this->id,
-			'choices'	=> $this->list_display_types(),
-		) );
-		$wp_customize->add_control( new AR2_Customize_Terms_Control( $wp_customize, 'ar2_section-' . $this->id . '-terms', array (
-			'settings'		=> $this->get_field_name( 'terms' ),
-			'label'			=> __( 'Terms', 'ar2' ),
-			'section'		=> 'ar2_section_' . $this->id,
-			'post_section'	=> $this->id,
-			'taxonomy'		=> $this->settings[ 'taxonomy' ],
-		) ) );
-		$wp_customize->add_control( 'ar2_section-' . $this->id . '-count', array ( 
-			'settings'	=> $this->get_field_name( 'count' ),
-			'label'		=> __( 'Post Count', 'ar2' ),
-			'type'		=> 'select',
-			'section'	=> 'ar2_section_' . $this->id,
-			'choices'	=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
-		) );
-		
-		if ( $wp_customize->is_preview() && !is_admin() ) {
-			add_action( 'wp_footer', array( $this, 'do_customize_preview_js' ), 30 );
-			add_action( 'ar2_customize_preview_localize_vars', array( $this, 'customize_localize_vars' ) );
+			$wp_customize->add_section( 'ar2_section_' . $this->id, array (
+				'title'		=> $this->settings[ 'label' ],
+				'priority'	=> 210 + ( 10 - $this->priority ),
+			) );
+			
+			// Settings
+			$wp_customize->add_setting( $this->get_field_name( 'enabled' ), array ( 
+				'default'	=> $this->settings[ 'enabled' ],
+				'type'		=> 'option',
+				'transport'	=> 'postMessage',
+			) );
+			$wp_customize->add_setting( $this->get_field_name( 'title' ), array ( 
+				'default'	=> $this->settings[ 'title' ],
+				'type'		=> 'option',
+				'transport'	=> 'postMessage',
+			) );
+			$wp_customize->add_setting( $this->get_field_name( 'type' ), array ( 
+				'default'	=> $this->settings[ 'type' ],
+				'type'		=> 'option',
+				'transport'	=> 'postMessage',
+			) );
+			$wp_customize->add_setting( $this->get_field_name( 'terms' ), array ( 
+				'default'	=> $this->settings[ 'terms' ],
+				'type'		=> 'option',
+				'transport'	=> 'postMessage',
+			) );
+			$wp_customize->add_setting( $this->get_field_name( 'count' ), array ( 
+				'default'	=> $this->settings[ 'count' ],
+				'type'		=> 'option',
+				'transport'	=> 'postMessage',
+			) );
+			
+			// Controls
+			$wp_customize->add_control( 'ar2_section-' . $this->id . '-enabled', array ( 
+				'settings'	=> $this->get_field_name( 'enabled' ),
+				'label'		=> sprintf( __( 'Enable %s', 'ar2' ), $this->settings[ 'label' ] ),
+				'type'		=> 'checkbox',
+				'section'	=> 'ar2_section_' . $this->id,
+			) );
+			$wp_customize->add_control( 'ar2_section-' . $this->id . '-title', array ( 
+				'settings'	=> $this->get_field_name( 'title' ),
+				'label'		=> __( 'Title', 'ar2' ),
+				'type'		=> 'text',
+				'section'	=> 'ar2_section_' . $this->id,
+			) );
+			$wp_customize->add_control( 'ar2_section-' . $this->id . '-type', array ( 
+				'settings'	=> $this->get_field_name( 'type' ),
+				'label'		=> __( 'Type', 'ar2' ),
+				'type'		=> 'select',
+				'section'	=> 'ar2_section_' . $this->id,
+				'choices'	=> $this->list_display_types(),
+			) );
+			$wp_customize->add_control( new AR2_Customize_Terms_Control( $wp_customize, 'ar2_section-' . $this->id . '-terms', array (
+				'settings'		=> $this->get_field_name( 'terms' ),
+				'label'			=> __( 'Terms', 'ar2' ),
+				'section'		=> 'ar2_section_' . $this->id,
+				'post_section'	=> $this->id,
+				'taxonomy'		=> $this->settings[ 'taxonomy' ],
+			) ) );
+			$wp_customize->add_control( 'ar2_section-' . $this->id . '-count', array ( 
+				'settings'	=> $this->get_field_name( 'count' ),
+				'label'		=> __( 'Post Count', 'ar2' ),
+				'type'		=> 'select',
+				'section'	=> 'ar2_section_' . $this->id,
+				'choices'	=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
+			) );
+			
+			if ( $wp_customize->is_preview() && !is_admin() ) {
+				add_action( 'wp_footer', array( $this, 'do_customize_preview_js' ), 30 );
+				add_action( 'ar2_customize_preview_localize_vars', array( $this, 'customize_localize_vars' ) );
+			}
+			
 		}
 		
 	}
