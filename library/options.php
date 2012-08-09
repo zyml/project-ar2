@@ -12,6 +12,17 @@ function ar2_theme_options_init() {
 add_action( 'admin_init', 'ar2_theme_options_init' );
 
 /**
+ * Change the capability required to save the 'ar2_options' options group. Adapted from TwentyEleven theme.
+ * @since 2.0
+ */
+function ar2_option_page_capability( $capability ) {
+
+	return 'edit_theme_options';
+	
+}
+add_filter( 'option_page_capability_ar2_options', 'ar2_option_page_capability' );
+
+/**
  * Generate default theme options.
  * @since 1.6
  */
