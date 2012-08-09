@@ -107,7 +107,7 @@ function ar2_theme_options_default_fields() {
 			'type'			=> 'static',
 			'title'			=> __( 'RSS Feed', 'ar2' ),
 			'section'		=> 'ar2_general_social',
-			'content'		=> '<code>' . get_bloginfo( 'rss2_url' ) . '</code>',
+			'content'		=> '<code>' . get_feed_link( 'rss2' ) . '</code>',
 			'description'	=> __( 'Custom feed URLs are no longer allowed due to support for automatic feed links.', 'ar2' )
 		),
 		'social_twitter' => array (

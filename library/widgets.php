@@ -878,7 +878,7 @@ class AR2_Social_Buttons_Widget extends WP_Widget {
 		?>
 		<div class="social-nav clearfix">
 		
-		<a class="rss" href="<?php bloginfo( 'rss2_url' ) ?>"><?php _e( 'RSS Feed', 'ar2' ) ?></a>
+		<a class="rss" href="<?php get_feed_link( 'rss2' ) ?>"><?php _e( 'RSS Feed', 'ar2' ) ?></a>
 		
 		<?php if ( '' != $twitter = ar2_get_theme_option( 'social_twitter' ) ) : ?>
 		<a class="twitter" href="http://www.twitter.com/<?php echo $twitter ?>"><?php _e( 'Twitter', 'ar2' ) ?></a>
