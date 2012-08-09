@@ -771,9 +771,10 @@ function ar2_admin_header_style() {
 		<?php else : ?>
 		background: #FFF;
 		<?php endif ?>
+		max-height: 120px;
 	}
 	.logo {
-		margin: 1.5em 1.3em 1.7em;
+		margin: 4% 1.3em;
 		font-weight: 700;
 		text-transform: uppercase;
 		<?php if ( 'blank' == $text_color ) : ?>

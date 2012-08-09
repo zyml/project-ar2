@@ -56,7 +56,7 @@ function ar2_setup() {
 	) );
 	add_theme_support( 'custom-header', array (
 		'width'						=> 960,
-		'flex-height'				=> true,
+		'height'					=> 120,
 		'default-text-color'		=> '333',
 		'wp-head-callback'			=> 'ar2_header_style',
 		'admin-head-callback'		=> 'ar2_admin_header_style',

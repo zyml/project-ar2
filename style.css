@@ -451,16 +451,16 @@ a.more-link:hover, .navigation a:hover, .comment-controls a:hover, a.post-edit-l
 -------------------------------------------------------------- */
 #header {
 	max-width: 960px;
-	padding: 10px;
 	margin: 0 auto;
+	padding: 10px;
 	background: #FFF;
 }
 #branding {
-
+	max-height: 120px;
 }
 .logo {
 	float: left;
-	padding: 2.7em 1.3em 2.9em;
+	padding: 4% 1.3em;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -732,7 +732,7 @@ ul.menu li a {
 	width: 36px;
 	height: 36px;
 	border-radius: 18px;
-	margin: 0 .4em 0 0;
+	margin: 0 .4em .4em 0;
 
 	text-indent: -9000px;
 }
@@ -1623,6 +1623,13 @@ article.page .entry-header h1.entry-title {
 	.posts-node .entry-comments, .posts-quick .entry-comments {
 		display: none;
 	}
+	.posts-node .entry-thumbnail img, .posts-quick .entry-thumbnail img {
+		width: auto;
+	}
+	.posts-node .entry-thumbnail, .posts-quick .entry-thumbnail {
+		margin: 0 0 1em;
+		display: inline-block;
+	}
 	
 	
 	.posts-slideshow {
@@ -1633,31 +1640,29 @@ article.page .entry-header h1.entry-title {
 		background: #000;
 	}
 	.posts-slideshow .entry-meta {
-		position: static;
-		background: #000;
-		min-height: 0;
 		padding: 3% 5%;
 		width: 90%;
-		font-size: 80%;
+		min-height: 10%;
+	}
+	.posts-slideshow .entry-summary {
+		display: none;
 	}
 	.posts-slideshow a.entry-title, .posts-slideshow .entry-summary {
 		margin: 0;
+		font-size: 90%;
 	}
 	.posts-slideshow .flex-direction-nav {
 		display: none;
 	}
 	
-	.posts-node .entry-thumbnail {
-		margin: 0 0 1em;
-	}
 	.posts-node .post {
 		float: none;
 		width: 100%;
 	}
 	
 	.posts-quick .entry-thumbnail {
-		width: 100%;
-		margin: 0 0 1em;
+		float: none;
+		width: auto;
 	}
 	.posts-quick .published {
 		margin-left: 0;
