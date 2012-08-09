@@ -1,0 +1,67 @@
+#ar2-theme-options .submit input {
+	margin-left: 5px;
+}
+
+#ar2-theme-options .nav-tab-wrapper li {
+	float: right;	
+}
+
+
+#ar2-theme-options-form {
+	padding: 1em;
+	width: 70%;
+	float: right;
+}
+
+#ar2-theme-options .form-table th {
+	padding: 10px 0 8px 8px;
+}
+
+#ar2-theme-options .reset-thumbnail-sizes {
+	margin-right: 10px;
+	float: left;
+}	
+
+#ar2-theme-options .asides {
+	float: left;
+}
+
+/* Switch */
+#ar2-theme-options .switch-inner {
+    margin-left: auto;
+    margin-right: -100%;
+}
+#ar2-theme-options .switch-inner > span {
+    float: right; 
+}
+#ar2-theme-options .switch-inner .switch-active {
+    padding-right: 10px;
+}
+#ar2-theme-options .switch-inner .switch-inactive {
+    padding-left: 10px;
+    text-align: left;
+}
+#ar2-theme-options .switch-node {
+    left: 36px;
+    right: auto;
+}
+#ar2-theme-options .switch input:checked + label .switch-inner {
+    margin-right: 0;
+}
+#ar2-theme-options .switch input:checked + label .switch-node {
+    left: 0;
+    right: auto;
+}
+
+/* TokenInput CSS */
+ul.token-input-list li {
+	float: right;
+}
+
+li.token-input-token p {
+	float: right;
+}
+
+li.token-input-token span {
+    float: left;
+}

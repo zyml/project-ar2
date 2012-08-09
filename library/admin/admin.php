@@ -359,18 +359,18 @@ function ar2_theme_options_enqueue_scripts( $hook_suffix ) {
 
 	$current = isset( $_GET[ 'opt_type' ] ) ? esc_attr( $_GET['opt_type'] ) : '';
 	
-	wp_enqueue_style( 'ar2-theme-options', get_template_directory_uri() . '/css/theme-options.css', array( 'farbtastic' ), '2011-07-29' );
+	wp_enqueue_style( 'ar2-theme-options', get_template_directory_uri() . '/css/theme-options.css', null, '2011-07-29' );
 	
 	wp_register_style( 'ar2-theme-options-ie', get_template_directory_uri() . '/css/theme-options-ie.css' );
 	$wp_styles->add_data( 'ar2-theme-options-ie', 'conditional', 'lt IE 9' );
 	wp_enqueue_style( 'ar2-theme-options-ie' );
 	
-	wp_enqueue_script( 'jquery-tokeninput', get_template_directory_uri() . '/js/jquery.tokeninput.min.js', array( 'jquery' ), time() );
-	wp_enqueue_script( 'ar2-theme-options', get_template_directory_uri() . '/js/theme-options.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), time() );
+	if ( is_rtl() )
+	wp_enqueue_style( 'ar2-theme-options-rtl', get_template_directory_uri() . '/css/theme-options-rtl.css', null, '2012-08-09' );
 	
-	wp_enqueue_script( 'farbtastic' );
-	wp_enqueue_style( 'farbtastic' );
-
+	wp_enqueue_script( 'jquery-tokeninput', get_template_directory_uri() . '/js/jquery.tokeninput.min.js', array( 'jquery' ), '2012-08-09' );
+	wp_enqueue_script( 'ar2-theme-options', get_template_directory_uri() . '/js/theme-options.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '2012-08-09' );
+	
 	wp_localize_script( 'ar2-theme-options', 'ar2Admin_l10n', ar2_theme_options_localize_vars() );
 	
 }

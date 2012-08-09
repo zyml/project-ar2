@@ -1,0 +1,405 @@
+/*   
+Theme Name: Project AR2
+
+This stylesheet is used when a right-to-left (RTL) language is used for WordPress.
+.
+*/
+
+/* =Global
+-------------------------------------------------------------- */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* Navigation */
+.navigation .prev {
+	float: right;
+}
+.navigation .next {
+	float: left;	
+}
+
+/* =Header
+-------------------------------------------------------------- */
+.logo {
+	float: right;
+}
+.banner {
+	float: left;
+}
+
+/* Search Bar */
+#searchsubmit {
+	left: 0;
+	right: auto;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+ul.menu li {
+	float: right;
+}
+
+/* Main Menu */
+#main-nav ul.menu li {
+	border-right: none;
+	border-left: 1px solid #DEDEDE;
+}
+#main-nav ul.menu li:hover > ul.sub-menu {
+	margin-left: 0;
+	margin-right: -1px;
+}
+#main-nav ul.menu li:hover > ul.sub-menu li:hover > ul.sub-menu {
+	margin-right: 0;
+}
+#main-nav ul.menu li:hover > ul.sub-menu li {
+	border-left: 0;
+}
+
+/* =Asides
+-------------------------------------------------------------- */
+.widget ul, .widget .xoxo, .widget ol {
+	margin: 0 1.25em 0 0;
+}
+.widget .entry-summary {
+	float: right;
+}
+.widget .more-link {
+	float: right;	
+}
+
+/* Bottom Content */
+.bottom-sidebar {
+	float: right;
+}
+.bottom-sidebar .widget-title {
+	margin: 1em 0 1em 1em;
+}
+
+/* Multi-Tabbed Sidebar */
+.multi-sidebar .tabs li {
+	float: right;	
+}
+.multi-sidebar .entry-thumbnail, .multi-sidebar .recentcomments .avatar, .featured-stories .entry-thumbnail {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+/* =Sections
+-------------------------------------------------------------- */
+.home-title, .archive-title, .module-title, #reply-title {
+	margin: 1em;
+}
+.posts-node .entry-comments, .posts-quick .entry-comments {
+	right: auto;
+	left: 0;
+	padding: .5em 1.75em .5em .5em;
+	background-position: -70px 8px;
+}
+
+/* Slideshow */
+.posts-slideshow {
+	direction: ltr;
+}
+.posts-slideshow ol.flex-control-nav {
+	left: auto;
+	right: 1.5em;
+}
+.posts-slideshow .entry-meta {
+	text-align: right;
+}
+.posts-slideshow ol.flex-control-nav li {
+	float: right;
+	margin: 0 0 0 5px;
+}
+.posts-slideshow ul.flex-direction-nav li:first-child {
+	float: right;
+}
+.posts-slideshow ul.flex-direction-nav li {
+	float: left;
+}
+.posts-slideshow ul.flex-direction-nav .flex-next {
+	background-position: 0 0;
+}
+.posts-slideshow ul.flex-direction-nav .flex-prev {
+	background-position: -32px 0;
+}
+
+/* Node Based */
+.posts-node .post {
+	float: right;
+}
+
+/* Quick Preview */
+.posts-quick li {
+	padding: 0 10px 0 0;
+	margin: 0 0 10px;
+}
+.posts-quick .entry-thumbnail {
+	float: right;
+	margin: 0 0 5em 20px;
+}
+
+/* Per Line */
+.posts-line {
+	margin: 0 20px 20px 1.5%;
+}
+.posts-line .entry-date {
+	float: right;
+}
+.posts-line .entry-title {
+	float: right;
+}
+.posts-line .entry-comments {
+	float: right;
+}
+
+/* Traditional */
+.posts-traditional article {
+	margin: 1em 1.75em 1.5em .75em;
+}
+
+/* =Single Post
+-------------------------------------------------------------- */
+article {
+	margin: 0 1em 1em;
+}
+article .entry-cats a:link, article .entry-cats a:visited {
+	color: #999;
+}
+article .entry-cats a:hover {
+	color: #333;
+}
+article .entry-title {
+	font-size: 200%;
+}
+article .entry-format {
+	margin: .2em 0 0 .2em;
+	float: right;
+}
+article .entry-photo {
+	margin: 1.5em 0 1.5em .5em;
+}
+article .entry-social {
+	float: right;
+}
+article .entry-tags {
+	clear: both;
+}
+/* Gallery */
+.gallery-item {
+	margin: 0 0 1em 1em;
+	float: right;
+}
+
+.about-author {
+	clear: both;
+}
+.about-author .author-avatar {
+	float: right;
+
+}
+.about-author .author-meta {
+	float: right;
+	margin-left: 0;
+	margin-right: 15px;
+}
+.author-archive {
+	margin: 0 1em 1em 1em;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+#commentlist .avatar {
+	float: right;
+	margin: 0 0 1em .5em;
+}
+#commentlist p {
+	clear: right;
+}
+#commentlist .children {
+	clear: left;
+	border-left: none;
+	border-right: 2px solid #E1E1E1;
+	list-style: none;
+	padding: 0 .5em .5em 0;
+	margin: 0 .5em 0 0;
+	
+}
+
+/* Archives
+-------------------------------------------------------------- */
+
+
+
+/* =Footer
+-------------------------------------------------------------- */
+#footer .footer-meta .menu li {
+	border-left: none;
+	border-right: 1px solid #CCC;
+}
+#footer .footer-meta .menu li:first-child {
+	border: none;
+	padding: 0 0 0 1%;
+}
+.footer-sidebar {
+	float: right;
+}
+
+/* =Media Queries - iPads (Portrait & Landscape)
+-------------------------------------------------------------- */
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+
+	body {
+		-webkit-text-size-adjust: 110%;
+	}
+
+}
+
+/* =Media Queries - Smartphones (Portrait & Landscape)
+-------------------------------------------------------------- */
+@media only screen and ( max-width: 480px ) {
+
+	/* Structure */
+	body, input, textarea {
+		font-size: 100%;
+	}
+	
+	#wrapper {
+		min-width: 0;
+	}
+	.twocol-r #container, .twocol-l #container, .twocol-l .main-aside, .twocol-r .main-aside,
+	.footer-sidebar {
+		float: none;
+		width: 100%;
+	}
+	
+	.logo {
+		width: 100%;
+		float: none;
+		padding: 1em 0;
+		text-align: center;
+	}
+	
+	/* Misc */
+	.tags a:link, .tags a:visited, .tagcloud a:link, .tagcloud a:visited {
+		font-size: 100% !important;
+	}
+	
+	/* Search Form */
+	#searchform {
+		height: 33px;
+		padding: .3em;
+	}
+	
+	/* Post Sections */
+	.home-title, .bottom-sidebar .widget-title, .archive-title, .module-title, #reply-title {
+		margin-right: 0;
+	}
+	
+	.posts-node .entry-comments, .posts-quick .entry-comments {
+		display: none;
+	}
+	.posts-node .entry-thumbnail img, .posts-quick .entry-thumbnail img {
+		width: auto;
+	}
+	.posts-node .entry-thumbnail, .posts-quick .entry-thumbnail {
+		margin: 0 0 1em;
+		display: inline-block;
+	}
+	
+	
+	.posts-slideshow {
+		min-height: 0;
+		margin: 0 0 1.5em;
+	}
+	.posts-slideshow .flex-viewport {
+		background: #000;
+	}
+	.posts-slideshow .entry-meta {
+		padding: 3% 5%;
+		width: 90%;
+		min-height: 10%;
+	}
+	.posts-slideshow .entry-summary {
+		display: none;
+	}
+	.posts-slideshow a.entry-title, .posts-slideshow .entry-summary {
+		margin: 0;
+		font-size: 90%;
+	}
+	.posts-slideshow .flex-direction-nav {
+		display: none;
+	}
+	
+	.posts-node .post {
+		float: none;
+		width: 100%;
+	}
+	
+	.posts-quick .entry-thumbnail {
+		float: none;
+		width: auto;
+	}
+	.posts-quick .published {
+		margin-left: 0;
+	}
+	
+	.posts-line .entry-title, .posts-line .entry-date {
+		float: none;
+		width: 100%;
+	}
+	.posts-line .entry-comments {
+		display: none;
+	}
+	
+	/* Single */
+	article .entry-title {
+		font-size: 180%;
+	}
+	.post-navigation {
+		text-align: center;
+	}
+	.about-author .author-avatar {
+		display: none;
+	}
+	.about-author .author-meta {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	
+	#commentform input[type=text] {
+		width: 98%;
+	}
+	
+	/* Navigation */
+	#main-nav {
+		background: #F5F5F5;
+	}
+	.js .menu { 
+		display: none; 
+	}
+	.js nav {
+		padding: 0 1em;
+	}
+	.js .tinynav {
+		display: block;
+		width: 100%;
+		margin: 1em 0;
+	}
+	
+	/* Footer */
+	#footer .widget {
+		padding: 1em;
+	}
+	#footer .footer-meta {
+		padding: 1em;
+	}
+	#footer .footer-meta p {
+		margin: 1em 0;
+		text-align: center;
+	}
+
+}

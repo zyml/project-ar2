@@ -427,7 +427,8 @@ class AR2_PostViews_Section {
 	
 		?>
 		jQuery( '.posts-slideshow' ).flexslider( {
-	          animation: 'slide'
+			useCSS: false,
+			animation: 'slide'
 	    } );
 		<?php
 		

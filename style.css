@@ -116,7 +116,7 @@ dt {
 	font-weight: bold;
 }
 ul, ol {
-	margin: 0 0 1.425em 1.8em; 
+	margin: 1.425em 1.8em;
 }
 ul {
 	list-style: square;
@@ -688,7 +688,7 @@ ul.menu li a {
 	width: 100%;
 }
 .widget ul, .widget .xoxo, .widget ol {
-	margin: 0 0 0 15px;
+	margin: 0 0 0 1.25em;
 	padding: 0;
 }
 .widget li {
@@ -904,7 +904,7 @@ ul.menu li a {
 	bottom: 1.5em;
 	padding: .5em .5em .5em 1.75em;
 	color: #FFF;
-	background: url( images/sprites.png ) no-repeat -58px 8px #86C140;
+	background: url( images/sprites.png ) no-repeat -82px 8px #86C140;
 	box-shadow: 0 0 10px 2px #555;
 	text-transform: uppercase;
 }
@@ -1497,7 +1497,7 @@ article.page .entry-header h1.entry-title {
 
 /* Pingbacks */
 #pingbacks {
-	margin: 0 0 1.5em 2.2em;
+	margin: 0 2.2em 1.5em;
 }
 #pingbacks li {
 	margin: 0 0 .2em;
@@ -1602,6 +1602,12 @@ article.page .entry-header h1.entry-title {
 		float: none;
 		padding: 1em 0;
 		text-align: center;
+	}
+	
+	/* Bottom Sidebar */
+	.bottom-sidebar {
+		float: none;
+		width: 100%;
 	}
 	
 	/* Misc */

@@ -1,0 +1,8 @@
+/* =Global
+-------------------------------------------------------------- */
+html .mceContentBody {
+	max-width: 634px;
+	direction: rtl;
+	unicode-bidi: embed;
+	float: right;
+}
