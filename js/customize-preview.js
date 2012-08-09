@@ -26,7 +26,7 @@ ar2Customize = {
 	
 	refreshSection : function( id, settings ) {
 		
-		jQuery( '#section-' + id ).css( 'opacity', 0.5 );
+		$( '#section-' + id ).css( 'opacity', 0.5 );
 		
 		var data = {
 			action: 'ar2_customize_preview_section',
@@ -34,21 +34,20 @@ ar2Customize = {
 			settings: settings
 		};
 		
-		jQuery.post( ar2Customize_l10n.ajaxurl, data, function( response ) {
+		$.post( _ar2Customize.ajaxurl, data, function( response ) {
 		
-			if ( response != 0 ) jQuery( '#section-' + id ).html( response );
-			jQuery( '#section-' + id ).css( 'opacity', 1.0 );
+			if ( response != 0 ) $( '#section-' + id ).html( response );
+			$( '#section-' + id ).css( 'opacity', 1.0 );
 			
 			if ( id == 'slideshow' ) {
-				jQuery( '#section-' + id + ' .posts-slideshow' ).flexslider( {
-			          animation: 'slide',
-			          directionNav: false
+				$( '#section-' + id + ' .posts-slideshow' ).flexslider( {
+			          animation: 'slide'
 			    } );
 			}
 							
 		} );
 		
-	},
+	}
 	
 };
 

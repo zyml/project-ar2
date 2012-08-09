@@ -74,7 +74,7 @@ class AR2_Customize_Terms_Control extends WP_Customize_Control {
 		?>
 		<label>
 			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<input id="section-<?php echo $this->section_id ?>-terms" class="tokeninput" type="text" taxonomy="<?php echo $this->taxonomy ?>" <?php $this->link() ?> />
+			<input id="section-<?php echo $this->section_id ?>-terms" class="tokeninput" type="text" data-taxonomy="<?php echo $this->taxonomy ?>" <?php $this->link() ?> />
 			<p><em><?php _e( "The section's post type and taxonomy can be changed via the theme options page.", 'ar2' ) ?></em></p>
 		</label>
 		<?php

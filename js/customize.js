@@ -20,10 +20,10 @@ ar2Customize = {
 			minChars	: 2,
 			preventDuplicates: true,
 			prePopulate : ar2Admin_l10n[ $( input ).attr( 'id' ) ],
-			limit		: $( input ).attr( 'taxonomy' ),
+			limit		: $( input ).attr( 'data-taxonomy' )
 		} );
 		
-	},
+	}
 		
 };
 

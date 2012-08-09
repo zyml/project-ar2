@@ -28,6 +28,8 @@ final class AR2_PostViews {
 		add_action( 'ar2_postviews_register', array( $this, 'register_zones' ) );
 		add_action( 'ar2_postviews_register', array( $this, 'register_sections' ) );
 		
+		add_action( 'customize_register', array( $this, 'customize_register' ) );
+		
 	}
 	
 	/**
@@ -282,6 +284,54 @@ final class AR2_PostViews {
 			'_builtin'				=> true,
 		) );
 		
+	}
+	
+	/**
+	 * Registers settings, sections and fields to the Theme Customizer.
+	 * @since 2.0
+	 */
+	public function customize_register( $wp_customize ) {
+	
+		if ( $wp_customize->is_preview() && !is_admin() )
+			add_action( 'wp_head', array( $this, 'init_customize_preview' ) );
+	
+	}
+	
+	/**
+	 * Tells the theme to go into 'customize preview' mode, somewhat.
+	 * @since 2.0
+	 */
+	public function init_customize_preview() {
+	
+		global $ar2_is_customize_preview;
+		$ar2_is_customize_preview = true;
+		
+		wp_enqueue_script( 'ar2-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'jquery' ), '2012-07-29' );
+		wp_localize_script( 'ar2-customize-preview', '_ar2Customize', $this->localize_customize_preview_js() );
+		
+		// Workaround for IE users: force the <iframe> to reload so that it could load jQuery.
+		// Credits: http://stackoverflow.com/questions/8389261/ie9-throws-exceptions-when-loading-scripts-in-iframe-why
+		?>
+		<!--[if IE]>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		if ( typeof jQuery == 'undefined' )
+			window.location.reload();
+		/* ]]> */	
+		</script>
+		<![endif]-->
+		<?php
+		
+	}
+	
+	public function localize_customize_preview_js() {
+		
+		$_defaults =  array ( 
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		);
+		
+		return apply_filters( 'ar2_customize_preview_localize_vars', $_defaults );
+	
 	}
 	
 }

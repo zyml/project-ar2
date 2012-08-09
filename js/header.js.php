@@ -1,4 +1,6 @@
-jQuery( document ).ready( function( $ ) {
+( function( $ ) {
+
+$( document ).ready( function( $ ) {
 
 	$( '.menu' ).tinyNav();
 	
@@ -9,3 +11,5 @@ jQuery( document ).ready( function( $ ) {
 	<?php do_action( 'ar2_custom_scripts' ) ?>
 	
 } );
+
+} )( jQuery );

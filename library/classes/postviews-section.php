@@ -79,6 +79,7 @@ class AR2_PostViews_Section {
 			'posts_per_page'	=> get_option( 'posts_per_page' ),
 			'orderby'			=> 'date',
 			'order'				=> 'DESC',
+			'post_status'		=> 'publish',
 		);
 		
 		if ( isset( $this->settings[ 'query_args' ] ) )
@@ -572,10 +573,26 @@ class AR2_PostViews_Section {
 		) );
 		
 		if ( $wp_customize->is_preview() && !is_admin() ) {
-			add_action( 'wp_head', array( $this, 'init_customize_preview' ) );
-			add_action( 'wp_footer', array( $this, 'do_customize_preview_js' ), 30 );			
+			add_action( 'wp_footer', array( $this, 'do_customize_preview_js' ), 30 );
+			add_action( 'ar2_customize_preview_localize_vars', array( $this, 'customize_localize_vars' ) );
 		}
 		
+	}
+	
+	/**
+	 * customize_localize_vars function.
+	 * @since 2.0
+	 */
+	public function customize_localize_vars( $vars ) {
+	
+		$_persistent_arr = array();
+		foreach( $this->settings[ 'persistent' ] as $id )
+			$_persistent_arr[ $id ] = $this->settings[ $id ];
+			
+		$vars[ $this->js_friendly_id() . 'Settings' ] = $_persistent_arr;
+		
+		return $vars;
+	
 	}
 	
 	/**
@@ -596,10 +613,15 @@ class AR2_PostViews_Section {
 		$_input_settings[ 'container' ] = false;
 		$_input_settings[ '_preview' ] = true;
 		
+		// Validate the JSON variables
+		$_input_settings[ 'title' ] = esc_attr( $_input_settings[ 'title' ] );
+		$_input_settings[ 'type' ] = esc_attr( $_input_settings[ 'type' ] );
+		$_input_settings[ 'count' ] = absint( $_input_settings[ 'count' ] );
+		$_input_settings[ 'enabled' ] = ( boolean ) $_input_settings[ 'enabled' ];
+		
 		if ( empty( $_input_settings[ 'terms' ] ) )
 			$_input_settings[ 'terms' ] = array();
 			
-		// @TODO: Validate the JSON
 		$_temp_settings = wp_parse_args( $_input_settings, $_section->settings );
 
 		$this->manager->render_section( new AR2_PostViews_Section( $this->manager, $_section->id, null, $_temp_settings ) );
@@ -608,26 +630,6 @@ class AR2_PostViews_Section {
 		
 	}
 	
-	
-	/**
-	 * Tells the theme to go into 'customize preview' mode, somewhat.
-	 * @since 2.0
-	 */
-	public function init_customize_preview() {
-	
-		global $ar2_is_customize_preview;
-		$ar2_is_customize_preview = true;
-		
-		wp_enqueue_script( 'ar2-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'jquery' ), '2012-07-29' );
-		wp_localize_script( 'ar2-customize-preview', 'ar2Customize_l10n', $this->localize_customize_preview_js() );
-		
-	}
-	
-	public function localize_customize_preview_js() {
-		
-		return array ( 'ajaxurl' => admin_url( 'admin-ajax.php' ), );
-	
-	}
 	
 	/**
 	 * Converts dashes to camelCase for Javascript-friendly variable naming.
@@ -647,47 +649,40 @@ class AR2_PostViews_Section {
 	
 		?>
 		<script type="text/javascript">
-		/* <![CDATA[ */		
-		( function( $ ) {
-			<?php
-			$_persistent_arr = array();
-			foreach( $this->settings[ 'persistent' ] as $id )
-				$_persistent_arr[ $id ] = $this->settings[ $id ];
-			?>
-			var <?php echo $this->js_friendly_id() ?>Settings = <?php echo json_encode( $_persistent_arr ) ?>;
-		
+		/* <![CDATA[ */
+		( function( $ ) {	
 			wp.customize( '<?php echo $this->get_field_name( 'enabled' ) ?>', function( value ) {
 				value.bind( function( to ) {
-					<?php echo $this->js_friendly_id() ?>Settings.enabled = to;
-					jQuery( '#section-<?php echo $this->id ?>' ).toggle( to );
+					_ar2Customize.<?php echo $this->js_friendly_id() ?>Settings.enabled = to;
+					$( '#section-<?php echo $this->id ?>' ).toggle( to );
 				} );
 			} );
 			
 			wp.customize( '<?php echo $this->get_field_name( 'title' ) ?>', function( value ) {
 				value.bind( function( to ) {
-					<?php echo $this->js_friendly_id() ?>Settings.title = to;
-					jQuery( '#section-<?php echo $this->id ?> .home-title' ).html( to );
+					_ar2Customize.<?php echo $this->js_friendly_id() ?>Settings.title = to;
+					$( '#section-<?php echo $this->id ?> .home-title' ).html( to );
 				} );
 			} );
 			
 			wp.customize( '<?php echo $this->get_field_name( 'count' ) ?>', function( value ) {
 				value.bind( function( to ) {				
-					<?php echo $this->js_friendly_id() ?>Settings.count = to;
-					ar2Customize.refreshSection( '<?php echo $this->id ?>', <?php echo $this->js_friendly_id() ?>Settings );	
+					_ar2Customize.<?php echo $this->js_friendly_id() ?>Settings.count = to;
+					ar2Customize.refreshSection( '<?php echo $this->id ?>', _ar2Customize.<?php echo $this->js_friendly_id() ?>Settings );	
 				} );
 			} );
 			
 			wp.customize( '<?php echo $this->get_field_name( 'terms' ) ?>', function( value ) {
 				value.bind( function( to ) {				
-					<?php echo $this->js_friendly_id() ?>Settings.terms = to;
-					ar2Customize.refreshSection( '<?php echo $this->id ?>', <?php echo $this->js_friendly_id() ?>Settings );	
+					_ar2Customize.<?php echo $this->js_friendly_id() ?>Settings.terms = to;
+					ar2Customize.refreshSection( '<?php echo $this->id ?>', _ar2Customize.<?php echo $this->js_friendly_id() ?>Settings );	
 				} );
 			} );
 			
 			wp.customize( '<?php echo $this->get_field_name( 'type' ) ?>', function( value ) {
 				value.bind( function( to ) {			
-					<?php echo $this->js_friendly_id() ?>Settings.type = to;
-					ar2Customize.refreshSection( '<?php echo $this->id ?>', <?php echo $this->js_friendly_id() ?>Settings );			
+					_ar2Customize.<?php echo $this->js_friendly_id() ?>Settings.type = to;
+					ar2Customize.refreshSection( '<?php echo $this->id ?>', _ar2Customize.<?php echo $this->js_friendly_id() ?>Settings );			
 				} );
 			} );
 			
