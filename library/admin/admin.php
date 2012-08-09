@@ -471,7 +471,7 @@ function ar2_theme_options_render_page() {
 			<aside class="widget clearfix">
 				<h3 class="widget-title"><?php _e( 'Need Support?', 'ar2' ) ?></h3>
 				<p><?php _e( 'Ask questions and share tips and tricks with fellow theme users all over the world at the theme community forums.', 'ar2' ) ?></p>
-				<p class="theme-link"><a href="http://www.arrastheme.com/forums/"><?php _e( 'Community Forums', 'ar2' ) ?></a></p>
+				<p class="theme-link"><a href="http://forums.arrastheme.com/"><?php _e( 'Community Forums', 'ar2' ) ?></a></p>
 			</aside>
 			<aside class="widget clearfix">
 				<h3 class="widget-title"><?php _e( 'Like this Theme?', 'ar2' ) ?></h3>
