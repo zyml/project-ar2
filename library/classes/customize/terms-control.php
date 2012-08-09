@@ -33,8 +33,8 @@ class AR2_Customize_Terms_Control extends WP_Customize_Control {
 	
 		wp_enqueue_style( 'ar2-theme-options', get_template_directory_uri() . '/css/theme-options.css', null, '2011-07-29' );
 		
-		wp_enqueue_script( 'jquery-tokeninput', get_template_directory_uri() . '/js/jquery.tokeninput.dev.js', array( 'jquery' ), time() );
-		wp_enqueue_script( 'ar2-customize-controls', get_template_directory_uri() . '/js/customize.js', array( 'jquery' ), time() );
+		wp_enqueue_script( 'jquery-tokeninput', get_template_directory_uri() . '/js/jquery.tokeninput.min.js', array( 'jquery' ), '2012-08-10' );
+		wp_enqueue_script( 'ar2-customize-controls', get_template_directory_uri() . '/js/customize.js', array( 'jquery' ), '2012-08-10' );
 		
 		if ( !defined( 'AR2_CUSTOMIZE_TERMS_LOCALIZED' ) )
 			wp_localize_script( 'ar2-customize-controls', 'ar2Admin_l10n', $this->localize_vars() );
