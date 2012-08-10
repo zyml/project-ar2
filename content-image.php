@@ -41,7 +41,7 @@
 		</div>
 		<?php else : ?>
 		<div class="entry-author">
-			<?php printf( __( 'Posted on %s', 'ar2' ), '<abbr class="published">' . ar2_posted_on( false ) . '</abbr>' ); ?>
+			<?php printf( __( 'Posted %s', 'ar2' ), '<abbr class="published">' . ar2_posted_on( false ) . '</abbr>' ); ?>
 			<?php edit_post_link( __( 'Edit', 'ar2' ) ) ?>
 		</div>
 		<?php endif ?>

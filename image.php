@@ -12,7 +12,7 @@
 			
 			<?php if ( ar2_get_theme_option( 'post_display[post_author]' ) ) : ?>
 			<div class="entry-author">
-				<?php printf( __( 'Posted by %1$s on %2$s', 'ar2' ), 
+				<?php printf( __( 'Posted by %1$s %2$s', 'ar2' ), 
 					'<address class="author vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '" title="' . esc_attr( get_the_author() ) . '">' . get_the_author() . '</a></address>',
 					'<abbr class="published">' . ar2_posted_on( false ) . '</abbr>'
 				); ?>
@@ -20,7 +20,7 @@
 			</div>
 			<?php else : ?>
 			<div class="entry-author">
-				<?php printf( __( 'Posted on %s', 'ar2' ), '<abbr class="published">' . ar2_posted_on( false ) . '</abbr>' ); ?>
+				<?php printf( __( 'Posted %s', 'ar2' ), '<abbr class="published">' . ar2_posted_on( false ) . '</abbr>' ); ?>
 				<?php edit_post_link( __( 'Edit', 'ar2' ) ) ?>
 			</div>
 			<?php endif ?>

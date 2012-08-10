@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-08 02:42+0730\n"
+"POT-Creation-Date: 2012-08-11 03:49+0730\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Melvin Lee <zy@zy.sg>\n"
 "Language-Team:  <zy@zy.sg>\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: ../content-audio.php:85
 #: ../content-image.php:85
 #: ../content-video.php:85
-#: ../content.php:100
+#: ../content.php:92
 #: ../image.php:83
 msgid "No information is provided by the author."
 msgstr ""
@@ -102,7 +102,7 @@ msgstr ""
 #: ../content-audio.php:11
 #: ../content-image.php:11
 #: ../content-video.php:11
-#: ../content.php:67
+#: ../content.php:70
 #: ../full-width-page.php:67
 #: ../image.php:50
 msgid "<p>Read the rest of this entry &raquo;</p>"
@@ -111,7 +111,7 @@ msgstr ""
 #: ../content-audio.php:12
 #: ../content-image.php:12
 #: ../content-video.php:12
-#: ../content.php:68
+#: ../content.php:71
 #: ../image.php:51
 msgid "Pages:"
 msgstr ""
@@ -119,10 +119,11 @@ msgstr ""
 #: ../content-audio.php:36
 #: ../content-image.php:36
 #: ../content-video.php:36
+#: ../content.php:32
 #: ../full-width-page.php:35
 #: ../image.php:15
 #, php-format
-msgid "Posted by %1$s on %2$s"
+msgid "Posted by %1$s %2$s"
 msgstr ""
 
 #: ../content-audio.php:40
@@ -147,13 +148,13 @@ msgstr ""
 #: ../full-width-page.php:43
 #: ../image.php:23
 #, php-format
-msgid "Posted on %s"
+msgid "Posted %s"
 msgstr ""
 
 #: ../content-audio.php:72
 #: ../content-image.php:72
 #: ../content-video.php:72
-#: ../content.php:87
+#: ../content.php:79
 #: ../image.php:70
 msgid "Tags: "
 msgstr ""
@@ -161,15 +162,10 @@ msgstr ""
 #: ../content-audio.php:82
 #: ../content-image.php:82
 #: ../content-video.php:82
-#: ../content.php:97
+#: ../content.php:89
 #: ../image.php:80
 #, php-format
 msgid "About %s"
-msgstr ""
-
-#: ../content.php:32
-#, php-format
-msgid "Posted by %1$s %2$s"
 msgstr ""
 
 #: ../footer.php:33
@@ -209,6 +205,11 @@ msgstr ""
 msgid "Footer Sidebar #%s"
 msgstr ""
 
+#: ../page.php:27
+#, php-format
+msgid "Posted by %1$s on %2$s"
+msgstr ""
+
 #: ../search.php:6
 msgid "Search Results"
 msgstr ""
@@ -239,7 +240,7 @@ msgstr ""
 msgid "Continue Reading"
 msgstr ""
 
-#: ../section.php:67
+#: ../section.php:56
 msgid "Read the rest of this entry"
 msgstr ""
 
@@ -259,58 +260,58 @@ msgstr ""
 msgid "Tag Cloud"
 msgstr ""
 
-#: ../library/options.php:22
+#: ../library/options.php:33
 #, php-format
 msgid "Copyright %s. All Rights Reserved"
 msgstr ""
 
-#: ../library/options.php:133
+#: ../library/options.php:144
 msgid "Your settings have been reverted to the defaults."
 msgstr ""
 
-#: ../library/options.php:141
+#: ../library/options.php:152
 msgid "Your settings have been successfully imported."
 msgstr ""
 
-#: ../library/options.php:219
+#: ../library/options.php:230
 msgid "Your settings have been successfully saved."
 msgstr ""
 
-#: ../library/postviews.php:225
-#: ../library/postviews.php:226
-#: ../library/classes/postviews-section.php:42
+#: ../library/postviews.php:263
+#: ../library/postviews.php:264
+#: ../library/classes/postviews-slideshow-section.php:20
 msgid "Slideshow"
 msgstr ""
 
-#: ../library/postviews.php:235
+#: ../library/postviews.php:273
 msgid "Featured Posts #1"
 msgstr ""
 
-#: ../library/postviews.php:236
+#: ../library/postviews.php:274
 msgid "Featured Posts"
 msgstr ""
 
-#: ../library/postviews.php:244
+#: ../library/postviews.php:282
 msgid "Featured Posts #2"
 msgstr ""
 
-#: ../library/postviews.php:245
+#: ../library/postviews.php:283
 msgid "Editors' Picks"
 msgstr ""
 
-#: ../library/postviews.php:253
+#: ../library/postviews.php:291
 msgid "News Posts"
 msgstr ""
 
-#: ../library/postviews.php:254
+#: ../library/postviews.php:292
 msgid "Latest News"
 msgstr ""
 
-#: ../library/postviews.php:278
+#: ../library/postviews.php:316
 msgid "Home"
 msgstr ""
 
-#: ../library/postviews.php:279
+#: ../library/postviews.php:317
 msgid "Handles all content being displayed in the front page (excluding the slideshow)."
 msgstr ""
 
@@ -394,9 +395,13 @@ msgid "Page %s"
 msgstr ""
 
 #: ../library/template.php:52
-#: ../library/template.php:73
 #, php-format
 msgid "%s"
+msgstr ""
+
+#: ../library/template.php:73
+#, php-format
+msgid "on %s"
 msgstr ""
 
 #: ../library/template.php:78
@@ -730,11 +735,6 @@ msgstr ""
 msgid "Social network IDs must be specified for their respective buttons to appear."
 msgstr ""
 
-#: ../library/widgets.php:983
-#, php-format
-msgid "Posted %s"
-msgstr ""
-
 #: ../library/widgets.php:996
 msgid "No posts at the moment. Check back again later!"
 msgstr ""
@@ -1019,90 +1019,90 @@ msgid "No Taxonomies Available"
 msgstr ""
 
 #: ../library/admin/admin.php:626
-#: ../library/classes/postviews-section.php:469
+#: ../library/classes/postviews-section.php:423
 msgid "Taxonomy"
 msgstr ""
 
-#: ../library/admin/admin.php:744
+#: ../library/admin/admin.php:769
 msgid "Width"
 msgstr ""
 
-#: ../library/admin/admin.php:748
+#: ../library/admin/admin.php:773
 msgid "Height"
 msgstr ""
 
-#: ../library/admin/admin.php:752
+#: ../library/admin/admin.php:777
 msgid "Reset to Defaults"
 msgstr ""
 
-#: ../library/admin/admin.php:765
+#: ../library/admin/admin.php:794
 msgid "Please choose your taxonomy before proceeding."
 msgstr ""
 
-#: ../library/admin/admin.php:778
+#: ../library/admin/admin.php:810
 msgid "Loading"
 msgstr ""
 
-#: ../library/admin/admin.php:793
+#: ../library/admin/admin.php:827
 msgid "On"
 msgstr ""
 
-#: ../library/admin/admin.php:794
+#: ../library/admin/admin.php:828
 msgid "Off"
 msgstr ""
 
-#: ../library/admin/admin.php:859
+#: ../library/admin/admin.php:893
 msgid "Default Stylesheet (style.css)"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:43
+#: ../library/classes/postviews-section.php:42
 msgid "Node Based"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:44
+#: ../library/classes/postviews-section.php:43
 msgid "Quick Preview"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:45
+#: ../library/classes/postviews-section.php:44
 msgid "Per Line"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:46
+#: ../library/classes/postviews-section.php:45
 msgid "Traditional"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:165
+#: ../library/classes/postviews-section.php:159
 #, php-format
 msgid "Post Section ID: %s"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:439
-#: ../library/classes/postviews-section.php:535
+#: ../library/classes/postviews-section.php:393
+#: ../library/classes/postviews-section.php:491
 #, php-format
 msgid "Enable %s"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:447
-#: ../library/classes/postviews-section.php:547
+#: ../library/classes/postviews-section.php:401
+#: ../library/classes/postviews-section.php:503
 msgid "Type"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:455
-#: ../library/classes/postviews-section.php:541
+#: ../library/classes/postviews-section.php:409
+#: ../library/classes/postviews-section.php:497
 msgid "Title"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:462
+#: ../library/classes/postviews-section.php:416
 msgid "Post Type"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:476
-#: ../library/classes/postviews-section.php:554
+#: ../library/classes/postviews-section.php:430
+#: ../library/classes/postviews-section.php:510
 msgid "Terms"
 msgstr ""
 
-#: ../library/classes/postviews-section.php:483
-#: ../library/classes/postviews-section.php:561
+#: ../library/classes/postviews-section.php:437
+#: ../library/classes/postviews-section.php:517
 msgid "Post Count"
 msgstr ""
 

@@ -70,7 +70,7 @@ function ar2_posted_on( $echo = 1 ) {
 		
 		if ( $months > 0 || $months < 0 ) {
 			// over a month old, just show date
-			$result = sprintf( __( '%s', 'ar2' ), get_the_time( get_option( 'date_format' ) ) );
+			$result = sprintf( __( 'on %s', 'ar2' ), get_the_time( get_option( 'date_format' ) ) );
 		} else {
 			if ( $weeks > 0 ) {
 				// weeks

@@ -19,7 +19,7 @@
 	
 	<div class="entry-summary">
 		<div class="entry-info">
-			<abbr class="published"><?php printf( __( 'Posted on %s', 'ar2' ), ar2_posted_on( false ) ) ?></abbr>
+			<abbr class="published"><?php printf( __( 'Posted %s', 'ar2' ), ar2_posted_on( false ) ) ?></abbr>
 		</div>
 		<?php echo get_the_excerpt() ?>
 		<p><a class="more-link" href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'ar2'), get_the_title() ) ?>">

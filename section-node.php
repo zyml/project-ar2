@@ -15,7 +15,7 @@
 	<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 	
 	<?php if ( ar2_get_theme_option( 'nodebased_show_excerpts' ) ) : ?>
-	<abbr class="published"><?php printf( __( 'Posted on %s', 'ar2' ), ar2_posted_on( false ) ) ?></abbr>
+	<abbr class="published"><?php printf( __( 'Posted %s', 'ar2' ), ar2_posted_on( false ) ) ?></abbr>
 	<div class="entry-summary"><?php the_excerpt() ?></div>
 	<?php endif ?>
 	

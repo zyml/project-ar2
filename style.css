@@ -1266,7 +1266,7 @@ article .entry-embed {
 	margin: 0 0 1em;
 	overflow: hidden;
 }
-article .entry-embed embed {
+article .entry-embed embed, article .entry-embed iframe {
 	position: absolute;
 	width: 100%;
 	height: 100%;
