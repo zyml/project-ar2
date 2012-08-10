@@ -39,23 +39,16 @@ class AR2_PostViews_Section {
 		$this->flush_settings( $args );
 		
 		// Register the default display types.
-		$this->manager->register_display_type( 'slideshow', __( 'Slideshow', 'ar2' ) );
-		$this->manager->register_display_type( 'node', __( 'Node Based', 'ar2' ) );
-		$this->manager->register_display_type( 'quick', __( 'Quick Preview', 'ar2' ) );
-		$this->manager->register_display_type( 'line', __( 'Per Line', 'ar2' ) );
-		$this->manager->register_display_type( 'traditional', __( 'Traditional', 'ar2' ) );
-		
-		// For people who wish to add additional display types without rewriting the entire class.
-		do_action( 'ar2_register_default_display_types' );
+		$this->manager->register_display_type( 'node', __( 'Node Based', 'ar2' ), $this );
+		$this->manager->register_display_type( 'quick', __( 'Quick Preview', 'ar2' ), $this );
+		$this->manager->register_display_type( 'line', __( 'Per Line', 'ar2' ), $this );
+		$this->manager->register_display_type( 'traditional', __( 'Traditional', 'ar2' ), $this );
 		
 		if ( isset( $this->zone->settings[ 'show_in_theme_options' ] ) && $this->zone->settings[ 'show_in_theme_options' ] )
 			$this->init_section_theme_options();
 			
 		if ( isset( $this->zone->settings[ 'show_in_customize' ] ) && $this->zone->settings[ 'show_in_customize' ] )
 			$this->init_section_theme_customize();
-			
-		if ( $this->settings[ 'type' ] == 'slideshow' && ( $this->settings[ '_preview' ] || $this->settings[ 'enabled' ] ) )
-			$this->init_slideshow_scripts();
 		
 		return $this;
 		
@@ -237,7 +230,7 @@ class AR2_PostViews_Section {
 			echo '>';
 		}
 		
-		if ( $this->settings[ 'type' ] != 'slideshow' && isset( $this->settings[ 'title' ] ) )
+		if ( isset( $this->settings[ 'title' ] ) )
 			echo '<h4 class="home-title">' . $this->settings[ 'title' ] . '</h4>';
 		
 		if ( $this->settings[ 'type' ] == 'line' || $this->settings[ 'type' ] == 'quick' )
@@ -268,27 +261,6 @@ class AR2_PostViews_Section {
 			
 			if ( $i % 3 != 0 ) echo '</div>';
 			
-		} else if ( $this->settings[ 'type' ] == 'slideshow' ) {
-		
-			echo '<ul class="slides clearfix">';
-		
-			while ( $this->query->have_posts() ) :
-			
-				$this->query->the_post();
-			
-				// hack for plugin authors who love to use $post = $wp_query->post
-				$wp_query->post = $this->query->post;
-				setup_postdata( $post );
-			
-				get_template_part( 'section', $this->settings[ 'type' ] );
-				
-				// Update the post blacklist.
-				$this->zone->blacklist[] = $post->ID;			
-				
-			endwhile;
-			
-			echo '</ul><!-- .slides -->';
-		
 		} else {		
 		
 			while ( $this->query->have_posts() ) :
@@ -406,32 +378,6 @@ class AR2_PostViews_Section {
 		}
 		
 		return $list;
-		
-	}
-	
-	/**
-	 * @todo
-	 * @since 2.0
-	 */
-	public function init_slideshow_scripts() {
-	
-		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array( 'jquery' ), '2012-07-08' );
-		add_action( 'ar2_custom_scripts', array( $this, 'do_slideshow_js' ) );
-		
-	}
-
-	/**
-	 * @todo
-	 * @since 2.0
-	 */
-	public function do_slideshow_js() {
-	
-		?>
-		jQuery( '.posts-slideshow' ).flexslider( {
-			useCSS: false,
-			animation: 'slide'
-	    } );
-		<?php
 		
 	}
 	
@@ -627,8 +573,11 @@ class AR2_PostViews_Section {
 			$_input_settings[ 'terms' ] = array();
 			
 		$_temp_settings = wp_parse_args( $_input_settings, $_section->settings );
-
-		$this->manager->render_section( new AR2_PostViews_Section( $this->manager, $_section->id, null, $_temp_settings ) );
+		
+		$_classname = $this->manager->get_display_type_classname( $_input_settings[ 'type' ] );
+		
+		if ( $_classname )
+		$this->manager->render_section( new $_classname( $this->manager, $_section->id, null, $_temp_settings ) );
 		
 		exit;
 		

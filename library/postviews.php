@@ -22,6 +22,7 @@ final class AR2_PostViews {
 	
 		require_once 'classes/postviews-section.php';
 		require_once 'classes/postviews-zone.php';
+		require_once 'classes/postviews-slideshow-section.php';
 		
 		add_action( 'wp_loaded', array( $this, 'wp_loaded' ), 5 );
 		
@@ -168,9 +169,15 @@ final class AR2_PostViews {
 	 * Registers a display type as an option for users.
 	 * @since 2.0
 	 */
-	public function register_display_type( $id, $label ) {
+	public function register_display_type( $id, $label, $classname ) {
 		
-		$this->display_types[ $id ] = $label;
+		if ( is_a( $classname, 'AR2_PostViews_Section' ) )
+			$classname = get_class( $classname );
+		
+		$this->display_types[ $id ] = array (
+			'label'		=> $label,
+			'classname'	=> $classname,	
+		);
 		
 	}
 	
@@ -185,14 +192,34 @@ final class AR2_PostViews {
 		
 	}
 	
+	/**
+	 * Retrieves the classname asscociated with a display type.
+	 * @since 2.0
+	 */
+	public function get_display_type_classname( $id ) {
+		
+		if ( isset( $this->display_types[ $id ] ) )
+			return $this->display_types[ $id ][ 'classname' ];
+		else
+			return false;
+		
+	}
+	
 	
 	/**
 	 * Lists all registered display types as an array.
 	 * @since 2.0
 	 */
-	public function list_display_types() {
+	public function list_display_types( $type = 'names' ) {
 		
-		return $this->display_types;
+		if ( $type == 'names' ) {
+		$display_types = array();
+			foreach( $this->display_types as $id => $args )
+				$display_types[ $id ] = $args[ 'label' ];
+			return $display_types;	
+		} else {
+			return $this->display_types;
+		}
 		
 	}
 	
@@ -223,7 +250,7 @@ final class AR2_PostViews {
 	public function register_sections() {
 		
 
-		$this->add_section( 'slideshow', 'home', array (
+		/*$this->add_section( 'slideshow', 'home', array (
 			'label'		=> __( 'Slideshow', 'ar2' ),
 			'title'		=> __( 'Slideshow', 'ar2' ),
 			'type'		=> 'slideshow',
@@ -231,7 +258,16 @@ final class AR2_PostViews {
 			'priority'	=> 5,
 			'display_types' => array( 'slideshow' ),
 			'enabled'	=> true,
-		) );
+		) );*/
+		$this->add_section( new AR2_PostViews_Slideshow_Section( $this, 'slideshow', 'home', array (
+			'label'		=> __( 'Slideshow', 'ar2' ),
+			'title'		=> __( 'Slideshow', 'ar2' ),
+			'type'		=> 'slideshow',
+			'count'		=> 3,
+			'priority'	=> 5,
+			'display_types' => array( 'slideshow' ),
+			'enabled'	=> true,
+		) ) );
 		
 		$this->add_section( 'featured-posts-1', 'home', array (
 			'label'		=> __( 'Featured Posts #1', 'ar2' ),
