@@ -32,9 +32,6 @@ Project AR2 is the re-release of Arras WordPress Theme, with up-to-date standard
 * Upload the ZIP package you have downloaded
 * Go back to Appearance > Themes and activate 'Project AR2'
 
-## Known Issues
-* Internet Explorer users will have issues using the Theme Customizer. A temporary workaround would be to refresh the preview page before making any customizations or use the theme options page instead.
-
 ## Support
 Community Forums support is available at http://www.arrastheme.com/forums/. You can also try asking the theme's Twitter account: http://twitter.com/arrastheme
 
