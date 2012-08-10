@@ -723,6 +723,29 @@ function ar2_ajax_get_terms_list() {
 add_action( 'wp_ajax_ar2_load_terms', 'ar2_ajax_get_terms_list' );
 
 /**
+ * @todo
+ * @since 1.5
+ */
+function ar2_get_terms_list( $taxonomy ) {
+
+	$terms = get_terms( $taxonomy, 'hide_empty=0' );
+	$options = array();
+	
+	if ( !is_wp_error( $terms ) ) {
+		foreach ( $terms as $term ) {
+			if ( $taxonomy == 'category' || $taxonomy == 'post_tag' ) {
+				$options[ $term->term_id ] = $term->name;
+			} else {
+				$options[ $term->slug ] = $term->name;
+			}
+		}
+	}
+	
+	return $options;
+
+}
+
+/**
  * Renders individual field in theme options.
  * @since 1.6
  */
@@ -763,6 +786,10 @@ function ar2_theme_options_render_field( $args = array() ) {
 			<div class="cat-dropdown-container">
 				<p class="cat-dropdown-multiselect">
 					<?php echo ar2_form_terms_dropdown( $id, $setting, ar2_multidimensional_get( $ar2_options, $_taxonomy_keys ), $value ); ?>
+					<?php 
+					$taxonomy = ar2_multidimensional_get( $ar2_options, $_taxonomy_keys );
+					echo ar2_form_dropdown( 'ar2_theme_options[' . $id . '][]', ar2_get_terms_list( $taxonomy ), $value, 'multiple="multiple" class="terms-multiselect"' );
+					?>
 				</p>
 				<span style="display: none" class="choosetax"><?php _e( 'Please choose your taxonomy before proceeding.', 'ar2' ) ?></span>
 			</div>
@@ -774,6 +801,9 @@ function ar2_theme_options_render_field( $args = array() ) {
 			$_posttype_keys[] = 'post_type';
 			
 			$_post_type = ( ar2_multidimensional_get( $ar2_options, $_posttype_keys ) ) == '' ? 'post' : ar2_multidimensional_get( $ar2_options, $_posttype_keys );
+			
+			$taxonomy = get_taxonomy( $value );
+			echo '<span class="no-js-label">' . $taxonomy->labels->name . '</span>';
 			?>
 			<div class="tax-dropdown-container">
 				<?php echo ar2_form_taxonomies_dropdown( 'ar2_theme_options[' . $id . ']', $_post_type, $value, $extras ); ?> 
@@ -783,6 +813,8 @@ function ar2_theme_options_render_field( $args = array() ) {
 		break;
 		
 		case 'posttype-dropdown' :
+			$post_type = get_post_type_object( $value );
+			echo '<span class="no-js-label">' . $post_type->labels->name . '</span>';
 			echo ar2_form_posttype_dropdown( 'ar2_theme_options[' . $id . ']', $value, $extras );
 		break;
 		

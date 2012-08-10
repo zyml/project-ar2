@@ -382,3 +382,15 @@ div.token-input-dropdown ul li em {
 div.token-input-dropdown ul li.token-input-selected-dropdown-item {
     background-color: #CCC;
 }
+
+body.no-js #ar2-theme-options .reset-thumbnail-sizes,
+body.no-js .nav-tab-wrapper,
+body.no-js .tokeninput,
+body.no-js .tax-dropdown,
+body.no-js .post-dropdown,
+body.js .no-js-label {
+	display: none;
+} 
+body.no-js-label {
+	font-weight: bold;
+}

@@ -11,6 +11,8 @@ ar2Admin = {
 			}
 		} );
 		
+		$( '.terms-multiselect' ).remove();
+		
 		$( 'input.tokeninput' ).each( function( index ) {
 			ar2Admin.initTokenInput( this );
 		} );
