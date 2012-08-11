@@ -112,7 +112,7 @@ function ar2_add_sidebars() {
 	register_sidebar( array(
 		'name' => __( 'Primary Sidebar', 'ar2' ),
 		'id' => 'primary-sidebar',
-		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
+		'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
@@ -120,7 +120,7 @@ function ar2_add_sidebars() {
 	register_sidebar( array(
 		'name' => __( 'Bottom Content #1', 'ar2' ),
 		'id' => 'bottom-content-1',
-		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
+		'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
@@ -128,7 +128,7 @@ function ar2_add_sidebars() {
 	register_sidebar( array(
 		'name' => __( 'Bottom Content #2', 'ar2' ),
 		'id' => 'bottom-content-2',
-		'before_widget' => '<aside id="%1$s" class="widget clearfix">',
+		'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
