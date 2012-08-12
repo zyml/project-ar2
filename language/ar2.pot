@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-11 03:49+0730\n"
+"POT-Creation-Date: 2012-08-12 23:26+0730\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Melvin Lee <zy@zy.sg>\n"
 "Language-Team:  <zy@zy.sg>\n"
@@ -262,18 +262,39 @@ msgstr ""
 
 #: ../library/options.php:33
 #, php-format
-msgid "Copyright %s. All Rights Reserved"
+msgid "Copyright %s."
 msgstr ""
 
-#: ../library/options.php:144
+#: ../library/options.php:34
+#, php-format
+msgid "Powered by %s and %s."
+msgstr ""
+
+#: ../library/options.php:35
+msgid "http://www.arrastheme.com/project-ar2/"
+msgstr ""
+
+#: ../library/options.php:35
+msgid "Project AR2"
+msgstr ""
+
+#: ../library/options.php:36
+msgid "http://www.wordpress.org/"
+msgstr ""
+
+#: ../library/options.php:36
+msgid "WordPress"
+msgstr ""
+
+#: ../library/options.php:148
 msgid "Your settings have been reverted to the defaults."
 msgstr ""
 
-#: ../library/options.php:152
+#: ../library/options.php:156
 msgid "Your settings have been successfully imported."
 msgstr ""
 
-#: ../library/options.php:230
+#: ../library/options.php:234
 msgid "Your settings have been successfully saved."
 msgstr ""
 
@@ -946,6 +967,11 @@ msgid "Ask questions and share tips and tricks with fellow theme users all over 
 msgstr ""
 
 #: ../library/admin/admin.php:474
+#: ../library/admin/admin.php:482
+msgid "http://forums.arrastheme.com/"
+msgstr ""
+
+#: ../library/admin/admin.php:474
 msgid "Community Forums"
 msgstr ""
 
@@ -955,6 +981,10 @@ msgstr ""
 
 #: ../library/admin/admin.php:478
 msgid "Arras & Project AR2 are open-source projects developed in my free time since 2009 for the benefit of the WordPress community. Your donations will support the on-going development of these themes in many years to come."
+msgstr ""
+
+#: ../library/admin/admin.php:479
+msgid "http://www.arrastheme.com/donate/"
 msgstr ""
 
 #: ../library/admin/admin.php:479
@@ -974,11 +1004,19 @@ msgid "Ask questions and share tips and tricks with others."
 msgstr ""
 
 #: ../library/admin/admin.php:483
+msgid "https://www.transifex.net/projects/p/project-ar2/"
+msgstr ""
+
+#: ../library/admin/admin.php:483
 msgid "Translations"
 msgstr ""
 
 #: ../library/admin/admin.php:483
 msgid "Fluent in other languages? Translate the theme for other users around the world."
+msgstr ""
+
+#: ../library/admin/admin.php:484
+msgid "https://github.com/zyml/project-ar2"
 msgstr ""
 
 #: ../library/admin/admin.php:484
