@@ -471,17 +471,17 @@ function ar2_theme_options_render_page() {
 			<aside class="widget clearfix">
 				<h3 class="widget-title"><?php _e( 'Need Support?', 'ar2' ) ?></h3>
 				<p><?php _e( 'Ask questions and share tips and tricks with fellow theme users all over the world at the theme community forums.', 'ar2' ) ?></p>
-				<p class="theme-link"><a href="http://forums.arrastheme.com/"><?php _e( 'Community Forums', 'ar2' ) ?></a></p>
+				<p class="theme-link"><a href="<?php _e( 'http://forums.arrastheme.com/' ,'ar2' ) ?>"><?php _e( 'Community Forums', 'ar2' ) ?></a></p>
 			</aside>
 			<aside class="widget clearfix">
 				<h3 class="widget-title"><?php _e( 'Like this Theme?', 'ar2' ) ?></h3>
 				<p><?php _e( 'Arras & Project AR2 are open-source projects developed in my free time since 2009 for the benefit of the WordPress community. Your donations will support the on-going development of these themes in many years to come.', 'ar2' ) ?></p>
-				<p class="theme-link"><a href="http://www.arrastheme.com/donate/"><?php _e( 'Donate to Theme Author', 'ar2' ) ?></a></p>
+				<p class="theme-link"><a href="<?php _e( 'http://www.arrastheme.com/donate/', 'ar2' ) ?>"><?php _e( 'Donate to Theme Author', 'ar2' ) ?></a></p>
 				<p><?php _e( 'There are other ways you can support these themes too:', 'ar2' ) ?></p>
 				<ul>
-					<li><strong><a href="http://forums.arrastheme.com/"><?php _e( 'Forums', 'ar2' ) ?></a></strong><br /><?php _e( 'Ask questions and share tips and tricks with others.', 'ar2' ) ?></li>
-					<li><strong><a href="https://www.transifex.net/projects/p/project-ar2/"><?php _e( 'Translations', 'ar2' ) ?></a></strong><br /><?php _e( 'Fluent in other languages? Translate the theme for other users around the world.', 'ar2' ) ?></li>
-					<li><strong><a href="https://github.com/zyml/project-ar2"><?php _e( 'GitHub', 'ar2' ) ?></a></strong><br /><?php _e( 'Aid development by sending in bug reports and issuing patches.', 'ar2' ) ?></li>
+					<li><strong><a href="<?php _e( 'http://forums.arrastheme.com/', 'ar2' ) ?>"><?php _e( 'Forums', 'ar2' ) ?></a></strong><br /><?php _e( 'Ask questions and share tips and tricks with others.', 'ar2' ) ?></li>
+					<li><strong><a href="<?php _e( 'https://www.transifex.net/projects/p/project-ar2/', 'ar2' ) ?>"><?php _e( 'Translations', 'ar2' ) ?></a></strong><br /><?php _e( 'Fluent in other languages? Translate the theme for other users around the world.', 'ar2' ) ?></li>
+					<li><strong><a href="<?php _e( 'https://github.com/zyml/project-ar2', 'ar2' ) ?>"><?php _e( 'GitHub', 'ar2' ) ?></a></strong><br /><?php _e( 'Aid development by sending in bug reports and issuing patches.', 'ar2' ) ?></li>
 				</ul>
 			</aside>
 		</div>

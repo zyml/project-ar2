@@ -30,7 +30,11 @@ function ar2_get_default_theme_options() {
 	$_default_theme_options = array (
 	
 		'version' => AR2_VERSION,
-		'footer_message' => '<p>' . sprintf( __('Copyright %s. All Rights Reserved', 'ar2'), get_bloginfo('name') ) . '</p>',
+		'footer_message' => '<p>' . sprintf( __( 'Copyright %s.', 'ar2' ), get_bloginfo( 'name' ) ) . ' ' . 
+			sprintf( __( 'Powered by %s and %s.', 'ar2' ),
+				'<a href="' . esc_url( __( 'http://www.arrastheme.com/project-ar2/', 'ar2' ) ) . '">' . __( 'Project AR2', 'ar2' ) . '</a>',
+				'<a href="' . esc_url( __( 'http://www.wordpress.org/', 'ar2' ) ) . '">' . __( 'WordPress', 'ar2' ) . '</a>'	
+			) . '</p>',
 		
 		'archive_display' => 'quick',
 		
