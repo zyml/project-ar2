@@ -237,7 +237,7 @@ msgid "Permalink to %s"
 msgstr ""
 
 #: ../section-node.php:18
-#../section-quick.php:22
+#: ../section-quick.php:22
 msgid "Posted on %s"
 msgstr ""
 
