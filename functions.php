@@ -141,7 +141,7 @@ function ar2_add_sidebars() {
 		register_sidebar( array(
 			'name' => sprintf( __( 'Footer Sidebar #%s', 'ar2' ), $i ),
 			'id' => 'footer-sidebar-' . $i,
-			'before_widget' => '<aside id="%1$s" class="widget clearfix">',
+			'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'
