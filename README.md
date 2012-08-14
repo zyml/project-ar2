@@ -2,7 +2,7 @@
 Last README update: 2012-08-09
 
 ## Overview
-Project AR2 is the re-release of Arras WordPress Theme, with up-to-date standards and new features. Built on HTML/CSS3. Released under the GPLv2 license.
+Project AR2 is the re-release of Arras WordPress Theme, with up-to-date standards and new features. Built on HTML5/CSS3. Released under the GPLv2 license.
 
 ## Features
 * Featured slideshow powered by FlexSlider 2
