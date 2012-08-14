@@ -293,7 +293,9 @@ class AR2_Featured_Stories extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 		
 		if ( !is_array( $instance[ 'featured_cat' ] ) )
 			$instance[ 'featured_cat' ] = array( $instance[ 'featured_cat' ] );
@@ -412,7 +414,9 @@ class AR2_Facebook_Activity_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 		
 		?>
 		<div class="fb-activity" data-width="280" data-height="300" data-header="false" data-recommendations="<?php echo $instance[ 'recommendations' ] ? 'true' : 'false' ?>" data-border-color="#FFF"></div>
@@ -489,7 +493,9 @@ class AR2_Facebook_Like_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 		
 		?>
 		<div class="fb-like-box" data-href="http://www.facebook.com/<?php echo $fb_id ?>" data-width="280" data-show-faces="<?php echo $instance[ 'faces' ] ? 'true' : 'false' ?>" data-border-color="#FFF" data-stream="<?php echo $instance[ 'stream' ] ? 'true' : 'false' ?>" data-header="false"></div>
@@ -574,7 +580,9 @@ class AR2_GPlus_Badge_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 			
 		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div><?php
 
@@ -644,7 +652,9 @@ class AR2_Video_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 			
 		echo $wp_embed->run_shortcode( '[embed width="272"]' . $instance[ 'video' ] . '[/embed]' );
 
@@ -728,7 +738,9 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . '<a href="http://www.twitter.com/' . ar2_get_theme_option( 'social_twitter' ) . '">' . sprintf( __( ' (%s)', 'ar2' ), '@' . ar2_get_theme_option( 'social_twitter' ) ) . '</a>' . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . '<a href="http://www.twitter.com/' . ar2_get_theme_option( 'social_twitter' ) . '">' . sprintf( __( ' (%s)', 'ar2' ), '@' . ar2_get_theme_option( 'social_twitter' ) ) . '</a>' . $after_title;
 		
 		$tweets = $this->get_tweets( ar2_get_theme_option( 'social_twitter' ), $instance[ 'number' ], $instance[ 'exclude_replies' ] );
 		
@@ -874,7 +886,9 @@ class AR2_Social_Buttons_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance[ 'title' ] );
 		
 		echo $before_widget;
-		echo $before_title . $title . $after_title;
+		
+		if ( $title != '' )
+			echo $before_title . $title . $after_title;
 		?>
 		<div class="social-nav clearfix">
 		
