@@ -248,17 +248,7 @@ final class AR2_PostViews {
 	 * @since 2.0
 	 */
 	public function register_sections() {
-		
-
-		/*$this->add_section( 'slideshow', 'home', array (
-			'label'		=> __( 'Slideshow', 'ar2' ),
-			'title'		=> __( 'Slideshow', 'ar2' ),
-			'type'		=> 'slideshow',
-			'count'		=> 3,
-			'priority'	=> 5,
-			'display_types' => array( 'slideshow' ),
-			'enabled'	=> true,
-		) );*/
+	
 		$this->add_section( new AR2_PostViews_Slideshow_Section( $this, 'slideshow', 'home', array (
 			'label'		=> __( 'Slideshow', 'ar2' ),
 			'title'		=> __( 'Slideshow', 'ar2' ),
