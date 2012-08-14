@@ -54,6 +54,50 @@ function ar2_get_default_theme_options() {
 		'layout' => 'twocol-r',	
 		'auto_thumbs' => true,
 		
+		'sections' => array (
+		
+			'slideshow' => array (
+				'enabled'	=> true,
+				'title' 	=> __( 'Slideshow', 'ar2' ),
+				'type'		=> 'slideshow',
+				'terms'		=> array(),
+				'post_type'	=> 'post',
+				'taxonomy'	=> 'category',
+				'count'		=> 3,
+			),
+			
+			'featured-posts-1' => array (
+				'enabled'	=> true,
+				'title' 	=> __( 'Featured Posts', 'ar2' ),
+				'type'		=> 'node',
+				'terms'		=> array(),
+				'post_type'	=> 'post',
+				'taxonomy'	=> 'category',
+				'count'		=> 3,
+			),
+			
+			'featured-posts-2' => array (
+				'enabled'	=> true,
+				'title' 	=> __( "Editors' Picks", 'ar2' ),
+				'type'		=> 'quick',
+				'terms'		=> array(),
+				'post_type'	=> 'post',
+				'taxonomy'	=> 'category',
+				'count'		=> 3,
+			),
+			
+			'news-posts' => array (
+				'enabled'	=> true,
+				'title' 	=> __( 'Latest News', 'ar2' ),
+				'type'		=> 'line',
+				'terms'		=> array(),
+				'post_type'	=> 'post',
+				'taxonomy'	=> 'category',
+				'count'		=> get_option( 'posts_per_page' ),
+			),
+			
+		),
+		
 	);
 	
 	return apply_filters( 'ar2_default_theme_options', $_default_theme_options );	
