@@ -81,7 +81,7 @@
 				<div class="author-meta">
 					<h4><?php printf( __( 'About %s', 'ar2' ), get_the_author_meta( 'display_name' ) ) ?></h4>
 					<?php 
-					if ( the_author_meta( 'description' ) == '' )
+					if ( get_the_author_meta( 'description' ) == '' )
 						_e( 'No information is provided by the author.', 'ar2' );
 					else
 						the_author_meta( 'description' );
