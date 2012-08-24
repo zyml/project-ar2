@@ -8,36 +8,9 @@
 	<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 		
 		<header class="entry-header clearfix">
-			<?php 
-			if ( ar2_get_theme_option( 'post_display[post_cats]' ) ) {
-			 	$post_cats = array();
-				$cats = get_the_category();
 				
-				foreach ( $cats as $c )
-					$post_cats[] = '<a href="' . get_category_link( $c->cat_ID ) . '">' . $c->cat_name . '</a>';
-				
-				echo '<div class="entry-cats">' . implode( ', ', $post_cats ) . '</div>';
-			}	
-			?>
-			
 			<h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h1>
-			
-			<?php if ( ar2_get_theme_option( 'post_display[post_author]' ) ) : ?>
-			<div class="entry-author">
-				<?php printf( __( 'Posted by %1$s %2$s', 'ar2' ), 
-					'<address class="author vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '" title="' . esc_attr( get_the_author() ) . '">' . get_the_author() . '</a></address>',
-					'<abbr class="published">' . ar2_posted_on( false ) . '</abbr>'
-				); ?>
-				<?php edit_post_link( __( 'Edit', 'ar2' ) ) ?>
-			</div>
-			<?php else : ?>
-			<div class="entry-author">
-				<?php printf( __( 'Posted %s', 'ar2' ), '<abbr class="published">' . ar2_posted_on( false ) . '</abbr>' ); ?>
-				<?php edit_post_link( __( 'Edit', 'ar2' ) ) ?>
-			</div>
-			<?php endif ?>
-			
-			
+				
 			<?php if ( ar2_get_theme_option( 'post_display[single_thumbs]' ) && has_post_thumbnail( $post->ID ) ) : ?>
 				<div class="entry-photo"><?php echo ar2_get_thumbnail( 'single-thumb' ) ?></div>
 			<?php endif ?>
