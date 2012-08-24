@@ -1600,8 +1600,17 @@ article.page .entry-header h1.entry-title {
 	.logo {
 		width: 100%;
 		float: none;
-		padding: 1em 0;
+		padding: 1em 0 !important;
 		text-align: center;
+		text-indent: 0 !important;
+	}
+	
+	.blog-name a:link, .blog-name a:visited {
+		height: auto !important;
+	}
+	
+	.blog-description {
+		display: block !important;
 	}
 	
 	/* Bottom Sidebar */

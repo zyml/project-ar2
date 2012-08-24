@@ -731,20 +731,31 @@ function ar2_header_style() {
 	$text_color = get_header_textcolor();
 	?>
 	<style type="text/css">
-	#branding {
-		<?php if ( $image ) : ?>
-		height: <?php echo get_custom_header()->height; ?>px;
-		background: url( <?php echo $image ?> ) no-repeat;
-		<?php endif ?>
-	}
+	<?php if ( $image ) : ?>
 	<?php if ( 'blank' == $text_color ) : ?>
-	.logo {	
+	.logo {
+		float: none;
+		padding: 0;
 		text-indent: -9000px;
 	}
+	.blog-name a:link, .blog-name a:visited {
+		display: block;
+		width: 100%;
+		height: 120px;
+		background: url( <?php echo $image ?> ) no-repeat;
+	}
+	.blog-description {
+		display: none;
+	}
 	<?php else : ?>
+	#branding {
+		height: <?php echo get_custom_header()->height; ?>px;
+		background: url( <?php echo $image ?> ) no-repeat;
+	}
 	.blog-name a:link, .blog-name a:visited, .blog-description {
 		color: #<?php echo $text_color ?>;
 	}
+	<?php endif ?>
 	<?php endif ?>
 	</style>
 	<?php
