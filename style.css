@@ -764,7 +764,7 @@ ul.menu li a {
 }
 
 /* Twitter Widget */
-.tweet-time {
+.tweet-time a {
 	color: #999;
 	font-size: 95%;
 	margin-left: .3em;

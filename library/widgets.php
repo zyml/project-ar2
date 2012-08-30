@@ -747,7 +747,7 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		if ( is_array( $tweets ) ) : ?>
 		<ul class="tweet-list">
 		<?php foreach( $tweets as $t ) : ?>
-		<li><?php echo $t[ 'text' ] ?><span class="tweet-time"><?php printf( __( '%s ago', 'ar2' ), human_time_diff( $t[ 'time' ], current_time( 'timestamp' ) ) ) ?></span></li>
+		<li><?php echo $t[ 'text' ] ?><span class="tweet-time"><a href="<?php echo $t['permalink']?>"><?php printf( __( '%s ago', 'ar2' ), human_time_diff( $t[ 'time' ], current_time( 'timestamp' ) ) ) ?></a></span></li>
 		<?php endforeach ?>
 		</ul><!-- .tweet-list -->
 		<?php else : ?>
