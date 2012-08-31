@@ -584,9 +584,28 @@ class AR2_GPlus_Badge_Widget extends WP_Widget {
 		if ( $title != '' )
 			echo $before_title . $title . $after_title;
 			
-		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div><?php
+		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div>
+		
+		<?php 
+			$lang = substr(get_locale(),0,2);
+			if(!$lang) {
+				$lang = 'en';
+			}
+		?>
+		
+		<script type="text/javascript">
+			window.___gcfg = {lang: '<?php echo $lang;?>'};
 
-		echo $after_widget;
+			
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+		</script>
+		
+		<?php echo $after_widget;
 		
 	}
 	
@@ -759,13 +778,23 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		
 	}
 	
+	public function filter_tweet($text) {
+    	$text = preg_replace('/\b([a-zA-Z]+:\/\/[\w_.\-]+\.[a-zA-Z]{2,6}[\/\w\-~.?=&%#+$*!]*)\b/i',"<a href=\"$1\" class=\"twitter-link\">$1</a>", $text);
+    	$text = preg_replace('/\b(?<!:\/\/)(www\.[\w_.\-]+\.[a-zA-Z]{2,6}[\/\w\-~.?=&%#+$*!]*)\b/i',"<a href=\"http://$1\" class=\"twitter-link\">$1</a>", $text);    
+    	$text = preg_replace("/\b([a-zA-Z][a-zA-Z0-9\_\.\-]*[a-zA-Z]*\@[a-zA-Z][a-zA-Z0-9\_\.\-]*[a-zA-Z]{2,6})\b/i","<a href=\"mailto://$1\" class=\"twitter-link\">$1</a>", $text);
+    	$text = preg_replace("/#(\w+)/u", "<a class=\"twitter-link\" href=\"http://search.twitter.com/search?q=\\1\">#\\1</a>", $text);
+    	$text = preg_replace("/@(\w+)/", "<a class=\"twitter-link\" href=\"http://twitter.com/\\1\">@\\1</a>", $text);
+
+    	return $text;
+    }
+	
 	public function get_tweets( $name, $count = 5, $exclude_replies = false ) {
 	
 		if ( false === $tweets = get_transient( $this->transient_name ) ) {
 		
 			$tweets = array();
 			
-			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies );
+			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies . '&include_rts=true');
 			
 			if ( !is_wp_error( $response ) && $response[ 'response' ][ 'code' ] == 200 ) {
 			
@@ -774,11 +803,12 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 				foreach ( $tweets_json as $tweet ) {
 					$name = $tweet[ 'user' ][ 'name' ];
 					$permalink = 'http://twitter.com/#!/'. $name .'/status/'. $tweet[ 'id_str' ];
+					$text = $this->filter_tweet($tweet['text']);
 					
 					// Message. Convert links to real links.
-					$pattern = '/http:(\S)+/';
-					$replace = '<a href="${0}" target="_blank" rel="nofollow">${0}</a>';
-					$text = preg_replace( $pattern, $replace, $tweet[ 'text' ] );
+					//$pattern = '/http:(\S)+/';
+					//$replace = '<a href="${0}" target="_blank" rel="nofollow">${0}</a>';
+					//$text = preg_replace( $pattern, $replace, $tweet[ 'text' ] );
 					
 					$time = $tweet[ 'created_at' ];
 					$time = date_parse( $time );
