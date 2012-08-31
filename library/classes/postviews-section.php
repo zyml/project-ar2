@@ -135,12 +135,9 @@ class AR2_PostViews_Section {
 		if ( !$this->settings[ '_preview' ] && $this->settings[ 'use_query_posts' ] ) {	
 		
 			$_query_args[ 'paged' ] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-		
-			query_posts( $_query_args );
-			$this->query = &$wp_query;
 			
-		} else
-			$this->query = new WP_Query( $_query_args );
+		}
+		$this->query = new WP_Query( $_query_args );
 		
 		return $this->query;
 		
