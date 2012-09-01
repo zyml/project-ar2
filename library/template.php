@@ -199,9 +199,16 @@ function ar2_load_facebook_sdk() {
 
 function ar2_load_gplus_sdk() {
 
+	$lang = substr(get_locale(),0,2);
+ 	if(!$lang) {
+		$lang = 'en';
+	}
+
 	?>
 	<script type="text/javascript">
 	/* <![CDATA[ */
+	window.___gcfg = {lang: '<?php echo $lang;?>'};
+	
 	( function() {
 	var po = document.createElement( 'script' ); po.type = 'text/javascript'; po.async = true;
 	po.src = 'https://apis.google.com/js/plusone.js';
