@@ -584,9 +584,28 @@ class AR2_GPlus_Badge_Widget extends WP_Widget {
 		if ( $title != '' )
 			echo $before_title . $title . $after_title;
 			
-		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div><?php
+		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div>
+		
+		<?php 
+			$lang = substr(get_locale(),0,2);
+			if(!$lang) {
+				$lang = 'en';
+			}
+		?>
+		
+		<script type="text/javascript">
+			window.___gcfg = {lang: '<?php echo $lang;?>'};
 
-		echo $after_widget;
+			
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+		</script>
+		
+		<?php echo $after_widget;
 		
 	}
 	
