@@ -742,7 +742,7 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		if ( $title != '' )
 			echo $before_title . $title . '<a href="http://www.twitter.com/' . ar2_get_theme_option( 'social_twitter' ) . '">' . sprintf( __( ' (%s)', 'ar2' ), '@' . ar2_get_theme_option( 'social_twitter' ) ) . '</a>' . $after_title;
 		
-		$tweets = $this->get_tweets( ar2_get_theme_option( 'social_twitter' ), $instance[ 'number' ], $instance[ 'exclude_replies' ] );
+		$tweets = $this->get_tweets( ar2_get_theme_option( 'social_twitter' ), $instance[ 'number' ], $instance[ 'exclude_replies' ], $instance[ 'include_rts' ] );
 		
 		if ( is_array( $tweets ) ) : ?>
 		<ul class="tweet-list">
@@ -759,13 +759,13 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		
 	}
 	
-	public function get_tweets( $name, $count = 5, $exclude_replies = false ) {
+	public function get_tweets( $name, $count = 5, $exclude_replies = false, $include_rts = false ) {
 	
 		if ( false === $tweets = get_transient( $this->transient_name ) ) {
 		
 			$tweets = array();
 			
-			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies );
+			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies . '&include_rts=' . $include_rts);
 			
 			if ( !is_wp_error( $response ) && $response[ 'response' ][ 'code' ] == 200 ) {
 			
@@ -815,6 +815,7 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		$instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
 		$instance[ 'number' ] = intval( $new_instance[ 'number' ] );
 		$instance[ 'exclude_replies' ] = ( boolean )( $new_instance[ 'exclude_replies' ] );
+		$instance[ 'include_rts' ] = ( boolean )( $new_instance[ 'include_rts' ] );
 		
 		delete_transient( $this->transient_name );
 		
@@ -828,6 +829,7 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 			'title' => __( 'Twitter Feed', 'ar2' ),
 			'number' => 5,
 			'exclude_replies' => false,
+			'include_rts' => false,
 		) );
 		
 		?>
@@ -847,6 +849,11 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		<p>
 		<input type="checkbox" name="<?php echo $this->get_field_name( 'exclude_replies' ) ?>" id="<?php echo $this->get_field_name( 'exclude_replies' ) ?>" <?php checked( $instance[ 'exclude_replies' ], 1 ) ?> />
 		<label for="<?php echo $this->get_field_id( 'exclude_replies' ) ?>"><?php _e( 'Exclude Replies', 'ar2' ) ?></label>
+		</p>
+		
+		<p>
+		<input type="checkbox" name="<?php echo $this->get_field_name( 'include_rts' ) ?>" id="<?php echo $this->get_field_name( 'include_rts' ) ?>" <?php checked( $instance[ 'include_rts' ], 1 ) ?> />
+		<label for="<?php echo $this->get_field_id( 'include_rts' ) ?>"><?php _e( 'Include RTs', 'ar2' ) ?></label>
 		</p>
 		
 		<p><?php _e( 'Your Twitter username must be specified via the theme options page for this widget to work.', 'ar2' ) ?></p>
