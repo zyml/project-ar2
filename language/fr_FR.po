@@ -1,0 +1,1201 @@
+# 
+# Translators:
+# <julfox37@hotmail.fr>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Project AR2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-12 23:26+0730\n"
+"PO-Revision-Date: 2012-09-01 17:36+0730\n"
+"Last-Translator: Melvin Lee <zy@zy.sg>\n"
+"Language-Team:  <zy@zy.sg>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Country: SINGAPORE\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../archive.php:10
+#: ../archive.php:12
+#: ../archive.php:14
+#, php-format
+msgid "%s Archive"
+msgstr "%s Archive"
+
+#: ../archive.php:16
+#: ../archive.php:18
+#: ../archive.php:20
+#, php-format
+msgid "Archive for %s"
+msgstr "Archive pour %s"
+
+#: ../archive.php:16
+msgid "F jS, Y"
+msgstr "F jS, Y"
+
+#: ../archive.php:18
+msgid "F, Y"
+msgstr "F, Y"
+
+#: ../archive.php:20
+msgid "Y"
+msgstr "Y"
+
+#: ../archive.php:22
+msgid "Author Archive"
+msgstr "Archive de l'auteur"
+
+#: ../archive.php:24
+#: ../blog-archives.php:20
+#: ../home.php:36
+msgid "Blog Archives"
+msgstr "Archive du blog"
+
+#: ../author.php:10
+#, php-format
+msgid "About Author: %s"
+msgstr "À propos de l'auteur: %s"
+
+#: ../author.php:20
+#: ../content-audio.php:85
+#: ../content-image.php:85
+#: ../content-video.php:85
+#: ../content.php:92
+#: ../image.php:83
+msgid "No information is provided by the author."
+msgstr "Aucune information n'est fournie par l'auteur."
+
+#: ../author.php:29
+#, php-format
+msgid "Posts by %s"
+msgstr "Rédigé par %s"
+
+#: ../comments.php:12
+msgid "Password Required"
+msgstr "Mot de passe requis"
+
+#: ../comments.php:13
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Cet article est protégé par un mot de passe. Entrez le mot de passe pour accéder aux commentaires."
+
+#: ../comments.php:26
+msgid "No Comments"
+msgstr "Pas de commentaires"
+
+#: ../comments.php:26
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: ../comments.php:39
+msgid "Trackbacks / Pings"
+msgstr "Trackbacks / Pings"
+
+#: ../comments.php:44
+msgid "Comments Closed"
+msgstr "Aucun commentaire accepté"
+
+#: ../comments.php:45
+msgid "Comments are closed. You will not be able to post a comment in this post."
+msgstr "Les commentaires sont déactivés. Vous ne serez pas en mesure de poster un commentaire dans cet article."
+
+#: ../content-audio.php:11
+#: ../content-image.php:11
+#: ../content-video.php:11
+#: ../content.php:70
+#: ../full-width-page.php:67
+#: ../image.php:50
+msgid "<p>Read the rest of this entry &raquo;</p>"
+msgstr "<p>Lire la suite du contenu &raquo;</p>"
+
+#: ../content-audio.php:12
+#: ../content-image.php:12
+#: ../content-video.php:12
+#: ../content.php:71
+#: ../image.php:51
+msgid "Pages:"
+msgstr "Pages:"
+
+#: ../content-audio.php:36
+#: ../content-image.php:36
+#: ../content-video.php:36
+#: ../content.php:32
+#: ../full-width-page.php:35
+#: ../image.php:15
+#, php-format
+msgid "Posted by %1$s %2$s"
+msgstr "Rédigé par %1$s %2$s"
+
+#: ../content-audio.php:40
+#: ../content-audio.php:45
+#: ../content-image.php:40
+#: ../content-image.php:45
+#: ../content-video.php:40
+#: ../content-video.php:45
+#: ../content.php:36
+#: ../content.php:41
+#: ../full-width-page.php:39
+#: ../full-width-page.php:44
+#: ../image.php:19
+#: ../image.php:24
+msgid "Edit"
+msgstr "Modifier"
+
+#: ../content-audio.php:44
+#: ../content-image.php:44
+#: ../content-video.php:44
+#: ../content.php:40
+#: ../full-width-page.php:43
+#: ../image.php:23
+#, php-format
+msgid "Posted %s"
+msgstr "Rédigé %s"
+
+#: ../content-audio.php:72
+#: ../content-image.php:72
+#: ../content-video.php:72
+#: ../content.php:79
+#: ../image.php:70
+msgid "Tags: "
+msgstr "Mots-clefs: "
+
+#: ../content-audio.php:82
+#: ../content-image.php:82
+#: ../content-video.php:82
+#: ../content.php:89
+#: ../image.php:80
+#, php-format
+msgid "About %s"
+msgstr "À propos %s"
+
+#: ../footer.php:33
+msgid "Back to Top"
+msgstr "Haut de la page"
+
+#: ../full-width-page.php:68
+msgid "<p><strong>Pages:</strong> "
+msgstr "<p><strong>Pages:</strong> "
+
+#: ../functions.php:74
+msgid "Main Menu"
+msgstr "Main Menu"
+
+#: ../functions.php:75
+msgid "Top Menu"
+msgstr "Top Menu"
+
+#: ../functions.php:76
+msgid "Footer Navigation"
+msgstr "Footer Navigation"
+
+#: ../functions.php:113
+msgid "Primary Sidebar"
+msgstr "Primary Sidebar"
+
+#: ../functions.php:121
+msgid "Bottom Content #1"
+msgstr "Bottom Content #1"
+
+#: ../functions.php:129
+msgid "Bottom Content #2"
+msgstr "Bottom Content #2"
+
+#: ../functions.php:142
+#, php-format
+msgid "Footer Sidebar #%s"
+msgstr "Footer Sidebar #%s"
+
+#: ../page.php:27
+#, php-format
+msgid "Posted by %1$s on %2$s"
+msgstr "Posté par %1$s dans %2$s"
+
+#: ../search.php:6
+msgid "Search Results"
+msgstr "Résultat de la recherche"
+
+#: ../search.php:17
+msgid "Sorry, we couldn't find any results based on your search query."
+msgstr "Désolé, nous n'avons pas trouvé de résultats en rapport avec votre recherche."
+
+#: ../section-404.php:10
+msgid "Error 404 - Not Found"
+msgstr "Error 404 - Not Found"
+
+#: ../section-404.php:13
+msgid "We're very sorry, but that page doesn't exist or has been moved."
+msgstr "Nous sommes désolés, mais cette page n'existe pas ou a été déplacée."
+
+#: ../section-404.php:14
+msgid "If you still can't find what you're looking for, try using the search form below."
+msgstr "Si vous ne pouvez toujours pas trouver ce que vous cherchez, essayez d'utiliser le formulaire de recherche ci-dessous."
+
+#: ../section-line.php:10
+#: ../section-quick.php:25
+#, php-format
+msgid "Permalink to %s"
+msgstr "Lien permanent vers %s"
+
+#: ../section-quick.php:26
+msgid "Continue Reading"
+msgstr "Lire la suite"
+
+#: ../section.php:56
+msgid "Read the rest of this entry"
+msgstr "Lire le reste de cette entrée"
+
+#: ../sidebar.php:11
+msgid "Welcome to Project AR2!"
+msgstr "Bienvenue sur le Projet AR2!"
+
+#: ../sidebar.php:12
+msgid "To remove this widget, simply go to the Widgets page in your WordPress admin and add a widget into this sidebar."
+msgstr "Pour supprimer ce widget, il suffit d'aller à la section Widgets dans votre section admin WordPress et ajouter un widget dans cette barre latérale."
+
+#: ../sidebar.php:16
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: ../sidebar.php:42
+msgid "Tag Cloud"
+msgstr "Nuage de mots-clefs"
+
+#: ../library/options.php:33
+#, php-format
+msgid "Copyright %s."
+msgstr "Copyright %s."
+
+#: ../library/options.php:34
+#, php-format
+msgid "Powered by %s and %s."
+msgstr "Propulsé par %s et %s."
+
+#: ../library/options.php:35
+msgid "http://www.arrastheme.com/project-ar2/"
+msgstr "http://www.arrastheme.com/project-ar2/"
+
+#: ../library/options.php:35
+msgid "Project AR2"
+msgstr "Project AR2"
+
+#: ../library/options.php:36
+msgid "http://www.wordpress.org/"
+msgstr "http://www.wordpress.org/"
+
+#: ../library/options.php:36
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../library/options.php:148
+msgid "Your settings have been reverted to the defaults."
+msgstr "Les valeurs de vos paramètres ont été remis par défaut."
+
+#: ../library/options.php:156
+msgid "Your settings have been successfully imported."
+msgstr "Vos paramètres ont été importés avec succès."
+
+#: ../library/options.php:234
+msgid "Your settings have been successfully saved."
+msgstr "Vos paramètres ont bien été enregistré."
+
+#: ../library/postviews.php:263
+#: ../library/postviews.php:264
+#: ../library/classes/postviews-slideshow-section.php:20
+msgid "Slideshow"
+msgstr "Diaporama"
+
+#: ../library/postviews.php:273
+msgid "Featured Posts #1"
+msgstr "Featured Posts #1"
+
+#: ../library/postviews.php:274
+msgid "Featured Posts"
+msgstr "Featured Posts"
+
+#: ../library/postviews.php:282
+msgid "Featured Posts #2"
+msgstr "Featured Posts #2"
+
+#: ../library/postviews.php:283
+msgid "Editors' Picks"
+msgstr "Editors' Picks"
+
+#: ../library/postviews.php:291
+msgid "News Posts"
+msgstr "Nouveaux articles"
+
+#: ../library/postviews.php:292
+msgid "Latest News"
+msgstr "Derniers articles"
+
+#: ../library/postviews.php:316
+msgid "Home"
+msgstr "Accueil"
+
+#: ../library/postviews.php:317
+msgid "Handles all content being displayed in the front page (excluding the slideshow)."
+msgstr "Gère tout le contenu affiché dans la page d'accueil (à l'exclusion du diaporama)."
+
+#: ../library/styles.php:87
+#: ../library/styles.php:161
+msgid "Default"
+msgstr "Default"
+
+#: ../library/styles.php:109
+msgid "Unknown Font"
+msgstr "Police inconnu"
+
+#: ../library/styles.php:184
+msgid "Unknown Color"
+msgstr "Couleur inconnu"
+
+#: ../library/styles.php:246
+msgid "2 Column Layout (Right Sidebar)"
+msgstr "2 Colonnes (Colonne à droite)"
+
+#: ../library/styles.php:247
+msgid "2 Column Layout (Left Sidebar)"
+msgstr "2 Colonnes (Colonne à gauche)"
+
+#: ../library/styles.php:259
+msgid "Primary Font"
+msgstr "Police principale"
+
+#: ../library/styles.php:260
+msgid "Secondary Font"
+msgstr "Police secondaire"
+
+#: ../library/styles.php:304
+msgid "Primary Color"
+msgstr "Couleur principale"
+
+#: ../library/styles.php:311
+msgid "Orange"
+msgstr "Orange"
+
+#: ../library/styles.php:315
+msgid "Yellow"
+msgstr "Jaune"
+
+#: ../library/styles.php:319
+msgid "Red"
+msgstr "Rouge"
+
+#: ../library/styles.php:323
+msgid "Blue"
+msgstr "Bleu"
+
+#: ../library/styles.php:327
+msgid "Pink"
+msgstr "Rose"
+
+#: ../library/styles.php:365
+msgid "Custom Fonts"
+msgstr "Polices personnalisées"
+
+#: ../library/styles.php:372
+msgid "Color Schemes"
+msgstr "Type de couleurs"
+
+#: ../library/styles.php:502
+#: ../library/admin/admin.php:18
+msgid "Layout"
+msgstr "Disposition"
+
+#: ../library/styles.php:514
+msgid "No. of Columns"
+msgstr "Nbre. de colonnes"
+
+#: ../library/styles.php:522
+msgid "Fonts"
+msgstr "Polices"
+
+#: ../library/template.php:23
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../library/template.php:52
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../library/template.php:73
+#, php-format
+msgid "on %s"
+msgstr "dans %s"
+
+#: ../library/template.php:78
+#, php-format
+msgid "%s weeks ago"
+msgstr "il y a %s semaines"
+
+#: ../library/template.php:80
+msgid "1 week ago"
+msgstr "il y a 1 semaine"
+
+#: ../library/template.php:84
+#, php-format
+msgid "%s days ago"
+msgstr "il y a %s jours"
+
+#: ../library/template.php:86
+msgid "1 day ago"
+msgstr "il y a 1 jour"
+
+#: ../library/template.php:90
+#, php-format
+msgid "%s hours ago"
+msgstr "il y a %s heures"
+
+#: ../library/template.php:92
+msgid "1 hour ago"
+msgstr "il y a 1 heure"
+
+#: ../library/template.php:96
+#, php-format
+msgid "%s minutes ago"
+msgstr "il y a %s minutes"
+
+#: ../library/template.php:98
+msgid "1 minute ago"
+msgstr "il y a 1 minutes"
+
+#: ../library/template.php:101
+msgid "less than a minute ago"
+msgstr "il y a moins d'une minute"
+
+#: ../library/template.php:136
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../library/template.php:139
+#, php-format
+msgid "Posted %1$s at %2$s"
+msgstr "Posté %1$s à %2$s"
+
+#: ../library/template.php:139
+msgid "c"
+msgstr "c"
+
+#: ../library/template.php:139
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#: ../library/template.php:139
+msgid "g:i A"
+msgstr "g:i A"
+
+#: ../library/thumbnails.php:16
+msgid "Single Post"
+msgstr "Article seul"
+
+#: ../library/thumbnails.php:19
+msgid "Sidebar Widgets"
+msgstr "Modules"
+
+#: ../library/thumbnails.php:22
+msgid "Post Sections"
+msgstr "Catégories "
+
+#: ../library/widgets.php:25
+msgid "Sidebar containing tabs that displays posts, comments and tags."
+msgstr "Module contenant des onglets qui affiche messages, des commentaires et des tags."
+
+#: ../library/widgets.php:27
+#, php-format
+msgid "%s - Tabbed Sidebar"
+msgstr "%s - Module par onglet"
+
+#: ../library/widgets.php:68
+msgid "Latest"
+msgstr "Derniers"
+
+#: ../library/widgets.php:69
+msgid "Random"
+msgstr "Au hasard"
+
+#: ../library/widgets.php:70
+msgid "Comments"
+msgstr "Commentaires"
+
+#: ../library/widgets.php:71
+#: ../library/admin/admin.php:568
+msgid "Tags"
+msgstr "Mots-clefs"
+
+#: ../library/widgets.php:201
+msgid "Tabbed Sidebar Order:"
+msgstr "Ordre des onglets du module:"
+
+#: ../library/widgets.php:208
+msgid "Post Count:"
+msgstr "Nombre d'articles:"
+
+#: ../library/widgets.php:216
+msgid "Comments Count:"
+msgstr "Nombre des commentaires:"
+
+#: ../library/widgets.php:227
+msgid "Display only in homepage"
+msgstr "Afficher seulement en page d'accueil"
+
+#: ../library/widgets.php:229
+msgid "Display thumbnails"
+msgstr "Afficher les vignettes"
+
+#: ../library/widgets.php:280
+msgid "Featured stories containing post thumbnails and the excerpt based on categories."
+msgstr "Articles en vedette contenant les vignettes et l'extrait des articles en fonction des catégories."
+
+#: ../library/widgets.php:282
+#, php-format
+msgid "%s - Featured Stories"
+msgstr "%s - Articles en vedette"
+
+#: ../library/widgets.php:332
+msgid "Featured Stories"
+msgstr "Article en vedette"
+
+#: ../library/widgets.php:343
+#: ../library/widgets.php:443
+#: ../library/widgets.php:523
+#: ../library/widgets.php:602
+#: ../library/widgets.php:674
+#: ../library/widgets.php:822
+#: ../library/widgets.php:927
+msgid "Title:"
+msgstr "Titre:"
+
+#: ../library/widgets.php:347
+msgid "Featured Categories:"
+msgstr "Catégories en vedette:"
+
+#: ../library/widgets.php:349
+msgid "All Categories"
+msgstr "Toutes les catégories"
+
+#: ../library/widgets.php:359
+msgid "How many items would you like to display?"
+msgstr "Combien d'articles voulez-vous afficher ?"
+
+#: ../library/widgets.php:370
+msgid "Do not display in homepage"
+msgstr "Ne pas afficher en page d'accueil"
+
+#: ../library/widgets.php:373
+msgid "Show post excerpts"
+msgstr "Voir les extraits des articles"
+
+#: ../library/widgets.php:376
+msgid "Show thumbnails"
+msgstr "Afficher les vignettes"
+
+#: ../library/widgets.php:399
+msgid "The Activity Feed plugin displays the most interesting recent activity from Facebook taking place on your site."
+msgstr "Le plugin Flux d'activité affiche l'activité la plus intéressante et récente de Facebook en prenant place sur votre site."
+
+#: ../library/widgets.php:402
+#, php-format
+msgid "%s - Facebook Activity Feed"
+msgstr "%s - Flux d'activité Facebook"
+
+#: ../library/widgets.php:438
+msgid "Facebook Activity"
+msgstr "Activité Facebook"
+
+#: ../library/widgets.php:449
+msgid "Show Recommendations"
+msgstr "Voir les recommandations"
+
+#: ../library/widgets.php:473
+msgid "Widget that enables Facebook Page owners to attract and gain Likes from their own website."
+msgstr "Module qui permet aux propriétaires d'une page Facebook d'attirer et de gagner des abonnés via leur propre site web."
+
+#: ../library/widgets.php:476
+#, php-format
+msgid "%s - Facebook Like Box"
+msgstr "%s - Facebook Like Box"
+
+#: ../library/widgets.php:517
+msgid "Like our Facebook Page!"
+msgstr "Rejoignez notre page Facebook !"
+
+#: ../library/widgets.php:529
+msgid "Show Faces"
+msgstr "Afficher les photos de profil"
+
+#: ../library/widgets.php:532
+msgid "Show Stream"
+msgstr "Afficher le flux"
+
+#: ../library/widgets.php:535
+msgid "Your Facebook Page username must be specified via the theme options page for this widget to work."
+msgstr "Le nom d'utilisateur de votre page Facebook doit être spécifiée via la page Options de votre thème pour que ce widget puisse fonctionner."
+
+#: ../library/widgets.php:558
+msgid "Widget that shows a Google+ Badge for your Google+ page."
+msgstr "Module qui affiche un badge + Google pour votre page Google +."
+
+#: ../library/widgets.php:561
+#, php-format
+msgid "%s - Google+ Badge"
+msgstr "%s - Badge Google+"
+
+#: ../library/widgets.php:598
+msgid "Like our Google+ Page!"
+msgstr "Rejoignez notre page Google+ !"
+
+#: ../library/widgets.php:606
+msgid "Your Google+ Page ID must be specified via the theme options page for this widget to work."
+msgstr "L'ID de votre page Google + doit être spécifiée via la page Options de votre thème pour que ce widget puisse fonctionner."
+
+#: ../library/widgets.php:629
+msgid "Widget that embeds a video from any supported video sites."
+msgstr "Module qui intègre une vidéo à partir des sites de steaming vidéo pris en charge."
+
+#: ../library/widgets.php:633
+#, php-format
+msgid "%s - Video"
+msgstr "%s - Vidéo"
+
+#: ../library/widgets.php:669
+msgid "Video"
+msgstr "Vidéo"
+
+#: ../library/widgets.php:678
+msgid "Video URL:"
+msgstr "L'URL de votre vidéo:"
+
+#: ../library/widgets.php:682
+msgid "Supported Video Sites"
+msgstr "Site de streaming vidéo supporté par le thème"
+
+#: ../library/widgets.php:715
+msgid "Widget that shows a selected number of tweets."
+msgstr "Module qui affiche un certain nombre de tweets."
+
+#: ../library/widgets.php:718
+#, php-format
+msgid "%s - Twitter Feed"
+msgstr "%s - Twitter Feed"
+
+#: ../library/widgets.php:731
+#, php-format
+msgid " (%s)"
+msgstr " (%s)"
+
+#: ../library/widgets.php:738
+#, php-format
+msgid "%s ago"
+msgstr "il y a %s"
+
+#: ../library/widgets.php:742
+msgid "There seems to be a problem communicating with Twitter at the moment. Please try again later."
+msgstr "Il semble y avoir un problème de communication avec Twitter pour le moment. Réessayer plus tard, s'il vous plait."
+
+#: ../library/widgets.php:816
+msgid "Twitter Feed"
+msgstr "Twitter Feed"
+
+#: ../library/widgets.php:826
+msgid "Number of Tweets:"
+msgstr "Nombre de Tweets:"
+
+#: ../library/widgets.php:837
+msgid "Exclude Replies"
+msgstr "Réponses exclues"
+
+#: ../library/widgets.php:840
+msgid "Your Twitter username must be specified via the theme options page for this widget to work."
+msgstr "Votre identifiant Twitter doit être spécifiée via la page Options de votre thème pour que ce widget puisse fonctionner."
+
+#: ../library/widgets.php:841
+msgid "Any changes to the settings will take up to 5 minutes for it to take effect."
+msgstr "Toute modification des paramètres peut prendre jusqu'à 5 minutes pour qu'elle prenne effet."
+
+#: ../library/widgets.php:864
+msgid "Widget that shows all social media icons specified in the theme options."
+msgstr "Module qui affiche tous les icônes des réseaux sociaux spécifiés dans les options du thème."
+
+#: ../library/widgets.php:867
+#, php-format
+msgid "%s - Social Buttons"
+msgstr "%s - Social Buttons"
+
+#: ../library/widgets.php:881
+#: ../library/admin/admin.php:108
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: ../library/widgets.php:884
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../library/widgets.php:888
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../library/widgets.php:892
+msgid "Google+"
+msgstr "Google+"
+
+#: ../library/widgets.php:896
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../library/widgets.php:900
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../library/widgets.php:923
+msgid "Social Buttons"
+msgstr "Social Buttons"
+
+#: ../library/widgets.php:931
+msgid "Social network IDs must be specified for their respective buttons to appear."
+msgstr "ID de vos réseaux sociaux doivent être spécifiés pour que leurs icônes respectives puisse apparaître."
+
+#: ../library/widgets.php:996
+msgid "No posts at the moment. Check back again later!"
+msgstr "Pas d'articles pour le moment. Revenez plus tard !"
+
+#: ../library/admin/admin.php:12
+msgid "General"
+msgstr "Général"
+
+#: ../library/admin/admin.php:19
+msgid "Design"
+msgstr "Design"
+
+#: ../library/admin/admin.php:20
+msgid "Thumbnails"
+msgstr "Vignette"
+
+#: ../library/admin/admin.php:21
+msgid "Tools"
+msgstr "Outils"
+
+#: ../library/admin/admin.php:36
+msgid "Theme Information"
+msgstr "Information du thème"
+
+#: ../library/admin/admin.php:40
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
+
+#: ../library/admin/admin.php:44
+msgid "Footer Information"
+msgstr "Informations en bas de page"
+
+#: ../library/admin/admin.php:49
+msgid "Excerpts"
+msgstr "Extraits"
+
+#: ../library/admin/admin.php:53
+msgid "Archive / Search"
+msgstr "Archive / Recherche"
+
+#: ../library/admin/admin.php:57
+msgid "Posts"
+msgstr "Articles"
+
+#: ../library/admin/admin.php:62
+msgid "Overall Design"
+msgstr "Mise en page"
+
+#: ../library/admin/admin.php:67
+msgid "Thumbnail Options"
+msgstr "Options des vignettes"
+
+#: ../library/admin/admin.php:72
+msgid "Thumbnail Sizes"
+msgstr "Dimensions des vignettes"
+
+#: ../library/admin/admin.php:77
+msgid "Import / Export Options"
+msgstr "Options d'importation / exportation"
+
+#: ../library/admin/admin.php:99
+msgid "Version"
+msgstr "Version"
+
+#: ../library/admin/admin.php:102
+msgid "If you have recently upgraded Project AR2 to a new release, it is <span style=\"color: red\">highly recommended</span> that you reset your theme options, clear your browser cache and restart your browser before proceeding."
+msgstr "Si vous avez récemment mis à jour le thème Projet AR2 vers une version plus récente, il est <span style=\"color: red\">hautement recommandé</span> que vous réinitialisiez les options du thème, vidiez votre cache navigateur et redémarriez votre navigateur avant de poursuivre."
+
+#: ../library/admin/admin.php:111
+msgid "Custom feed URLs are no longer allowed due to support for automatic feed links."
+msgstr "Les liens URL de flux personnalisées ne sont plus autorisés en raison du support automatique des liens feed."
+
+#: ../library/admin/admin.php:115
+msgid "Twitter Username"
+msgstr "Pseudo Twitter"
+
+#: ../library/admin/admin.php:120
+msgid "Facebook Username"
+msgstr "Pseudo Facebook"
+
+#: ../library/admin/admin.php:125
+msgid "Flickr ID"
+msgstr "Flickr ID"
+
+#: ../library/admin/admin.php:130
+msgid "Google+ ID"
+msgstr "Google+ ID"
+
+#: ../library/admin/admin.php:135
+msgid "YouTube Channel ID"
+msgstr "YouTube Channel ID"
+
+#: ../library/admin/admin.php:142
+msgid "Footer Message"
+msgstr "Credits"
+
+#: ../library/admin/admin.php:144
+msgid "Usually your website's copyright information would go here.<br /> It would be great if you could include a link to WordPress or the theme website. :)"
+msgstr "En règle générale, les informations de copyright de votre site Web irait ici. <br /> Ce serait aimable si vous pouviez inclure un lien vers le site de WordPress ou celui du thème. :)"
+
+#: ../library/admin/admin.php:151
+msgid "Show Excerpts"
+msgstr "Voir les extraits"
+
+#: ../library/admin/admin.php:156
+msgid "Excerpt Limit"
+msgstr "Limite des extraits"
+
+#: ../library/admin/admin.php:159
+msgid "Excerpts will only be trimmed to the limit if no excerpt is specified for the respective post."
+msgstr "Les extraits seront coupé à cette limite si aucun extrait est spécifié pour l'article concerné."
+
+#: ../library/admin/admin.php:165
+msgid "Display Type"
+msgstr "Afficher le type"
+
+#: ../library/admin/admin.php:173
+msgid "Display in Single Posts"
+msgstr "Afficher dans les articles seuls"
+
+#: ../library/admin/admin.php:180
+msgid "Display Relative Post Dates"
+msgstr "Afficher les dates des articles"
+
+#: ../library/admin/admin.php:182
+msgid "Check this to display post dates relative to current time (eg. 2 days ago )."
+msgstr "Cochez cette case pour afficher les dates de publication des articles par rapport à l'heure actuelle (par exemple : il y a 2 jours)."
+
+#: ../library/admin/admin.php:188
+msgid "Auto Thumbnails"
+msgstr "Vignette automatique"
+
+#: ../library/admin/admin.php:190
+msgid "Check this to allow the theme to automatically retrieve the first attached image from the post as featured image when no image is specified."
+msgstr "Cochez cette case pour permettre au thème de récupérer automatiquement la première image de l'article lorsque aucune image n'est spécifiée."
+
+#: ../library/admin/admin.php:196
+msgid "No of Columns"
+msgstr "Nombre de colonnes"
+
+#: ../library/admin/admin.php:205
+msgid "Import Theme Options"
+msgstr "Importer les options du thème"
+
+#: ../library/admin/admin.php:207
+msgid "Import your theme settings by pasting the exported code in the textbox above."
+msgstr "Importez vos paramètres du thème en collant le code exporté dans le champ ci-dessus."
+
+#: ../library/admin/admin.php:212
+msgid "Export Theme Options"
+msgstr "Export Theme Options"
+
+#: ../library/admin/admin.php:214
+msgid "You can save the code above into a text file and use it when you need to import them into another installation. Note that not all options (custom background, child theme settings, etc.) will be exported."
+msgstr "Vous pouvez enregistrer le code ci-dessus dans un fichier texte et l'utiliser quand vous avez besoin de les importer dans une autre installation. Notez que toutes les options (arrière-plan personnalisé, les paramètres enfants du thème, etc.) seront exportés."
+
+#: ../library/admin/admin.php:237
+msgid "Custom Stylesheet"
+msgstr "Stylesheet personnalisé"
+
+#: ../library/admin/admin.php:240
+#, php-format
+msgid "Stylesheets can be placed in %s."
+msgstr "Stylesheets peuvent être placés dans %s."
+
+#: ../library/admin/admin.php:341
+msgid "Theme Options"
+msgstr "Options du thème"
+
+#: ../library/admin/admin.php:342
+msgid "Options"
+msgstr "Options"
+
+#: ../library/admin/admin.php:388
+msgid "If you have made any changes in the fields without submitting, all changes will be lost."
+msgstr "Si vous avez effectué des modifications dans les domaines sans les avoir soumis, tous les changements seront perdus."
+
+#: ../library/admin/admin.php:393
+msgid "Start by entering a term here."
+msgstr "Commencez par entrer un terme ici."
+
+#: ../library/admin/admin.php:394
+msgid "No results."
+msgstr "Aucun résultat."
+
+#: ../library/admin/admin.php:395
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+#: ../library/admin/admin.php:449
+#, php-format
+msgid "%s Theme Options"
+msgstr "%s Options du thème"
+
+#: ../library/admin/admin.php:464
+msgid "Save Changes"
+msgstr "Changements sauvés"
+
+#: ../library/admin/admin.php:465
+msgid "Reset Settings"
+msgstr "Paramètres remis à zéro"
+
+#: ../library/admin/admin.php:472
+msgid "Need Support?"
+msgstr "Besoin d'assistance ?"
+
+#: ../library/admin/admin.php:473
+msgid "Ask questions and share tips and tricks with fellow theme users all over the world at the theme community forums."
+msgstr "Posez vos questions et partagez des conseils et astuces avec d'autres utilisateurs du thème dans le monde entier dans les forums communautaires thématiques."
+
+#: ../library/admin/admin.php:474
+#: ../library/admin/admin.php:482
+msgid "http://forums.arrastheme.com/"
+msgstr "http://forums.arrastheme.com/"
+
+#: ../library/admin/admin.php:474
+msgid "Community Forums"
+msgstr "Community Forums"
+
+#: ../library/admin/admin.php:477
+msgid "Like this Theme?"
+msgstr "Vous aimez le thème ?"
+
+#: ../library/admin/admin.php:478
+msgid "Arras & Project AR2 are open-source projects developed in my free time since 2009 for the benefit of the WordPress community. Your donations will support the on-going development of these themes in many years to come."
+msgstr "Arras & Project AR2 sont des projets open-sources développés durant mon temps libre depuis 2009 pour le bénéfice de la communauté WordPress. Vos dons permetteront de soutenir le développement continu de ces thèmes pour les nombreuses années à venir."
+
+#: ../library/admin/admin.php:479
+msgid "http://www.arrastheme.com/donate/"
+msgstr "http://www.arrastheme.com/donate/"
+
+#: ../library/admin/admin.php:479
+msgid "Donate to Theme Author"
+msgstr "Faire un don à l'auteur du thème"
+
+#: ../library/admin/admin.php:480
+msgid "There are other ways you can support these themes too:"
+msgstr "Il y a d'autres manière de soutenir ces thèmes également:"
+
+#: ../library/admin/admin.php:482
+msgid "Forums"
+msgstr "Forums"
+
+#: ../library/admin/admin.php:482
+msgid "Ask questions and share tips and tricks with others."
+msgstr "Posez vos questions et partagez des conseils et astuces avec les autres."
+
+#: ../library/admin/admin.php:483
+msgid "https://www.transifex.net/projects/p/project-ar2/"
+msgstr "https://www.transifex.net/projects/p/project-ar2/"
+
+#: ../library/admin/admin.php:483
+msgid "Translations"
+msgstr "Traductions"
+
+#: ../library/admin/admin.php:483
+msgid "Fluent in other languages? Translate the theme for other users around the world."
+msgstr "Vous parlez couramment d'autres langues ? Traduisez le thème pour les autres utilisateurs à travers le monde."
+
+#: ../library/admin/admin.php:484
+msgid "https://github.com/zyml/project-ar2"
+msgstr "https://github.com/zyml/project-ar2"
+
+#: ../library/admin/admin.php:484
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../library/admin/admin.php:484
+msgid "Aid development by sending in bug reports and issuing patches."
+msgstr "Aider au développement du thème en envoyant des rapports de bugs et des correctifs."
+
+#: ../library/admin/admin.php:548
+msgid "Author & Publish Date"
+msgstr "Auteur & Date de publication"
+
+#: ../library/admin/admin.php:553
+msgid "Post Excerpt (if available)"
+msgstr "Extrait de l'article (si disponible)"
+
+#: ../library/admin/admin.php:558
+msgid "Facebook, Twitter, Google+ Buttons (English Only)"
+msgstr "Facebook, Twitter, Google+ Buttons (En anglais uniquement)"
+
+#: ../library/admin/admin.php:563
+msgid "Categories"
+msgstr "Catégories"
+
+#: ../library/admin/admin.php:573
+msgid "Post Thumbnail"
+msgstr "Vignettre des articles"
+
+#: ../library/admin/admin.php:578
+msgid "Author Information"
+msgstr "Informations sur l'auteur"
+
+#: ../library/admin/admin.php:601
+#: ../library/admin/admin.php:689
+msgid "No Taxonomies Available"
+msgstr "Pas de taxonomies disponibles"
+
+#: ../library/admin/admin.php:626
+#: ../library/classes/postviews-section.php:423
+msgid "Taxonomy"
+msgstr "Taxonomy"
+
+#: ../library/admin/admin.php:769
+msgid "Width"
+msgstr "Largeur"
+
+#: ../library/admin/admin.php:773
+msgid "Height"
+msgstr "Hauteur"
+
+#: ../library/admin/admin.php:777
+msgid "Reset to Defaults"
+msgstr "Réinitialiser les paramètres par défaut"
+
+#: ../library/admin/admin.php:794
+msgid "Please choose your taxonomy before proceeding."
+msgstr "S'il vous plaît choisir votre taxonomie avant de continuer."
+
+#: ../library/admin/admin.php:810
+msgid "Loading"
+msgstr "Changement en cours"
+
+#: ../library/admin/admin.php:827
+msgid "On"
+msgstr "On"
+
+#: ../library/admin/admin.php:828
+msgid "Off"
+msgstr "Off"
+
+#: ../library/admin/admin.php:893
+msgid "Default Stylesheet (style.css)"
+msgstr "Stylesheet par défault (style.css)"
+
+#: ../library/classes/postviews-section.php:42
+msgid "Node Based"
+msgstr "Node Based"
+
+#: ../library/classes/postviews-section.php:43
+msgid "Quick Preview"
+msgstr "Quick Preview"
+
+#: ../library/classes/postviews-section.php:44
+msgid "Per Line"
+msgstr "Per Line"
+
+#: ../library/classes/postviews-section.php:45
+msgid "Traditional"
+msgstr "Traditional"
+
+#: ../library/classes/postviews-section.php:159
+#, php-format
+msgid "Post Section ID: %s"
+msgstr "ID de la section de l'article : %s"
+
+#: ../library/classes/postviews-section.php:393
+#: ../library/classes/postviews-section.php:491
+#, php-format
+msgid "Enable %s"
+msgstr "Activé %s"
+
+#: ../library/classes/postviews-section.php:401
+#: ../library/classes/postviews-section.php:503
+msgid "Type"
+msgstr "Type"
+
+#: ../library/classes/postviews-section.php:409
+#: ../library/classes/postviews-section.php:497
+msgid "Title"
+msgstr "Titre"
+
+#: ../library/classes/postviews-section.php:416
+msgid "Post Type"
+msgstr "Type de l'article"
+
+#: ../library/classes/postviews-section.php:430
+#: ../library/classes/postviews-section.php:510
+msgid "Terms"
+msgstr "termes"
+
+#: ../library/classes/postviews-section.php:437
+#: ../library/classes/postviews-section.php:517
+msgid "Post Count"
+msgstr "Nombre de messages"
+
+#: ../library/classes/postviews-zone.php:67
+#, php-format
+msgid "ID: %s"
+msgstr "ID: %s"
+
+#: ../library/classes/postviews-zone.php:179
+#, php-format
+msgid "%s: Post Options"
+msgstr "%s: Options de l'article"
+
+#: ../library/classes/postviews-zone.php:184
+#, php-format
+msgid "Zone %s: Post Options"
+msgstr "Zone %s: Options de l'article"
+
+#: ../library/classes/postviews-zone.php:202
+#: ../library/classes/postviews-zone.php:274
+msgid "Hide Duplicate Posts"
+msgstr "Masquer les articles en double"
+
+#: ../library/classes/postviews-zone.php:208
+#: ../library/classes/postviews-zone.php:282
+msgid "Ignore Sticky Posts"
+msgstr "Ignorer les articles mis en avant"
+
+#: ../library/classes/postviews-zone.php:244
+#, php-format
+msgid "%s (Zone)"
+msgstr "%s (Zone)"
+
+#: ../library/classes/postviews-zone.php:258
+msgid "Post Options"
+msgstr "Options de l'article"
+
+#: ../library/classes/postviews-zone.php:276
+msgid "Check this to prevent duplicate posts from displaying within sections from this zone. This may increase your server load."
+msgstr "Cochez cette case pour éviter les messages en double au sein des sections de cette zone. Cela peut augmenter la charge du serveur."
+
+#: ../library/classes/postviews-zone.php:284
+msgid "Check this to ignore sticky posts from being displayed on every top of each section in this zone."
+msgstr "Cochez cette case pour ignorer les messages mis en avant de s'afficher en premier sur chaque section de cette zone."
+
+#: ../library/classes/customize/color-switcher-control.php:66
+msgid "Previewing hovered colors will not work at the moment."
+msgstr "La prévisualisation des couleurs ne fonctionnera pas pour le moment."
+
+#: ../library/classes/customize/terms-control.php:78
+msgid "The section's post type and taxonomy can be changed via the theme options page."
+msgstr "Les types et les taxonomies des sections des articles peuvent être changés via la pages des options du thème."
+
