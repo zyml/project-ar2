@@ -16,7 +16,7 @@
 		</div>
 		<div class="author-meta">
 			<?php 
-			if ( the_author_meta( 'description' ) == '' )
+			if ( get_the_author_meta( 'description' ) == '' )
 				_e( 'No information is provided by the author.', 'ar2' );
 			else
 				the_author_meta( 'description' );
