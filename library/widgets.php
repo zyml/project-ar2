@@ -584,7 +584,7 @@ class AR2_GPlus_Badge_Widget extends WP_Widget {
 		if ( $title != '' )
 			echo $before_title . $title . $after_title;
 			
-		?> <div class="g-plus" data-width="272" data-href="https://plus.google.com/<?php echo $gplus_id ?>?rel=publisher"></div><?php
+		?> <div class="g-plus" data-width="272" data-height="131" data-href="https://plus.google.com/<?php echo $gplus_id ?>" data-rel="publisher"></div><?php
 
 		echo $after_widget;
 		
