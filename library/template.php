@@ -199,9 +199,73 @@ function ar2_load_facebook_sdk() {
 
 function ar2_load_gplus_sdk() {
 
+	// Correspondence between WP language codes and Google's API ones
+	$lang_codes = array(
+		'af' => 'af',				// Afrikaans
+		'ar' => 'ar',				// Arabic
+		'bn_BD' => 'bn',			// Bengali
+		'eu' => 'eu',				// Basque
+		'bg_BG' => 'bg',			// Bulgarian
+		'ca' => 'ca',				// Catalan
+		'zh_CN' => 'zh-CN',			// Chinese (Simplified)
+		'zh_HK' => 'zh-HK',			// Chinese (Hong Kong)
+		'zh_TW' => 'zh_TW',			// Chinese (Taiwan)
+		'hr' => 'hr',				// Croatian
+		'cs_CZ' => 'cs',			// Czech
+		'da_DK' => 'da',			// Danish
+		'nl_NL' => 'nl',			// Dutch
+		'en_US' => 'en-US',			// English (US)
+		'en_GB' => 'en-GB',			// English (UK)
+		'et' => 'et',				// Estonian
+		'fi' => 'fi',				// Finnish
+		'fr_FR' => 'fr',			// French
+		'gl_ES' => 'gl',			// Galician
+		'de_DE' => 'de',			// German
+		'el' => 'el',				// Greek
+		'he_IL' => 'iw',			// Hebrew
+		'hi_IN' => 'hi',			// Hindi
+		'hu_HU' => 'hu',			// Hungarian
+		'is_IS' => 'is',			// Icelandic
+		'id_ID' => 'id',			// Indonesian
+		'it_IT' => 'it',			// Italian
+		'ja' => 'ja',				// Japanese
+		'ko_KR' => 'ko',			// Korean
+		'lv' => 'lv',				// Latvian
+		'lt_LT' => 'lt',			// Lithuanian
+		'ms_MY' => 'ms',			// Malay
+		'nb_NO' => 'no',			// Norwegian
+		'nn_NO' => 'no', 			// Norwegian
+		'fa_IR' => 'fa',			// Persian
+		'pl_PL' => 'pl',			// Polish
+		'pt_PT' => 'pt-PT',			// European Portuguese
+		'pt_BR' => 'pt-BR',			// Brazilian Portuguese
+		'ro_RO' => 'ro',			// Romanian
+		'ru_RU' => 'ru',			// Russian
+		'sr_RS' => 'sr',			// Serbian
+		'sk_SK' => 'sk',			// Slovak
+		'sl_SI' => 'sl',			// Slovenian
+		'es_ES' => 'es',			// Spanish
+		'es_PE' => 'es-419',		// Peru Spanish
+		'sv_SE' => 'sv',			// Swedish
+		'ta_LK' => 'ta',			// Tamil
+		'th' => 'th',				// Thai
+		'tr' => 'tr',				// Turkish
+		'uk' => 'uk',				// Ukranian
+		'vi' => 'vi',				// Vietnamese
+	);
+	
+	// Set English (US) as default if no matching is found
+	$lang = array_key_exists(get_locale(), $lang_codes) ? $lang_codes[get_locale()] : 'en-US';
+	
 	?>
+	
 	<script type="text/javascript">
 	/* <![CDATA[ */
+	
+	window.___gcfg = {
+		lang: '<?php echo $lang;?>'
+	};
+	
 	( function() {
 	var po = document.createElement( 'script' ); po.type = 'text/javascript'; po.async = true;
 	po.src = 'https://apis.google.com/js/plusone.js';
