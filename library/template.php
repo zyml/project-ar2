@@ -200,7 +200,7 @@ function ar2_load_facebook_sdk() {
 function ar2_load_gplus_sdk() {
 
 	// Correspondence between WP language codes and Google's API ones
-	$lang_codes = array(
+	$lang_codes = array (
 		'af' => 'af',				// Afrikaans
 		'ar' => 'ar',				// Arabic
 		'bn_BD' => 'bn',			// Bengali
@@ -255,7 +255,7 @@ function ar2_load_gplus_sdk() {
 	);
 	
 	// Set English (US) as default if no matching is found
-	$lang = array_key_exists(get_locale(), $lang_codes) ? $lang_codes[get_locale()] : 'en-US';
+	$lang = array_key_exists( get_locale(), $lang_codes ) ? $lang_codes[ get_locale() ] : 'en-US';
 	
 	?>
 	
@@ -263,7 +263,7 @@ function ar2_load_gplus_sdk() {
 	/* <![CDATA[ */
 	
 	window.___gcfg = {
-		lang: '<?php echo $lang;?>'
+		lang: '<?php echo $lang ?>'
 	};
 	
 	( function() {
