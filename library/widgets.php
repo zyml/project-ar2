@@ -765,7 +765,7 @@ class AR2_Twitter_Feed_Widget extends WP_Widget {
 		
 			$tweets = array();
 			
-			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies . '&include_rts=' . $include_rts);
+			$response = wp_remote_get( 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' . $name . '&count=' . $count . '&exclude_replies=' . $exclude_replies . '&include_rts=' . $include_rts );
 			
 			if ( !is_wp_error( $response ) && $response[ 'response' ][ 'code' ] == 200 ) {
 			

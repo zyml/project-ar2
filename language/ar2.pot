@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-12 23:26+0730\n"
+"POT-Creation-Date: 2012-09-24 23:00+0730\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Melvin Lee <zy@zy.sg>\n"
 "Language-Team:  <zy@zy.sg>\n"
@@ -103,7 +103,7 @@ msgstr ""
 #: ../content-image.php:11
 #: ../content-video.php:11
 #: ../content.php:70
-#: ../full-width-page.php:67
+#: ../full-width-page.php:40
 #: ../image.php:50
 msgid "<p>Read the rest of this entry &raquo;</p>"
 msgstr ""
@@ -120,7 +120,6 @@ msgstr ""
 #: ../content-image.php:36
 #: ../content-video.php:36
 #: ../content.php:32
-#: ../full-width-page.php:35
 #: ../image.php:15
 #, php-format
 msgid "Posted by %1$s %2$s"
@@ -134,8 +133,6 @@ msgstr ""
 #: ../content-video.php:45
 #: ../content.php:36
 #: ../content.php:41
-#: ../full-width-page.php:39
-#: ../full-width-page.php:44
 #: ../image.php:19
 #: ../image.php:24
 msgid "Edit"
@@ -145,7 +142,6 @@ msgstr ""
 #: ../content-image.php:44
 #: ../content-video.php:44
 #: ../content.php:40
-#: ../full-width-page.php:43
 #: ../image.php:23
 #, php-format
 msgid "Posted %s"
@@ -172,7 +168,7 @@ msgstr ""
 msgid "Back to Top"
 msgstr ""
 
-#: ../full-width-page.php:68
+#: ../full-width-page.php:41
 msgid "<p><strong>Pages:</strong> "
 msgstr ""
 
@@ -203,11 +199,6 @@ msgstr ""
 #: ../functions.php:142
 #, php-format
 msgid "Footer Sidebar #%s"
-msgstr ""
-
-#: ../page.php:27
-#, php-format
-msgid "Posted by %1$s on %2$s"
 msgstr ""
 
 #: ../search.php:6
@@ -286,53 +277,51 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: ../library/options.php:148
+#: ../library/options.php:61
+msgid "Slideshow"
+msgstr ""
+
+#: ../library/options.php:71
+msgid "Featured Posts"
+msgstr ""
+
+#: ../library/options.php:81
+msgid "Editors' Picks"
+msgstr ""
+
+#: ../library/options.php:91
+msgid "Latest News"
+msgstr ""
+
+#: ../library/options.php:192
 msgid "Your settings have been reverted to the defaults."
 msgstr ""
 
-#: ../library/options.php:156
+#: ../library/options.php:200
 msgid "Your settings have been successfully imported."
 msgstr ""
 
-#: ../library/options.php:234
+#: ../library/options.php:278
 msgid "Your settings have been successfully saved."
 msgstr ""
 
 #: ../library/postviews.php:263
-#: ../library/postviews.php:264
-#: ../library/classes/postviews-slideshow-section.php:20
-msgid "Slideshow"
-msgstr ""
-
-#: ../library/postviews.php:273
 msgid "Featured Posts #1"
 msgstr ""
 
-#: ../library/postviews.php:274
-msgid "Featured Posts"
-msgstr ""
-
-#: ../library/postviews.php:282
+#: ../library/postviews.php:272
 msgid "Featured Posts #2"
 msgstr ""
 
-#: ../library/postviews.php:283
-msgid "Editors' Picks"
-msgstr ""
-
-#: ../library/postviews.php:291
+#: ../library/postviews.php:281
 msgid "News Posts"
 msgstr ""
 
-#: ../library/postviews.php:292
-msgid "Latest News"
-msgstr ""
-
-#: ../library/postviews.php:316
+#: ../library/postviews.php:306
 msgid "Home"
 msgstr ""
 
-#: ../library/postviews.php:317
+#: ../library/postviews.php:307
 msgid "Handles all content being displayed in the front page (excluding the slideshow)."
 msgstr ""
 
@@ -553,210 +542,214 @@ msgstr ""
 msgid "%s - Featured Stories"
 msgstr ""
 
-#: ../library/widgets.php:332
+#: ../library/widgets.php:334
 msgid "Featured Stories"
 msgstr ""
 
-#: ../library/widgets.php:343
-#: ../library/widgets.php:443
-#: ../library/widgets.php:523
-#: ../library/widgets.php:602
-#: ../library/widgets.php:674
-#: ../library/widgets.php:822
-#: ../library/widgets.php:927
+#: ../library/widgets.php:345
+#: ../library/widgets.php:447
+#: ../library/widgets.php:529
+#: ../library/widgets.php:610
+#: ../library/widgets.php:684
+#: ../library/widgets.php:836
+#: ../library/widgets.php:948
 msgid "Title:"
 msgstr ""
 
-#: ../library/widgets.php:347
+#: ../library/widgets.php:349
 msgid "Featured Categories:"
 msgstr ""
 
-#: ../library/widgets.php:349
+#: ../library/widgets.php:351
 msgid "All Categories"
 msgstr ""
 
-#: ../library/widgets.php:359
+#: ../library/widgets.php:361
 msgid "How many items would you like to display?"
 msgstr ""
 
-#: ../library/widgets.php:370
+#: ../library/widgets.php:372
 msgid "Do not display in homepage"
 msgstr ""
 
-#: ../library/widgets.php:373
+#: ../library/widgets.php:375
 msgid "Show post excerpts"
 msgstr ""
 
-#: ../library/widgets.php:376
+#: ../library/widgets.php:378
 msgid "Show thumbnails"
 msgstr ""
 
-#: ../library/widgets.php:399
+#: ../library/widgets.php:401
 msgid "The Activity Feed plugin displays the most interesting recent activity from Facebook taking place on your site."
 msgstr ""
 
-#: ../library/widgets.php:402
+#: ../library/widgets.php:404
 #, php-format
 msgid "%s - Facebook Activity Feed"
 msgstr ""
 
-#: ../library/widgets.php:438
+#: ../library/widgets.php:442
 msgid "Facebook Activity"
 msgstr ""
 
-#: ../library/widgets.php:449
+#: ../library/widgets.php:453
 msgid "Show Recommendations"
 msgstr ""
 
-#: ../library/widgets.php:473
+#: ../library/widgets.php:477
 msgid "Widget that enables Facebook Page owners to attract and gain Likes from their own website."
 msgstr ""
 
-#: ../library/widgets.php:476
+#: ../library/widgets.php:480
 #, php-format
 msgid "%s - Facebook Like Box"
 msgstr ""
 
-#: ../library/widgets.php:517
+#: ../library/widgets.php:523
 msgid "Like our Facebook Page!"
 msgstr ""
 
-#: ../library/widgets.php:529
+#: ../library/widgets.php:535
 msgid "Show Faces"
 msgstr ""
 
-#: ../library/widgets.php:532
+#: ../library/widgets.php:538
 msgid "Show Stream"
 msgstr ""
 
-#: ../library/widgets.php:535
+#: ../library/widgets.php:541
 msgid "Your Facebook Page username must be specified via the theme options page for this widget to work."
 msgstr ""
 
-#: ../library/widgets.php:558
+#: ../library/widgets.php:564
 msgid "Widget that shows a Google+ Badge for your Google+ page."
 msgstr ""
 
-#: ../library/widgets.php:561
+#: ../library/widgets.php:567
 #, php-format
 msgid "%s - Google+ Badge"
 msgstr ""
 
-#: ../library/widgets.php:598
+#: ../library/widgets.php:606
 msgid "Like our Google+ Page!"
 msgstr ""
 
-#: ../library/widgets.php:606
+#: ../library/widgets.php:614
 msgid "Your Google+ Page ID must be specified via the theme options page for this widget to work."
 msgstr ""
 
-#: ../library/widgets.php:629
+#: ../library/widgets.php:637
 msgid "Widget that embeds a video from any supported video sites."
 msgstr ""
 
-#: ../library/widgets.php:633
+#: ../library/widgets.php:641
 #, php-format
 msgid "%s - Video"
 msgstr ""
 
-#: ../library/widgets.php:669
+#: ../library/widgets.php:679
 msgid "Video"
 msgstr ""
 
-#: ../library/widgets.php:678
+#: ../library/widgets.php:688
 msgid "Video URL:"
 msgstr ""
 
-#: ../library/widgets.php:682
+#: ../library/widgets.php:692
 msgid "Supported Video Sites"
 msgstr ""
 
-#: ../library/widgets.php:715
+#: ../library/widgets.php:725
 msgid "Widget that shows a selected number of tweets."
 msgstr ""
 
-#: ../library/widgets.php:718
+#: ../library/widgets.php:728
 #, php-format
 msgid "%s - Twitter Feed"
 msgstr ""
 
-#: ../library/widgets.php:731
+#: ../library/widgets.php:743
 #, php-format
 msgid " (%s)"
 msgstr ""
 
-#: ../library/widgets.php:738
+#: ../library/widgets.php:750
 #, php-format
 msgid "%s ago"
 msgstr ""
 
-#: ../library/widgets.php:742
+#: ../library/widgets.php:754
 msgid "There seems to be a problem communicating with Twitter at the moment. Please try again later."
 msgstr ""
 
-#: ../library/widgets.php:816
+#: ../library/widgets.php:829
 msgid "Twitter Feed"
 msgstr ""
 
-#: ../library/widgets.php:826
+#: ../library/widgets.php:840
 msgid "Number of Tweets:"
 msgstr ""
 
-#: ../library/widgets.php:837
+#: ../library/widgets.php:851
 msgid "Exclude Replies"
 msgstr ""
 
-#: ../library/widgets.php:840
+#: ../library/widgets.php:856
+msgid "Include RTs"
+msgstr ""
+
+#: ../library/widgets.php:859
 msgid "Your Twitter username must be specified via the theme options page for this widget to work."
 msgstr ""
 
-#: ../library/widgets.php:841
+#: ../library/widgets.php:860
 msgid "Any changes to the settings will take up to 5 minutes for it to take effect."
 msgstr ""
 
-#: ../library/widgets.php:864
+#: ../library/widgets.php:883
 msgid "Widget that shows all social media icons specified in the theme options."
 msgstr ""
 
-#: ../library/widgets.php:867
+#: ../library/widgets.php:886
 #, php-format
 msgid "%s - Social Buttons"
 msgstr ""
 
-#: ../library/widgets.php:881
+#: ../library/widgets.php:902
 #: ../library/admin/admin.php:108
 msgid "RSS Feed"
 msgstr ""
 
-#: ../library/widgets.php:884
+#: ../library/widgets.php:905
 msgid "Twitter"
 msgstr ""
 
-#: ../library/widgets.php:888
+#: ../library/widgets.php:909
 msgid "Facebook"
 msgstr ""
 
-#: ../library/widgets.php:892
+#: ../library/widgets.php:913
 msgid "Google+"
 msgstr ""
 
-#: ../library/widgets.php:896
+#: ../library/widgets.php:917
 msgid "Flickr"
 msgstr ""
 
-#: ../library/widgets.php:900
+#: ../library/widgets.php:921
 msgid "YouTube"
 msgstr ""
 
-#: ../library/widgets.php:923
+#: ../library/widgets.php:944
 msgid "Social Buttons"
 msgstr ""
 
-#: ../library/widgets.php:931
+#: ../library/widgets.php:952
 msgid "Social network IDs must be specified for their respective buttons to appear."
 msgstr ""
 
-#: ../library/widgets.php:996
+#: ../library/widgets.php:1017
 msgid "No posts at the moment. Check back again later!"
 msgstr ""
 
