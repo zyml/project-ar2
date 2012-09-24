@@ -557,16 +557,18 @@ ul.menu ul {
 }
 ul.menu ul li {
 	float: none;
+	width: 12em;
 }
 ul.menu ul ul {
 	top: 0;
-	left: 10em;
+	left: 12em;
 }
 ul.menu li:hover > ul {
 	visibility: visible;
 }
 ul.menu li a {
 	display: block;
+	overflow: hidden;
 }
 
 /* Top Menu */
