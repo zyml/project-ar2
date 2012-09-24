@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-29 11:01+0100\n"
+"POT-Creation-Date: 2012-09-01 16:57+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -118,7 +118,7 @@ msgstr "Editar"
 
 #: ../content-audio.php:44 ../content-image.php:44 ../content-video.php:44
 #: ../content.php:40 ../image.php:23 ../section-node.php:18
-#: ../section-quick.php:22 ../section.php:40 ../library/widgets.php:997
+#: ../section-quick.php:22 ../section.php:40 ../library/widgets.php:1004
 #, php-format
 msgid "Posted %s"
 msgstr "Publicado %s"
@@ -541,8 +541,8 @@ msgstr "Historias Destacadas"
 
 #: ../library/widgets.php:345 ../library/widgets.php:447
 #: ../library/widgets.php:529 ../library/widgets.php:610
-#: ../library/widgets.php:684 ../library/widgets.php:834
-#: ../library/widgets.php:941
+#: ../library/widgets.php:684 ../library/widgets.php:836
+#: ../library/widgets.php:948
 msgid "Title:"
 msgstr "Título:"
 
@@ -695,19 +695,23 @@ msgstr ""
 "Parece que hay un problema en la comunicación con Twitter en estos momentos. "
 "Por favor inténtalo de nuevo más tarde."
 
-#: ../library/widgets.php:828
+#: ../library/widgets.php:829
 msgid "Twitter Feed"
 msgstr "Actividad en Twitter"
 
-#: ../library/widgets.php:838
+#: ../library/widgets.php:840
 msgid "Number of Tweets:"
 msgstr "Número de Tweets:"
 
-#: ../library/widgets.php:849
+#: ../library/widgets.php:851
 msgid "Exclude Replies"
 msgstr "Excluir Respuestas"
 
-#: ../library/widgets.php:852
+#: ../library/widgets.php:856
+msgid "Include RTs"
+msgstr "Incluir RTs"
+
+#: ../library/widgets.php:859
 msgid ""
 "Your Twitter username must be specified via the theme options page for this "
 "widget to work."
@@ -715,60 +719,60 @@ msgstr ""
 "Tu usuario de Twitter debe especificarse a través de la página de opciones "
 "del tema para que este widget funcione."
 
-#: ../library/widgets.php:853
+#: ../library/widgets.php:860
 msgid ""
 "Any changes to the settings will take up to 5 minutes for it to take effect."
 msgstr ""
 "Cualquier cambio en los ajustes puede tardar hasta 5 minutos en tener efecto."
 
-#: ../library/widgets.php:876
+#: ../library/widgets.php:883
 msgid ""
 "Widget that shows all social media icons specified in the theme options."
 msgstr ""
 "Widget que muestra todos los iconos sociales especificados en las opciones "
 "del tema."
 
-#: ../library/widgets.php:879
+#: ../library/widgets.php:886
 #, php-format
 msgid "%s - Social Buttons"
 msgstr "%s - Botones Sociales"
 
-#: ../library/widgets.php:895 ../library/admin/admin.php:108
+#: ../library/widgets.php:902 ../library/admin/admin.php:108
 msgid "RSS Feed"
 msgstr "Feed RSS"
 
-#: ../library/widgets.php:898
+#: ../library/widgets.php:905
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../library/widgets.php:902
+#: ../library/widgets.php:909
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../library/widgets.php:906
+#: ../library/widgets.php:913
 msgid "Google+"
 msgstr "Google+"
 
-#: ../library/widgets.php:910
+#: ../library/widgets.php:917
 msgid "Flickr"
 msgstr "Flickr"
 
-#: ../library/widgets.php:914
+#: ../library/widgets.php:921
 msgid "YouTube"
 msgstr "YouTube"
 
-#: ../library/widgets.php:937
+#: ../library/widgets.php:944
 msgid "Social Buttons"
 msgstr "Botones Sociales"
 
-#: ../library/widgets.php:945
+#: ../library/widgets.php:952
 msgid ""
 "Social network IDs must be specified for their respective buttons to appear."
 msgstr ""
 "Los IDs de las redes sociales deben ser especificados para que aparezcan los "
 "respectivos botones."
 
-#: ../library/widgets.php:1010
+#: ../library/widgets.php:1017
 msgid "No posts at the moment. Check back again later!"
 msgstr "No hay entradas por el momento. ¡Vuelve a comprobarlo más tarde!"
 
