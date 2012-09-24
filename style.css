@@ -533,40 +533,40 @@ a.more-link:hover, .navigation a:hover, .comment-controls a:hover, a.post-edit-l
 #top-menu, #nav {
 	position: relative;
 }
-ul.menu, ul.menu ul {
+nav ul.menu, nav ul.menu ul {
 	margin: 0;
 	list-style: none;
 }
-ul.menu li {
+nav ul.menu li {
 	float: left;
 	line-height: 1.3em;
 	vertical-align: middle;
 	zoom: 1;
 }
-ul.menu li.hover, ul.menu li:hover {
+nav ul.menu li.hover, nav ul.menu li:hover {
 	position: relative;
 	z-index: 599;
 	cursor: default;
 	visibility: inherit;
 }
-ul.menu ul {
+nav ul.menu ul {
 	visibility: hidden;
 	position: absolute;
 	top: 100%;
 	z-index: 1000;
 }
-ul.menu ul li {
+nav ul.menu ul li {
 	float: none;
 	width: 12em;
 }
-ul.menu ul ul {
+nav ul.menu ul ul {
 	top: 0;
 	left: 12em;
 }
-ul.menu li:hover > ul {
+nav ul.menu li:hover > ul {
 	visibility: visible;
 }
-ul.menu li a {
+nav ul.menu li a {
 	display: block;
 	overflow: hidden;
 }
