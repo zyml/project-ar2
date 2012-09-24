@@ -11,7 +11,7 @@
 
 <?php 
 $posts_per_page = get_option( 'posts_per_page' );
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1; // use 'page' since this is a page template.
 
 $wp_query = new WP_Query( array ( 'paged' => $paged, 'posts_per_page' => $posts_per_page ) );
 ?>
