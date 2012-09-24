@@ -203,8 +203,6 @@ small {
 }
 img {
 	max-width: 100%;
-	width: auto; /* IE8 */
-	height: auto;
 }
 
 /* Forms */
