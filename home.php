@@ -35,22 +35,7 @@
 
 <h1 class="archive-title"><?php _e( 'Blog Archives', 'ar2' ) ?></h1>
 <div id="archive-posts">
-<?php
-$section = new AR2_PostViews_Section( null, 'archive-posts', null, array (
-	
-	'type'				=> ar2_get_theme_option( 'archive_display' ),
-	'title'				=> null,
-	'use_query_posts'	=> true,
-	'count'				=> get_option( 'posts_per_page' ),
-	'enabled'			=> true,
-	'persistent'		=> false,
-	
-) );
-ar2_render_section( $section );
-
-if ( $section->query->max_num_pages > 1 )
-	ar2_post_navigation();
-?>
+<?php ar2_render_posts( null, array ( 'type' => ar2_get_theme_option( 'archive_display' ) ), true ) ?>
 </div><!-- #archive-posts -->
 
 <?php endif; ?>

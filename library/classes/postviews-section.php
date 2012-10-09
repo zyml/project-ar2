@@ -55,12 +55,67 @@ class AR2_PostViews_Section {
 	}
 	
 	/**
-	 * Prepares WP_Query based on settings. An upgrade from Arras' arras_prep_query().
+	 * Updates Post Section settings from the database.
 	 * @since 2.0
 	 */
-	protected function prepare_query() {
+	public function flush_settings( $override = array() ) {
+		
+		global $ar2_options;
+		
+		$_defaults = array (
+			'enabled'			=> true,
+			'label'				=> sprintf( __( 'Post Section ID: %s', 'ar2' ), $this->id ),
+			'terms'				=> array(),
+			'count'				=> get_option( 'posts_per_page' ),
+			'taxonomy'			=> 'category',
+			'post_type'			=> 'post',
+			'priority'			=> 10,
+			'container'			=> true,
+			'persistent'		=> array( 'enabled', 'terms', 'count', 'taxonomy', 'post_type', 'type', 'title' ),
+			'display_types'		=> array( 'node', 'quick', 'line', 'traditional' ),
+			'use_main_query'	=> false,
+			'_preview'			=> false,
+		);
+		
+		$args = wp_parse_args( $override, $_defaults );
+
+		if ( is_array( $args[ 'persistent' ] ) && !is_array( $ar2_options ) ) 
+			ar2_flush_theme_options();
+		
+		if ( is_array( $args[ 'persistent' ] ) && isset( $ar2_options[ 'sections' ][ $this->id ] ) )
+			$this->settings = wp_parse_args( $ar2_options[ 'sections' ][ $this->id ], $args );
+		else
+			$this->settings = $args;
+			
+		$this->priority = &$this->settings[ 'priority' ];
+		
+		/*if ( is_array( $this->settings[ 'persistent' ] ) && !isset( $ar2_options[ 'sections' ][ $this->id ] ) ) {
+		
+			foreach( $this->settings[ 'persistent' ] as $id ) {
+				if ( isset( $this->settings[ $id ] ) )
+					$ar2_options[ 'sections' ][ $this->id ][ $id ] = $this->settings[ $id ];
+			}
+			
+			update_option( 'ar2_theme_options', $ar2_options );
+			
+		}*/
+	}
 	
-		global $wp_query, $paged;
+	/**
+	 * Retrieves the field ID for a specific setting.
+	 * @since 2.0
+	 */
+	public function get_field_name( $name ) {
+	
+		return apply_filters( $this->id . '_field_name', 'ar2_theme_options[sections][' . $this->id . '][' . $name . ']', $name );
+	
+	}
+	
+	/**
+	 * Parses WP_Query variables based on settings to be used in a new WP_Query object or overriden with an action hook.
+	 * @since 2.0.1
+	 */
+	protected function parse_query_args() {
 	
 		// Convert Term setting into an array.
 		if ( !is_array( $this->settings[ 'terms' ] ) )
@@ -129,78 +184,40 @@ class AR2_PostViews_Section {
 			$_query_args[ 'post_status' ] = 'inherit';
 		
 		// Post Count
-		$_query_args[ 'posts_per_page' ] = $this->settings[ 'count' ];	
+		$_query_args[ 'posts_per_page' ] = $this->settings[ 'count' ];
+		
+		return $_query_args;
+	
+	}
+	
+	/**
+	 * Prepares WP_Query based on settings. An upgrade from Arras' arras_prep_query().
+	 * @since 2.0
+	 */
+	protected function prepare_query() {
 
-		// Done! Now let's create a WP_Query object.
-		if ( !$this->settings[ '_preview' ] && $this->settings[ 'use_query_posts' ] ) {	
-		
-			$_query_args[ 'paged' ] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-		
-			query_posts( $_query_args );
+		global $wp_query;
+
+		if ( $this->settings[ 'use_main_query' ] ) {
+			add_action( 'pre_get_posts', array ( $this, 'alter_main_query' ) );
 			$this->query = &$wp_query;
-			
-		} else
-			$this->query = new WP_Query( $_query_args );
-		
-		return $this->query;
+			$this->query->get_posts();
+		} else {
+			// Create a WP_Query object for post section.
+			$this->query = new WP_Query( $this->parse_query_args() );
+		}
 		
 	}
 	
 	/**
-	 * Updates Post Section settings from the database.
-	 * @since 2.0
+	 * Action hook to alter main query.
+	 * @since 2.0.1
 	 */
-	public function flush_settings( $override = array() ) {
+	public function alter_main_query( $query ) {
 		
-		global $ar2_options;
+		if ( $query->is_main_query() )
+			$query->query_vars = wp_parse_args( $this->parse_query_args(), $query->query_vars );
 		
-		$_defaults = array (
-			'enabled'			=> true,
-			'label'				=> sprintf( __( 'Post Section ID: %s', 'ar2' ), $this->id ),
-			'terms'				=> array(),
-			'count'				=> get_option( 'posts_per_page' ),
-			'taxonomy'			=> 'category',
-			'post_type'			=> 'post',
-			'use_query_posts'	=> false,
-			'priority'			=> 10,
-			'container'			=> true,
-			'persistent'		=> array( 'enabled', 'terms', 'count', 'taxonomy', 'post_type', 'type', 'title' ),
-			'display_types'		=> array( 'node', 'quick', 'line', 'traditional' ),
-			'_preview'			=> false,
-		);
-		
-		$args = wp_parse_args( $override, $_defaults );
-
-		if ( is_array( $args[ 'persistent' ] ) && !is_array( $ar2_options ) ) 
-			ar2_flush_theme_options();
-		
-		if ( is_array( $args[ 'persistent' ] ) && isset( $ar2_options[ 'sections' ][ $this->id ] ) )
-			$this->settings = wp_parse_args( $ar2_options[ 'sections' ][ $this->id ], $args );
-		else
-			$this->settings = $args;
-			
-		$this->priority = &$this->settings[ 'priority' ];
-		
-		/*if ( is_array( $this->settings[ 'persistent' ] ) && !isset( $ar2_options[ 'sections' ][ $this->id ] ) ) {
-		
-			foreach( $this->settings[ 'persistent' ] as $id ) {
-				if ( isset( $this->settings[ $id ] ) )
-					$ar2_options[ 'sections' ][ $this->id ][ $id ] = $this->settings[ $id ];
-			}
-			
-			update_option( 'ar2_theme_options', $ar2_options );
-			
-		}*/
-	}
-	
-	/**
-	 * Retrieves the field ID for a specific setting.
-	 * @since 2.0
-	 */
-	public function get_field_name( $name ) {
-	
-		return apply_filters( $this->id . '_field_name', 'ar2_theme_options[sections][' . $this->id . '][' . $name . ']', $name );
-	
 	}
 	
 	/**
@@ -220,79 +237,86 @@ class AR2_PostViews_Section {
 		
 		if ( !is_a( $this->query, 'WP_Query' ) )
 			$this->prepare_query();
-		
-		if ( $this->settings[ 'container' ] ) {
-			echo '<div id="section-' . $this->id . '" class="clearfix"';
-		
-			if ( !$this->settings[ 'enabled' ] )
-				echo ' style="display: none"';
 			
-			echo '>';
-		}
+		// Check if the query has posts first!
+		if ( $this->query->have_posts() ) {
 		
-		if ( isset( $this->settings[ 'title' ] ) )
-			echo '<h4 class="home-title">' . $this->settings[ 'title' ] . '</h4>';
-		
-		if ( $this->settings[ 'type' ] == 'line' || $this->settings[ 'type' ] == 'quick' )
-			echo '<ul class="hfeed posts-' . $this->settings[ 'type' ] . '">';
-		else
-			echo '<div class="hfeed posts-' . $this->settings[ 'type' ] . '">';
-		
-		if ( $this->settings[ 'type' ] == 'node' ) {
+			if ( $this->settings[ 'container' ] ) {
+				echo '<div id="section-' . $this->id . '" class="clearfix"';
+			
+				if ( !$this->settings[ 'enabled' ] )
+					echo ' style="display: none"';
+				
+				echo '>';
+			}
+			
+			if ( isset( $this->settings[ 'title' ] ) )
+				echo '<h4 class="home-title">' . $this->settings[ 'title' ] . '</h4>';
+			
+			if ( $this->settings[ 'type' ] == 'line' || $this->settings[ 'type' ] == 'quick' )
+				echo '<ul class="hfeed posts-' . $this->settings[ 'type' ] . '">';
+			else
+				echo '<div class="hfeed posts-' . $this->settings[ 'type' ] . '">';
+			
+			if ( $this->settings[ 'type' ] == 'node' ) {
+	
+				for ( $i = 0; $this->query->have_posts(); $i++ ) :
+				
+					if ( $i % 3 == 0 ) echo '<div class="clearfix">';
+				
+					$this->query->the_post();
+				
+					// hack for plugin authors who love to use $post = $wp_query->post
+					$wp_query->post = $this->query->post;
+					setup_postdata( $post );
+				
+					get_template_part( 'section', $this->settings[ 'type' ] );
+					
+					if ( $i % 3 == 2 ) echo '</div>';
+					
+					// Update the post blacklist.
+					$this->zone->blacklist[] = $post->ID;
+					
+				endfor;
+				
+				if ( $i % 3 != 0 ) echo '</div>';
+				
+			} else {		
+			
+				while ( $this->query->have_posts() ) :
+				
+					$this->query->the_post();
+				
+					// hack for plugin authors who love to use $post = $wp_query->post
+					$wp_query->post = $this->query->post;
+					setup_postdata( $post );
+				
+					get_template_part( 'section', $this->settings[ 'type' ] );
+					
+					// Update the post blacklist.
+					$this->zone->blacklist[] = $post->ID;			
+					
+				endwhile;
+				
+			}
+			
+			if ( $this->settings[ 'type' ] == 'line' || $this->settings[ 'type' ] == 'quick' )
+				echo '</ul><!-- .posts-' . $this->settings[ 'type' ] . '-->';
+			else
+				echo '</div><!-- .posts-' . $this->settings[ 'type' ] . '-->';
 
-			for ( $i = 0; $this->query->have_posts(); $i++ ) :
+			if ( $this->settings[ 'use_main_query' ] && $this->query->max_num_pages > 1 )
+				ar2_post_navigation();
 			
-				if ( $i % 3 == 0 ) echo '<div class="clearfix">';
+			if ( $this->settings[ 'container' ] )
+				echo '</div><!-- #section-' . $this->id . '-->';
 			
-				$this->query->the_post();
-			
-				// hack for plugin authors who love to use $post = $wp_query->post
-				$wp_query->post = $this->query->post;
-				setup_postdata( $post );
-			
-				get_template_part( 'section', $this->settings[ 'type' ] );
-				
-				if ( $i % 3 == 2 ) echo '</div>';
-				
-				// Update the post blacklist.
-				$this->zone->blacklist[] = $post->ID;
-				
-			endfor;
-			
-			if ( $i % 3 != 0 ) echo '</div>';
-			
-		} else {		
+		} else {
 		
-			while ( $this->query->have_posts() ) :
-			
-				$this->query->the_post();
-			
-				// hack for plugin authors who love to use $post = $wp_query->post
-				$wp_query->post = $this->query->post;
-				setup_postdata( $post );
-			
-				get_template_part( 'section', $this->settings[ 'type' ] );
-				
-				// Update the post blacklist.
-				$this->zone->blacklist[] = $post->ID;			
-				
-			endwhile;
-			
+			// We'll put up a notice if there are no posts in the next patch.
+		
 		}
 		
-		if ( $this->settings[ 'type' ] == 'line' || $this->settings[ 'type' ] == 'quick' )
-			echo '</ul><!-- .posts-' . $this->settings[ 'type' ] . '-->';
-		else
-			echo '</div><!-- .posts-' . $this->settings[ 'type' ] . '-->';
-		
-		/*
-		if ( $this->settings[ 'use_query_posts' ] && $wp_query->max_num_pages > 1 )
-			ar2_post_navigation();
-		*/
-		
-		if ( $this->settings[ 'container' ] )
-			echo '</div><!-- #section-' . $this->id . '-->';
-			
 		// For developers to place code after the post section.
 		do_action( 'ar2_after_section-' . $this->id );
 			
