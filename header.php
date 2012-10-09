@@ -27,11 +27,6 @@
 wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.custom.min.js', null, '2012-07-08' );
 wp_enqueue_script( 'tinynav', get_template_directory_uri() . '/js/tinynav.min.js', array( 'jquery' ), '2012-08-02' );
 
-if ( is_singular() ) :
-wp_enqueue_style( 'colorbox_css', get_template_directory_uri() . '/css/colorbox.css', null, '2012-08-04' );
-wp_enqueue_script( 'colorbox', get_template_directory_uri() . '/js/jquery.colorbox.min.js', array( 'jquery' ), '2012-08-04' );
-endif;
-
 if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 ?>
 
