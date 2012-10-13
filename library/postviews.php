@@ -400,7 +400,6 @@ function ar2_render_posts( $query = null, $args = array(), $show_nav = false ) {
 	);
 	
 	$args = wp_parse_args( $args, $_defaults );
-	print_r( $args );
 
 	$section = new AR2_PostViews_Section( null, 'archive-posts', null, $args );
 	ar2_render_section( $section );
