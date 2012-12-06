@@ -24,7 +24,7 @@
 	color: #D54E21;
 }
 
-#ar2-theme-options .nav-tab-wrapper .ui-tabs-selected a {
+#ar2-theme-options .nav-tab-wrapper .ui-state-active a {
 	color: #464646;
 	border-bottom: 1px solid #FFF;
 }

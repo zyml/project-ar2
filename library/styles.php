@@ -302,7 +302,7 @@ final class AR2_Styles {
 	public function default_colors() {
 	
 		$this->add_color_set( 'primary', __( 'Primary Color', 'ar2' ), array (
-			'bg_selectors'		=> 'input[type=submit]:hover, a.more-link:hover, .navigation a:hover, .comment-controls a:hover, a.post-edit-link:hover, .wp-pagenavi a:hover, .tags a:hover, .tagcloud a:hover, .navigation .current, .wp-pagenavi .current, #main-nav ul.menu ul a:hover, #main-nav ul.menu ul ul a:hover, .multi-sidebar .tabs a:hover, .multi-sidebar .tabs .ui-tabs-selected a, .posts-node .entry-comments, .posts-quick .entry-comments, .posts-slideshow ul.flex-direction-nav li a:hover, .post-navigation span, .post-navigation a:hover span, .social-nav a:hover',
+			'bg_selectors'		=> 'input[type=submit]:hover, a.more-link:hover, .navigation a:hover, .comment-controls a:hover, a.post-edit-link:hover, .wp-pagenavi a:hover, .tags a:hover, .tagcloud a:hover, .navigation .current, .wp-pagenavi .current, #main-nav ul.menu ul a:hover, #main-nav ul.menu ul ul a:hover, .multi-sidebar .tabs a:hover, .multi-sidebar .tabs .ui-state-active a, .posts-node .entry-comments, .posts-quick .entry-comments, .posts-slideshow ul.flex-direction-nav li a:hover, .post-navigation span, .post-navigation a:hover span, .social-nav a:hover',
 			'text_selectors'	=> 'a:hover',
 			'border_selectors'	=> '#main-nav ul.menu li a:hover',
 		) );

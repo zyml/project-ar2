@@ -851,10 +851,10 @@ nav ul.menu li a {
 	background: #86C140;
 	color: #FFF;
 }
-.multi-sidebar .tabs .ui-tabs-selected a {
+.multi-sidebar .tabs .ui-state-active a {
 	background: #86C140;
 }
-.multi-sidebar .tabs .ui-tabs-selected a:link, .multi-sidebar .tabs .ui-tabs-selected a:visited {
+.multi-sidebar .tabs .ui-state-active a:link, .multi-sidebar .tabs .ui-state-active a:visited {
 	color: #FFF;
 }
 .multi-sidebar .entry-author {
