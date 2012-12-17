@@ -202,6 +202,28 @@
 	font-style: normal;
 }
 
+#ar2-theme-options .media-upload img {
+    display: block;
+    margin: 0 0 1em;
+    width: 50%;
+    border: 1px solid #F5F5F5;
+    height: auto;
+    border-radius: 3px;
+    padding: 1em;
+}
+#ar2-theme-options .media-upload input[type=text] {
+    display: none;
+}
+#ar2-theme-options .media-upload-remove {
+    color: #FF0000;
+    margin-left: 1em;
+}
+#ar2-theme-options .media-upload-remove:hover {
+    color: #FFF;
+    background: #FF0000;
+    margin-left: 1em;
+}
+
 .ie8 #ar2-theme-options .switch {
 	margin: 0;
 }

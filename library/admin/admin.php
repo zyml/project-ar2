@@ -190,14 +190,13 @@ function ar2_theme_options_default_fields() {
 			'description'		=> __( 'Check this to allow the theme to automatically retrieve the first attached image from the post as featured image when no image is specified.', 'ar2' )
 		),
 		
-		/* Layouts */
+		/* Overall Design */
 		'layout' => array (
 			'type'			=> 'dropdown',
 			'title'			=> __( 'No of Columns', 'ar2' ),
 			'section'		=> 'ar2_design_overall',
 			'options'		=> $ar2_styles->get_layouts(),
-		),
-		
+		),	
 		
 		/* Import / Export Options */
 		'import_theme_options' => array (
@@ -358,6 +357,15 @@ function ar2_theme_options_enqueue_scripts( $hook_suffix ) {
 	global $wp_styles;
 
 	$current = isset( $_GET[ 'opt_type' ] ) ? esc_attr( $_GET['opt_type'] ) : '';
+
+	// for media uploading functionality.
+	if ( function_exists( 'wp_enqueue_media' ) ) {
+		wp_enqueue_media();
+	} else {
+		wp_enqueue_script( 'thickbox' );
+		wp_enqueue_style( 'thickbox' );
+		wp_enqueue_script( 'media-upload' );
+	}
 	
 	wp_enqueue_style( 'ar2-theme-options', get_template_directory_uri() . '/css/theme-options.css', null, '2011-07-29' );
 	
@@ -385,15 +393,17 @@ function ar2_theme_options_localize_vars() {
 	$current = isset( $_GET[ 'opt_type' ] ) ? esc_attr( $_GET['opt_type'] ) : '';
 	
 	$_vars = array (
-		'changedConfirmation'	=> __( 'If you have made any changes in the fields without submitting, all changes will be lost.', 'ar2' )
-	);
-	
-	$_vars = array_merge( $_vars, array (
+		'changedConfirmation'	=> __( 'If you have made any changes in the fields without submitting, all changes will be lost.', 'ar2' ),
 		'ajaxurl'				=> admin_url( 'admin-ajax.php' ),
 		'hintText'				=> __( 'Start by entering a term here.', 'ar2' ),
 		'noResultsText'			=> __( 'No results.', 'ar2' ),
 		'searchingText'			=> __( 'Searching...', 'ar2' ),
-	) );
+		'uploadMediaTitle'		=> __( 'Upload Media', 'ar2' ),
+		'isNewMediaManager'		=> false,
+	);
+
+	if ( function_exists( 'wp_enqueue_media' ) )
+		$_vars[ 'isNewMediaManager' ] = true;
 	
 	$_fields = ar2_theme_options_default_fields();
 	
@@ -840,6 +850,15 @@ function ar2_theme_options_render_field( $args = array() ) {
 					echo '<label title="' . $color[ 'label' ] . '" for="' . $id . '-' . $color_id . '"><span style="background: ' . $color[ 'hex' ] . '">' . $color[ 'label' ] . '</span></label>';
 				}
 			}
+			echo '</div>';
+		break;
+
+		case 'media-upload' :
+			echo '<div class="media-upload">';
+			echo '<p><img id="media-upload-img-' . $id . '" src="' . $value . '" alt="" /></p>';
+			echo ar2_form_input( 'ar2_theme_options[' . $id . ']', $value, 'id="media-upload-' . $id . '"' );
+			echo '<input type="button" data-upload-field="' . $id . '" class="button media-upload-add" value="' . __( 'Add Image', 'ar2' ) . '" />';
+			echo '<a href="#" data-upload-field="' . $id . '" class="media-upload-remove">' . __( 'Remove', 'ar2' ) . '</a>';
 			echo '</div>';
 		break;
 		
