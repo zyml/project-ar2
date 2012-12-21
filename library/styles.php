@@ -25,10 +25,12 @@ final class AR2_Styles {
 		add_action( 'after_setup_theme', array( $this, 'default_fonts' ), 5 );
 		add_action( 'after_setup_theme', array( $this, 'default_colors' ), 5 );
 		
+		if ( !is_admin() ) {
+			add_action( 'wp_print_styles', array( $this, 'load_styles' ), 1 );
+			add_action( 'wp_print_styles', array( $this, 'remove_styles' ), 100 );
+		}
+
 		add_action( 'wp_head', array( $this, 'override_styles' ) );
-		
-		if ( !is_admin() )
-			add_action( 'wp_head', array( $this, 'load_styles' ), 1 );
 		
 		// Theme Options.
 		add_filter( 'ar2_default_theme_options', array( $this, 'add_default_theme_option' ) );
@@ -418,7 +420,7 @@ final class AR2_Styles {
 	 * @since 1.6
 	 */
 	public function load_styles() {
-	
+
 		if ( !AR2_ALLOW_CUSTOM_STYLES || ( 
 			!ar2_get_theme_option( 'style' ) || 
 			ar2_get_theme_option( 'style' ) == '_default' || 
@@ -443,6 +445,16 @@ final class AR2_Styles {
 		// load other custom styles
 		do_action( 'ar2_load_styles' );
 		
+	}
+
+	/**
+	 * Removes any unwanted styles.
+	 * @since 1.6
+	 */
+	public function remove_styles() {
+
+		wp_deregister_style( 'wp-pagenavi' );
+
 	}
 	
 	/**

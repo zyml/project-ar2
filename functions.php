@@ -79,9 +79,6 @@ function ar2_setup() {
 	/* Register sidebars */
 	ar2_add_sidebars();
 	
-	/* Header actions */
-	remove_action( 'wp_head', 'pagenavi_css' );
-	
 	add_action( 'wp_footer', 'ar2_add_header_js', 100 );
 	
 	// Editor Style
