@@ -84,7 +84,7 @@
         
 			<?php $id = get_the_author_meta( 'ID' ); ?>
 			<div class="about-author clearfix">
-				<a class="author-avatar" href="<?php get_author_posts_url( $id ) ?>"><?php echo get_avatar( $id, 64 ) ?></a>
+				<a class="author-avatar" href="<?php echo get_author_posts_url( $id ) ?>"><?php echo get_avatar( $id, 64 ) ?></a>
 				<div class="author-meta">
 					<h4><?php printf( __( 'About %s', 'ar2' ), get_the_author_meta( 'display_name' ) ) ?></h4>
 					<?php 
