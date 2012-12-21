@@ -184,7 +184,8 @@ class AR2_PostViews_Section {
 			$_query_args[ 'post_status' ] = 'inherit';
 		
 		// Post Count
-		$_query_args[ 'posts_per_page' ] = $this->settings[ 'count' ];
+		if ( !$this->settings[ 'use_main_query' ] )
+			$_query_args[ 'posts_per_page' ] = $this->settings[ 'count' ];
 		
 		return $_query_args;
 	
@@ -455,13 +456,14 @@ class AR2_PostViews_Section {
 			'section'		=> 'ar2_zone_' . $this->zone->id . '_' . $this->id,
 		);
 		
-		$fields[ 'section-' . $this->id . '-count' ] = array (
-			'setting'		=> $this->get_field_name( 'count' ),
-			'type'			=> 'dropdown',
-			'title'			=> __( 'Post Count', 'ar2' ),
-			'section'		=> 'ar2_zone_' . $this->zone->id . '_' . $this->id,
-			'options'		=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
-		);
+		if ( !$this->settings[ 'use_main_query' ] )
+			$fields[ 'section-' . $this->id . '-count' ] = array (
+				'setting'		=> $this->get_field_name( 'count' ),
+				'type'			=> 'dropdown',
+				'title'			=> __( 'Post Count', 'ar2' ),
+				'section'		=> 'ar2_zone_' . $this->zone->id . '_' . $this->id,
+				'options'		=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
+			);
 		
 		return $fields;
 		
@@ -503,11 +505,13 @@ class AR2_PostViews_Section {
 				'type'		=> 'option',
 				'transport'	=> 'postMessage',
 			) );
-			$wp_customize->add_setting( $this->get_field_name( 'count' ), array ( 
-				'default'	=> $this->settings[ 'count' ],
-				'type'		=> 'option',
-				'transport'	=> 'postMessage',
-			) );
+
+			if ( !$this->settings[ 'use_main_query' ] )
+				$wp_customize->add_setting( $this->get_field_name( 'count' ), array ( 
+					'default'	=> $this->settings[ 'count' ],
+					'type'		=> 'option',
+					'transport'	=> 'postMessage',
+				) );
 			
 			// Controls
 			$wp_customize->add_control( 'ar2_section-' . $this->id . '-enabled', array ( 
@@ -536,13 +540,15 @@ class AR2_PostViews_Section {
 				'post_section'	=> $this->id,
 				'taxonomy'		=> $this->settings[ 'taxonomy' ],
 			) ) );
-			$wp_customize->add_control( 'ar2_section-' . $this->id . '-count', array ( 
-				'settings'	=> $this->get_field_name( 'count' ),
-				'label'		=> __( 'Post Count', 'ar2' ),
-				'type'		=> 'select',
-				'section'	=> 'ar2_section_' . $this->id,
-				'choices'	=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
-			) );
+
+			if ( !$this->settings[ 'use_main_query' ] )
+				$wp_customize->add_control( 'ar2_section-' . $this->id . '-count', array ( 
+					'settings'	=> $this->get_field_name( 'count' ),
+					'label'		=> __( 'Post Count', 'ar2' ),
+					'type'		=> 'select',
+					'section'	=> 'ar2_section_' . $this->id,
+					'choices'	=> apply_filters( 'ar2_post_count_options', array ( 1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ) ),
+				) );
 			
 			if ( $wp_customize->is_preview() && !is_admin() ) {
 				add_action( 'wp_footer', array( $this, 'do_customize_preview_js' ), 30 );
@@ -685,7 +691,9 @@ class AR2_PostViews_Section {
 		$output[ 'sections' ][ $this->id ][ 'taxonomy' ] = ( isset( $input[ 'sections' ][ $this->id ][ 'taxonomy' ] ) && taxonomy_exists( $input[ 'sections' ][ $this->id ][ 'taxonomy' ] ) ? $input[ 'sections' ][ $this->id ][ 'taxonomy' ] : $defaults[ 'sections' ][ $this->id ][ 'taxonomy' ] );
 		$output[ 'sections' ][ $this->id ][ 'terms' ] = isset( $input[ 'sections' ][ $this->id ][ 'terms' ] ) ? ar2_theme_options_validate_terms_input( $input[ 'sections' ][ $this->id ][ 'terms' ] ) : $defaults[ 'sections' ][ $this->id ][ 'terms' ];
 		$output[ 'sections' ][ $this->id ][ 'type' ] = ( isset( $input[ 'sections' ][ $this->id ][ 'type' ] ) && in_array( $input[ 'sections' ][ $this->id ][ 'type' ], array_keys( $this->list_display_types() ) ) ? $input[ 'sections' ][ $this->id ][ 'type' ] : $defaults[ 'sections' ][ $this->id ][ 'type' ] );
-		$output[ 'sections' ][ $this->id ][ 'count' ] = ( isset( $input[ 'sections' ][ $this->id ][ 'count' ] ) && is_numeric( $input[ 'sections' ][ $this->id ][ 'count' ] ) ? absint( $input[ 'sections' ][ $this->id ][ 'count' ] ) : $defaults[ 'sections' ][ $this->id ][ 'count' ] );
+		
+		if ( !$this->settings[ 'use_main_query' ] )
+			$output[ 'sections' ][ $this->id ][ 'count' ] = ( isset( $input[ 'sections' ][ $this->id ][ 'count' ] ) && is_numeric( $input[ 'sections' ][ $this->id ][ 'count' ] ) ? absint( $input[ 'sections' ][ $this->id ][ 'count' ] ) : $defaults[ 'sections' ][ $this->id ][ 'count' ] );
 		
 		return $output;
 		
