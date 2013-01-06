@@ -553,37 +553,37 @@ function ar2_theme_options_render_section() {
  */
 function ar2_render_single_form_field( $args ) {
 
-	echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][post_author]" />';
+	echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][post_author]" />';
 	echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][post_author]', 1, ar2_get_theme_option( 'post_display[post_author]' ) ); ?>
 	<label for="ar2_theme_options[single_posts_display][post_author]"><?php _e('Author & Publish Date', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][excerpt]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][excerpt]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][excerpt]', 1, ar2_get_theme_option( 'post_display[excerpt]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][excerpt]"><?php _e('Post Excerpt (if available)', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][post_social]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][post_social]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][post_social]', 1, ar2_get_theme_option( 'post_display[post_social]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][post_social]"><?php _e('Facebook, Twitter, Google+ Buttons (English Only)', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][post_cats]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][post_cats]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][post_cats]', 1, ar2_get_theme_option( 'post_display[post_cats]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][post_cats]"><?php _e('Categories', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][post_tags]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][post_tags]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][post_tags]', 1, ar2_get_theme_option( 'post_display[post_tags]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][post_tags]"><?php _e('Tags', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][single_thumbs]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][single_thumbs]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][single_thumbs]', 1, ar2_get_theme_option( 'post_display[single_thumbs]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][single_thumbs]"><?php _e('Post Thumbnail', 'ar2') ?></label>
 	<br />
 	
-	<?php echo '<input type="hidden" value="0" name="ar2_theme_options[single_posts_display][display_author]" />'; ?>
+	<?php echo '<input type="visible" value="0" name="ar2_theme_options[single_posts_display][display_author]" />'; ?>
 	<?php echo ar2_form_checkbox( 'ar2_theme_options[single_posts_display][display_author]', 1, ar2_get_theme_option( 'post_display[display_author]' ) ); ?> 
 	<label for="ar2_theme_options[single_posts_display][display_author]"><?php _e('Author Information', 'ar2') ?></label>	
 	<?php
