@@ -311,19 +311,19 @@ msgstr "Diaporama"
 
 #: ../library/postviews.php:273
 msgid "Featured Posts #1"
-msgstr "Featured Posts #1"
+msgstr "Articles à la Une #1"
 
 #: ../library/postviews.php:274
 msgid "Featured Posts"
-msgstr "Featured Posts"
+msgstr "Articles à la Une"
 
 #: ../library/postviews.php:282
 msgid "Featured Posts #2"
-msgstr "Featured Posts #2"
+msgstr "Articles à la Une #2"
 
 #: ../library/postviews.php:283
 msgid "Editors' Picks"
-msgstr "Editors' Picks"
+msgstr "Séléction du Rédacteur"
 
 #: ../library/postviews.php:291
 msgid "News Posts"
