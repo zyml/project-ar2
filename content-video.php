@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying 'image' post format.
+ * Template for displaying 'video' post format.
  * @since 2.0
  */
 ?>

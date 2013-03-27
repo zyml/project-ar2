@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying 'image' post format.
+ * Template for displaying 'audio' post format.
  * @since 2.0
  */
 ?>
@@ -27,7 +27,7 @@
 		?>
 
 		<h1 class="entry-title">
-			<span class="entry-format"><?php echo get_post_format_string( 'video' ) ?></span>
+			<span class="entry-format"><?php echo get_post_format_string( 'audio' ) ?></span>
 			<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a>
 		</h1>
 		
