@@ -629,15 +629,12 @@ nav ul.menu li a:only-child:after {
 #top-menu ul.menu li:hover > ul.sub-menu li {
 	border: 0;
 }
+#top-menu ul.menu ul a {
+	background: #000;
+}
 #top-menu ul.menu ul a:hover {
 	color: #FFF;
-	background: #5E5E5E;
-}
-#top-menu ul.menu ul li:hover, #top-menu ul.menu ul li:hover > ul.sub-menu {
-	background: #5E5E5E;
-}
-#top-menu ul.menu ul ul a:hover {
-	background: #6E6E6E;	
+	background: #3E3E3E;
 }
 
 /* Main Menu */
@@ -692,6 +689,9 @@ nav ul.menu li a:only-child:after {
 }
 #main-nav ul.menu li:hover > ul.sub-menu li a {
 	border: 0;
+}
+#main-nav ul.menu ul a {
+	background: #F5F5F5;
 }
 #main-nav ul.menu ul a:hover {
 	background: #86C140;
