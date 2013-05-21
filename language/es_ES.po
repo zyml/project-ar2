@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project AR2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-01 16:57+0100\n"
+"POT-Creation-Date: 2013-05-04 22:47-0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: Borja Santos-Diez <borja@santosdiez.es>\n"
 "Language-Team: \n"
 "Language: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _e;__;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../archive.php:10 ../archive.php:12 ../archive.php:14
@@ -70,11 +71,11 @@ msgstr ""
 "Esta entrada está protegida con contraseña. Introduce la contraseña para ver "
 "los comentarios."
 
-#: ../comments.php:26
+#: ../comments.php:26 ../section-line.php:11
 msgid "No Comments"
 msgstr "Sin Comentarios"
 
-#: ../comments.php:26
+#: ../comments.php:26 ../section-line.php:11
 msgid "1 Comment"
 msgstr "1 Comentario"
 
@@ -154,19 +155,19 @@ msgstr "Menú Superior"
 msgid "Footer Navigation"
 msgstr "Navegación al Pie"
 
-#: ../functions.php:113
+#: ../functions.php:110
 msgid "Primary Sidebar"
 msgstr "Barra Lateral Primaria"
 
-#: ../functions.php:121
+#: ../functions.php:118
 msgid "Bottom Content #1"
 msgstr "Contenido Inferior #1"
 
-#: ../functions.php:129
+#: ../functions.php:126
 msgid "Bottom Content #2"
 msgstr "Contenido Inferior #2"
 
-#: ../functions.php:142
+#: ../functions.php:139
 #, php-format
 msgid "Footer Sidebar #%s"
 msgstr "Barra a Pie de Página #%s"
@@ -316,75 +317,75 @@ msgid ""
 msgstr ""
 "Maneja todo el contenido mostrado en la portada (salvo la presentación)."
 
-#: ../library/styles.php:87 ../library/styles.php:161
+#: ../library/styles.php:89 ../library/styles.php:163
 msgid "Default"
 msgstr "Por Defecto"
 
-#: ../library/styles.php:109
+#: ../library/styles.php:111
 msgid "Unknown Font"
 msgstr "Fuente Desconocida"
 
-#: ../library/styles.php:184
+#: ../library/styles.php:186
 msgid "Unknown Color"
 msgstr "Color Desconocido"
 
-#: ../library/styles.php:246
+#: ../library/styles.php:248
 msgid "2 Column Layout (Right Sidebar)"
 msgstr "Disposición en 2 columnas (Barra lateral derecha)"
 
-#: ../library/styles.php:247
+#: ../library/styles.php:249
 msgid "2 Column Layout (Left Sidebar)"
 msgstr "Disposición en 2 columnas (Barra lateral izquierda)"
 
-#: ../library/styles.php:259
+#: ../library/styles.php:261
 msgid "Primary Font"
 msgstr "Fuente Principal"
 
-#: ../library/styles.php:260
+#: ../library/styles.php:262
 msgid "Secondary Font"
 msgstr "Fuente Secundaria"
 
-#: ../library/styles.php:304
+#: ../library/styles.php:306
 msgid "Primary Color"
 msgstr "Color Principal"
 
-#: ../library/styles.php:311
+#: ../library/styles.php:313
 msgid "Orange"
 msgstr "Naranja"
 
-#: ../library/styles.php:315
+#: ../library/styles.php:317
 msgid "Yellow"
 msgstr "Amarillo"
 
-#: ../library/styles.php:319
+#: ../library/styles.php:321
 msgid "Red"
 msgstr "Rojo"
 
-#: ../library/styles.php:323
+#: ../library/styles.php:325
 msgid "Blue"
 msgstr "Azul"
 
-#: ../library/styles.php:327
+#: ../library/styles.php:329
 msgid "Pink"
 msgstr "Rosa"
 
-#: ../library/styles.php:365
+#: ../library/styles.php:367
 msgid "Custom Fonts"
 msgstr "Fuentes Personalizadas"
 
-#: ../library/styles.php:372
+#: ../library/styles.php:374
 msgid "Color Schemes"
 msgstr "Esquemas de Color"
 
-#: ../library/styles.php:502 ../library/admin/admin.php:18
+#: ../library/styles.php:514 ../library/admin/admin.php:18
 msgid "Layout"
 msgstr "Disposición"
 
-#: ../library/styles.php:514
+#: ../library/styles.php:526
 msgid "No. of Columns"
 msgstr "No. de Columnas"
 
-#: ../library/styles.php:522
+#: ../library/styles.php:534
 msgid "Fonts"
 msgstr "Fuentes"
 
@@ -498,7 +499,7 @@ msgstr "Aleatorias"
 msgid "Comments"
 msgstr "Comentarios"
 
-#: ../library/widgets.php:71 ../library/admin/admin.php:568
+#: ../library/widgets.php:71 ../library/admin/admin.php:578
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -938,22 +939,22 @@ msgstr ""
 msgid "No of Columns"
 msgstr "No. de Columnas"
 
-#: ../library/admin/admin.php:205
+#: ../library/admin/admin.php:204
 msgid "Import Theme Options"
 msgstr "Importar Opciones del Tema"
 
-#: ../library/admin/admin.php:207
+#: ../library/admin/admin.php:206
 msgid ""
 "Import your theme settings by pasting the exported code in the textbox above."
 msgstr ""
 "Importa tus ajustes del tema pegando el código exportado en el cuadro de "
 "texto superior."
 
-#: ../library/admin/admin.php:212
+#: ../library/admin/admin.php:211
 msgid "Export Theme Options"
 msgstr "Exportar Opciones del Tema"
 
-#: ../library/admin/admin.php:214
+#: ../library/admin/admin.php:213
 msgid ""
 "You can save the code above into a text file and use it when you need to "
 "import them into another installation. Note that not all options (custom "
@@ -963,24 +964,24 @@ msgstr ""
 "cuando necesites importarlos en otra instalación. No todas las opciones "
 "(fondo personalizado, ajustes de tema hijo, etc.) se exportarán."
 
-#: ../library/admin/admin.php:237
+#: ../library/admin/admin.php:236
 msgid "Custom Stylesheet"
 msgstr "Hoja de Estilos Personalizada"
 
-#: ../library/admin/admin.php:240
+#: ../library/admin/admin.php:239
 #, php-format
 msgid "Stylesheets can be placed in %s."
 msgstr "Las hojas de estilo pueden colocarse en %s."
 
-#: ../library/admin/admin.php:341
+#: ../library/admin/admin.php:340
 msgid "Theme Options"
 msgstr "Opciones del Tema"
 
-#: ../library/admin/admin.php:342
+#: ../library/admin/admin.php:341
 msgid "Options"
 msgstr "Opciones"
 
-#: ../library/admin/admin.php:388
+#: ../library/admin/admin.php:396
 msgid ""
 "If you have made any changes in the fields without submitting, all changes "
 "will be lost."
@@ -988,36 +989,40 @@ msgstr ""
 "Si has realizado algún cambio en los campos sin enviarlo, todos los cambios "
 "se perderán."
 
-#: ../library/admin/admin.php:393
+#: ../library/admin/admin.php:398
 msgid "Start by entering a term here."
 msgstr "Empieza tecleando un término aquí."
 
-#: ../library/admin/admin.php:394
+#: ../library/admin/admin.php:399
 msgid "No results."
 msgstr "Sin resultados."
 
-#: ../library/admin/admin.php:395
+#: ../library/admin/admin.php:400
 msgid "Searching..."
 msgstr "Buscando…"
 
-#: ../library/admin/admin.php:449
+#: ../library/admin/admin.php:401
+msgid "Upload Media"
+msgstr "Subir Media"
+
+#: ../library/admin/admin.php:459
 #, php-format
 msgid "%s Theme Options"
 msgstr "Opciones del Tema %s"
 
-#: ../library/admin/admin.php:464
+#: ../library/admin/admin.php:474
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
-#: ../library/admin/admin.php:465
+#: ../library/admin/admin.php:475
 msgid "Reset Settings"
 msgstr "Restablecer Ajustes"
 
-#: ../library/admin/admin.php:472
+#: ../library/admin/admin.php:482
 msgid "Need Support?"
 msgstr "¿Necesitas Ayuda?"
 
-#: ../library/admin/admin.php:473
+#: ../library/admin/admin.php:483
 msgid ""
 "Ask questions and share tips and tricks with fellow theme users all over the "
 "world at the theme community forums."
@@ -1025,19 +1030,19 @@ msgstr ""
 "Haz preguntas y comparte consejos y trucos con compañeros usuarios del tema "
 "por todo el mundo en los foros de la comunidad del tema."
 
-#: ../library/admin/admin.php:474 ../library/admin/admin.php:482
+#: ../library/admin/admin.php:484 ../library/admin/admin.php:492
 msgid "http://forums.arrastheme.com/"
 msgstr "http://forums.arrastheme.com/"
 
-#: ../library/admin/admin.php:474
+#: ../library/admin/admin.php:484
 msgid "Community Forums"
 msgstr "Foros de la Comunidad"
 
-#: ../library/admin/admin.php:477
+#: ../library/admin/admin.php:487
 msgid "Like this Theme?"
 msgstr "¿Te gusta este tema?"
 
-#: ../library/admin/admin.php:478
+#: ../library/admin/admin.php:488
 msgid ""
 "Arras & Project AR2 are open-source projects developed in my free time since "
 "2009 for the benefit of the WordPress community. Your donations will support "
@@ -1048,35 +1053,35 @@ msgstr ""
 "donaciones apoyarán el desarrollo en proceso de estos temas en los años "
 "venideros."
 
-#: ../library/admin/admin.php:479
+#: ../library/admin/admin.php:489
 msgid "http://www.arrastheme.com/donate/"
 msgstr "http://www.arrastheme.com/donate/"
 
-#: ../library/admin/admin.php:479
+#: ../library/admin/admin.php:489
 msgid "Donate to Theme Author"
 msgstr "Donar al Autor del Tema"
 
-#: ../library/admin/admin.php:480
+#: ../library/admin/admin.php:490
 msgid "There are other ways you can support these themes too:"
 msgstr "Hay otras formas de que apoyes estos temas también:"
 
-#: ../library/admin/admin.php:482
+#: ../library/admin/admin.php:492
 msgid "Forums"
 msgstr "Foros"
 
-#: ../library/admin/admin.php:482
+#: ../library/admin/admin.php:492
 msgid "Ask questions and share tips and tricks with others."
 msgstr "Haz preguntas y comparte consejos y trucos con los demás."
 
-#: ../library/admin/admin.php:483
+#: ../library/admin/admin.php:493
 msgid "https://www.transifex.net/projects/p/project-ar2/"
 msgstr "https://www.transifex.net/projects/p/project-ar2/"
 
-#: ../library/admin/admin.php:483
+#: ../library/admin/admin.php:493
 msgid "Translations"
 msgstr "Traducciones"
 
-#: ../library/admin/admin.php:483
+#: ../library/admin/admin.php:493
 msgid ""
 "Fluent in other languages? Translate the theme for other users around the "
 "world."
@@ -1084,79 +1089,87 @@ msgstr ""
 "¿Fluidez en otros lenguajes? Traduce el tema para otros usuarios alrededor "
 "del mundo."
 
-#: ../library/admin/admin.php:484
+#: ../library/admin/admin.php:494
 msgid "https://github.com/zyml/project-ar2"
 msgstr "https://github.com/zyml/project-ar2"
 
-#: ../library/admin/admin.php:484
+#: ../library/admin/admin.php:494
 msgid "GitHub"
 msgstr "GitHub"
 
-#: ../library/admin/admin.php:484
+#: ../library/admin/admin.php:494
 msgid "Aid development by sending in bug reports and issuing patches."
 msgstr "Ayuda al desarrollo enviando informes de fallos y publicando parches."
 
-#: ../library/admin/admin.php:548
+#: ../library/admin/admin.php:558
 msgid "Author & Publish Date"
 msgstr "Autor & Fecha de Publicación"
 
-#: ../library/admin/admin.php:553
+#: ../library/admin/admin.php:563
 msgid "Post Excerpt (if available)"
 msgstr "Extracto de Entrada (si disponible)"
 
-#: ../library/admin/admin.php:558
+#: ../library/admin/admin.php:568
 msgid "Facebook, Twitter, Google+ Buttons (English Only)"
 msgstr "Botones de Facebook, Twitter, Google+ (Sólo Inglés)"
 
-#: ../library/admin/admin.php:563
+#: ../library/admin/admin.php:573
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../library/admin/admin.php:573
+#: ../library/admin/admin.php:583
 msgid "Post Thumbnail"
 msgstr "Miniatura de la Entrada"
 
-#: ../library/admin/admin.php:578
+#: ../library/admin/admin.php:588
 msgid "Author Information"
 msgstr "Información del Autor"
 
-#: ../library/admin/admin.php:601 ../library/admin/admin.php:689
+#: ../library/admin/admin.php:611 ../library/admin/admin.php:699
 msgid "No Taxonomies Available"
 msgstr "No hay Taxonomías Disponibles"
 
-#: ../library/admin/admin.php:626 ../library/classes/postviews-section.php:423
+#: ../library/admin/admin.php:636 ../library/classes/postviews-section.php:448
 msgid "Taxonomy"
 msgstr "Taxonomía"
 
-#: ../library/admin/admin.php:769
+#: ../library/admin/admin.php:779
 msgid "Width"
 msgstr "Anchura"
 
-#: ../library/admin/admin.php:773
+#: ../library/admin/admin.php:783
 msgid "Height"
 msgstr "Altura"
 
-#: ../library/admin/admin.php:777
+#: ../library/admin/admin.php:787
 msgid "Reset to Defaults"
 msgstr "Restablecer Predeterminados"
 
-#: ../library/admin/admin.php:794
+#: ../library/admin/admin.php:804
 msgid "Please choose your taxonomy before proceeding."
 msgstr "Por favor elige tu taxonomía antes de continuar."
 
-#: ../library/admin/admin.php:810
+#: ../library/admin/admin.php:820
 msgid "Loading"
 msgstr "Cargando"
 
-#: ../library/admin/admin.php:827
+#: ../library/admin/admin.php:837
 msgid "On"
 msgstr "On"
 
-#: ../library/admin/admin.php:828
+#: ../library/admin/admin.php:838
 msgid "Off"
 msgstr "Off"
 
-#: ../library/admin/admin.php:893
+#: ../library/admin/admin.php:860
+msgid "Add Image"
+msgstr "Añadir Imagen"
+
+#: ../library/admin/admin.php:861
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../library/admin/admin.php:912
 msgid "Default Stylesheet (style.css)"
 msgstr "Hoja de estilo por defecto (style.css)"
 
@@ -1176,38 +1189,38 @@ msgstr "Por línea"
 msgid "Traditional"
 msgstr "Tradicional"
 
-#: ../library/classes/postviews-section.php:159
+#: ../library/classes/postviews-section.php:67
 #, php-format
 msgid "Post Section ID: %s"
 msgstr "ID de Sección de Entradas: %s"
 
-#: ../library/classes/postviews-section.php:393
-#: ../library/classes/postviews-section.php:491
+#: ../library/classes/postviews-section.php:418
+#: ../library/classes/postviews-section.php:519
 #, php-format
 msgid "Enable %s"
 msgstr "Habilitar %s"
 
-#: ../library/classes/postviews-section.php:401
-#: ../library/classes/postviews-section.php:503
+#: ../library/classes/postviews-section.php:426
+#: ../library/classes/postviews-section.php:531
 msgid "Type"
 msgstr "Tipo"
 
-#: ../library/classes/postviews-section.php:409
-#: ../library/classes/postviews-section.php:497
+#: ../library/classes/postviews-section.php:434
+#: ../library/classes/postviews-section.php:525
 msgid "Title"
 msgstr "Título"
 
-#: ../library/classes/postviews-section.php:416
+#: ../library/classes/postviews-section.php:441
 msgid "Post Type"
 msgstr "Tipo de Entrada"
 
-#: ../library/classes/postviews-section.php:430
-#: ../library/classes/postviews-section.php:510
+#: ../library/classes/postviews-section.php:455
+#: ../library/classes/postviews-section.php:538
 msgid "Terms"
 msgstr "Términos"
 
-#: ../library/classes/postviews-section.php:437
-#: ../library/classes/postviews-section.php:517
+#: ../library/classes/postviews-section.php:463
+#: ../library/classes/postviews-section.php:547
 msgid "Post Count"
 msgstr "Número de Entradas"
 
