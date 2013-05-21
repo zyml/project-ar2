@@ -53,8 +53,13 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 	 * @since 1.3
 	 */
 	public function do_js() {
+		// Small hack to prevent Theme Customizer from going gaga.
 		?>
-		$('.multi-sidebar').tabs();
+		$('.multi-sidebar').tabs({
+			beforeLoad: function( event, ui ) { 
+				ui.jqXHR.abort();
+			}
+		});
 		<?php
 	}
 	
@@ -101,10 +106,16 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 				</ul>
 				
 				<?php
+				$tab_count = 0;
 				foreach ( $instance['order'] as $tab ) {
-					echo '<div id="s-' . $tab . '" class="widget clearfix">';
+					if ( $tab_count == 0 ) :
+						echo '<div id="s-' . $tab . '" class="widget clearfix">';
+					else :
+						echo '<div style="display: none" id="s-' . $tab . '" class="widget clearfix">';
+					endif;
 					do_action( 'ar2_tabbed_sidebar_tab-' . $tab );
 					echo '</div><!-- #s-' . $tab . ' -->';
+					$tab_count++;
 				}
 				?>
 			</div>
