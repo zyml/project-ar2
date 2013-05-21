@@ -205,7 +205,9 @@ class AR2_PostViews_Section {
 		global $wp_query;
 
 		if ( $this->settings[ 'use_main_query' ] ) {
-			add_action( 'pre_get_posts', array ( $this, 'alter_main_query' ) );
+			if ( !is_search() ) {
+				add_action( 'pre_get_posts', array ( $this, 'alter_main_query' ) );
+			}
 			$this->query = &$wp_query;
 			$this->query->get_posts();
 		} else {
