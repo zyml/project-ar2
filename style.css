@@ -559,7 +559,7 @@ nav ul.menu ul li {
 	width: 12em;
 }
 nav ul.menu ul ul {
-	top: -1px;
+	top: 0;
 	left: 12em;
 }
 nav ul.menu li:hover > ul {
@@ -588,6 +588,9 @@ nav ul.menu > li > a:after {
 	width: 0;
 	border: 4px solid transparent;
 	border-top-color: #999;
+}
+nav ul.menu > li > a:hover:after {
+	border-left-color: transparent;
 }
 nav ul.menu li a:only-child:after {
 	border: none;
@@ -663,6 +666,9 @@ nav ul.menu li a:only-child:after {
 }
 #main-nav ul.menu li.current-menu-item a {
 	color: #333;
+}
+#main-nav ul.menu ul ul {
+	top: -1px;
 }
 #main-nav ul.menu ul li a {
 	padding: .7em 1em;
