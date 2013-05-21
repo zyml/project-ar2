@@ -60,6 +60,7 @@ add_filter( 'body_class', 'ar2_body_class' );
  */
 function ar2_post_class( $classes ) {
 	
+	$classes[] = 'post-container';
 	$classes[] = 'clearfix';
 	return $classes;
 	

@@ -1103,7 +1103,7 @@ nav ul.menu li a:only-child:after {
 	width: 98%;
 	margin: 0 0 20px 1.5%;
 }
-.posts-node .post {
+.posts-node .post-container {
 	float: left;
 	padding: 0;
 	width: 30.1%;
