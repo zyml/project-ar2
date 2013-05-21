@@ -181,11 +181,12 @@ table {
 th, td {
 	border-spacing: 3px;
 	padding: 0.5em;
+	border: 1px solid #CCC;
 }
 th {
 	background: #333;
 	color: #F5F5F5;	
-	border: 1px solid #333;
+	border: 1px solid #222;
 }
 tr:nth-child(odd) {
 	background: #F5F5F5;
