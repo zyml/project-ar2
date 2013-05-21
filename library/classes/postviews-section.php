@@ -166,12 +166,14 @@ class AR2_PostViews_Section {
 			break;
 		
 		default :
-			$_query_args[ 'tax_query' ][] = array (
-				'taxonomy'	=> $this->settings[ 'taxonomy' ],
-				'field'		=> 'id',
-				'terms'		=> $this->settings[ 'terms' ],
-				'operator'	=> 'AND',
-			);	
+			if ( !empty($this->settings[ 'terms '] ) ) {
+				$_query_args[ 'tax_query' ][] = array (
+					'taxonomy'	=> $this->settings[ 'taxonomy' ],
+					'field'		=> 'id',
+					'terms'		=> $this->settings[ 'terms' ],
+					'operator'	=> 'AND',
+				);
+			}
 			
 		endswitch;
 
