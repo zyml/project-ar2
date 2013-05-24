@@ -9,8 +9,10 @@
 
 	<a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo ar2_get_thumbnail( 'single-thumb' ) ?></a>
 	<div class="entry-meta">
-		<a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		<div class="entry-summary"><?php the_excerpt() ?></div>
+		<div class="entry-heading">
+			<a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+			<div class="entry-summary"><?php the_excerpt() ?></div>
+		</div>
 	</div>
 
 </li>

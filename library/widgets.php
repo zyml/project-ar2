@@ -44,7 +44,7 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 	 */
 	public function load_js() {
 	
-		wp_enqueue_script( 'jquery-ui-tabs', null, array( 'jquery-ui-core', 'jquery' ), null, false ); 
+		wp_enqueue_script( 'responsive-tabs', get_template_directory_uri() . '/js/responsive-tabs.min.js', array( 'jquery' ), '2012-08-02' );
 		
 	}
 	
@@ -53,13 +53,8 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 	 * @since 1.3
 	 */
 	public function do_js() {
-		// Small hack to prevent Theme Customizer from going gaga.
 		?>
-		$('.multi-sidebar').tabs({
-			beforeLoad: function( event, ui ) { 
-				ui.jqXHR.abort();
-			}
-		});
+		$( '.multi-sidebar' ).easyResponsiveTabs();
 		<?php
 	}
 	
@@ -105,6 +100,7 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 				<?php $this->render_sidebar_tabs( $instance[ 'order' ] ) ?>
 				</ul>
 				
+				<div class="tabs-container">
 				<?php
 				$tab_count = 0;
 				foreach ( $instance['order'] as $tab ) {
@@ -118,6 +114,7 @@ class AR2_Tabbed_Sidebar extends WP_Widget {
 					$tab_count++;
 				}
 				?>
+				</div>
 			</div>
 		</aside>
 		<?php

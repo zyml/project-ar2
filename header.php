@@ -25,7 +25,6 @@
 
 <?php
 wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.custom.min.js', null, '2012-07-08' );
-wp_enqueue_script( 'tinynav', get_template_directory_uri() . '/js/tinynav.min.js', array( 'jquery' ), '2012-08-02' );
 
 if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 ?>
@@ -38,7 +37,7 @@ if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comm
 
 <div id="wrapper">
 
-<nav id="top-menu" class="clearfix" role="navigation">
+<nav class="menu-container" id="top-menu" class="clearfix" role="navigation">
 <?php ar2_above_top_menu() ?>
 	<?php 
 	wp_nav_menu( array( 
@@ -52,7 +51,7 @@ if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comm
 <?php ar2_below_top_menu() ?>
 </nav><!-- #top-menu -->
 
-<header id="header" role="banner">
+<header id="header" role="banner" class="clearfix">
 	<div id="branding" class="clearfix">
 		<?php if ( is_home() || is_front_page() ) : ?>
 		<hgroup class="logo">
@@ -71,21 +70,22 @@ if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comm
 		</div>
 		
 	</div><!-- #branding -->
-</header><!-- #header -->
 
-<?php ar2_above_nav() ?>
-<nav id="main-nav" role="navigation">
-	<?php 
-	wp_nav_menu( array( 
-		'sort_column'	=> 'menu_order', 
-		'menu_class' 	=> 'menu clearfix', 
-		'theme_location'=> 'main-menu',
-		'container'		=> false,
-		'fallback_cb'	=> 'ar2_nav_fallback_cb' 
-	) );
-	?>
-</nav><!-- #nav -->
-<?php ar2_below_nav() ?>
+	<?php ar2_above_nav() ?>
+	<nav class="menu-container" id="main-nav" role="navigation">
+		<?php 
+		wp_nav_menu( array( 
+			'sort_column'	=> 'menu_order', 
+			'menu_class' 	=> 'menu clearfix', 
+			'theme_location'=> 'main-menu',
+			'container'		=> false,
+			'fallback_cb'	=> 'ar2_nav_fallback_cb' 
+		) );
+		?>
+	</nav><!-- #nav -->
+	<?php ar2_below_nav() ?>
+
+</header><!-- #header -->
 
 <?php ar2_above_main() ?>
  

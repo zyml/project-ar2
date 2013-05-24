@@ -45,6 +45,6 @@ if ( have_comments() ) :
 	<p class="nocomments"><?php _e( 'Comments are closed. You will not be able to post a comment in this post.', 'ar2' ) ?></p>
 <?php endif ?>
 
-<?php comment_form( null, get_the_ID() ) ?>
-
 </div><!-- #comments -->
+
+<?php comment_form( null, get_the_ID() ) ?>

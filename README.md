@@ -1,11 +1,12 @@
 # Project AR2
-Last README update: 2012-08-09
+Last README update: 2013-05-24
 
 ## Overview
 Project AR2 is the re-release of Arras WordPress Theme, with up-to-date standards and new features. Built on HTML5/CSS3. Released under the GPLv2 license.
 
 ## Features
-* Featured slideshow powered by FlexSlider 2
+* Featured slideshow powered by FlexSlider 2.
+* Responsive layout, designed for smartphones and tablets.
 * Three customizable post sections in homepage, with four different layouts.
 * Homepage layout customizable with WordPress 3.4's Theme Customizer.
 * Customizable archives page with four different layouts.
@@ -49,7 +50,7 @@ The following resources are licensed under the MIT license (GPL compatible):
 
 * [ColorBox](http://www.jacklmoore.com/colorbox)
 * [Modernizr](http://www.modernizr.com/)
-* [TinyNav.js](http://tinynav.viljamis.com/)
+* [Easy Responsive Tabs to Accordion](https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion)
 
 Social and post format icons adapted from [Faenza Icon Theme](http://code.google.com/p/faenza-icon-theme/), which is licensed under the GPLv3.
 
