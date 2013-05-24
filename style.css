@@ -999,7 +999,7 @@ nav ul.menu li a:only-child:after {
 /* Slideshow */
 .posts-slideshow {
 	margin: 0 2% 1.5em 0;
-	padding: .5em;
+	/*padding: .5em;*/
 	border: 1px solid #E1E1E1;
 	box-shadow: 0 0 10px 2px #EEE;
 	position: relative;
@@ -1074,7 +1074,7 @@ nav ul.menu li a:only-child:after {
 	padding: 0;
 	position: absolute;
 	top: 42%;
-	width: 98%;
+	width: 100%;
 }
 .posts-slideshow ul.flex-direction-nav li:first-child {
 	float: left;
@@ -1218,7 +1218,7 @@ nav ul.menu li a:only-child:after {
 /* =Single Post
 -------------------------------------------------------------- */
 article {
-	margin: 0 1em 1em;
+	margin: 0 1em 1em .5em;
 }
 article .entry-cats a:link, article .entry-cats a:visited {
 	color: #999;
@@ -1639,7 +1639,7 @@ article.page .entry-header h1.entry-title {
 	.multi-sidebar .resp-accordion {
 		display: block;
 		font-size: 100%;
-		padding: 1em 1.25em;
+		padding: .75em 1.25em;
 		border: 1px solid #CCC;
 	}
 	.multi-sidebar .resp-arrow {
