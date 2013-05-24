@@ -1640,7 +1640,7 @@ article.page .entry-header h1.entry-title {
 		display: block;
 		font-size: 100%;
 		padding: .75em 1.25em;
-		border: 1px solid #CCC;
+		border: 1px solid #DDD;
 	}
 	.multi-sidebar .resp-arrow {
 		margin: .5em 0 0 .5em;
@@ -1657,6 +1657,9 @@ article.page .entry-header h1.entry-title {
 	}
 	.multi-sidebar .widget {
 		margin: 0;
+	}
+	.multi-sidebar .ui-state-active {
+		border-color: #86C140;
 	}
 
 	/* Footer */

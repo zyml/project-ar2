@@ -140,7 +140,7 @@ function ar2_get_first_post_image_id( $id = NULL ) {
  */
 function ar2_post_thumbnail_size() {
 
-	return apply_filters('ar2_content_width', array( 620, 350 ) );
+	return apply_filters('ar2_content_width', array( 600, 350 ) );
 	
 }
 
@@ -150,7 +150,7 @@ function ar2_post_thumbnail_size() {
  */
 function ar2_sidebar_thumbnail_size() {
 
-	return apply_filters( 'ar2_sidebar_thumbnail_size', array( 36, 36 ) );
+	return apply_filters( 'ar2_sidebar_thumbnail_size', array( 72, 72 ) );
 	
 }
 
@@ -160,7 +160,7 @@ function ar2_sidebar_thumbnail_size() {
  */
 function ar2_section_thumbnail_size() {
 
-	return apply_filters( 'ar2_section_thumbnail_size', array( 200, 110 ) );
+	return apply_filters( 'ar2_section_thumbnail_size', array( 300, 200 ) );
 	
 }
 
@@ -170,7 +170,7 @@ function ar2_section_thumbnail_size() {
  */
 function ar2_full_width_thumbnail_size() {
 
-	return apply_filters( 'ar2_full_width_thumbnail_size', array( 980, 540 ) );
+	return apply_filters( 'ar2_full_width_thumbnail_size', array( 980, 650 ) );
 	
 }
 
