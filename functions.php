@@ -7,6 +7,14 @@ define ( 'AR2_LIB', get_template_directory() . '/library' );
 // CSS files have to be placed in /css/styles/ folder.
 define( 'AR2_ALLOW_CUSTOM_STYLES', false );
 
+// Maximum custom logo size
+define( 'AR2_MAX_LOGO_WIDTH', '400' );
+define( 'AR2_MAX_LOGO_HEIGHT', '80' );
+
+// Custom logo padding (theme will automatically resize if logo is smaller than max custom logo size).
+define( 'AR2_LOGO_PADDING_WIDTH', '10' );
+define( 'AR2_LOGO_PADDING_HEIGHT', '10' );
+
 do_action( 'ar2_init' );
 
 /**
@@ -58,6 +66,7 @@ function ar2_setup() {
 		'width'						=> 960,
 		'height'					=> 120,
 		'default-text-color'		=> '333',
+		'header-text'				=> false,
 		'wp-head-callback'			=> 'ar2_header_style',
 		'admin-head-callback'		=> 'ar2_admin_header_style',
 		'admin-preview-callback'	=> 'ar2_admin_header_image',

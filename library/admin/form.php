@@ -27,8 +27,7 @@ function ar2_form_input( $data = null, $value = null, $extra = null ) {
 function ar2_form_textarea( $data = null, $value = null, $extra = null ) {
 	$_defaults = array (
 		'name'	=> ( ( !is_array( $data ) ) ? $data : ' ' ),
-		'cols'	=> '80',
-		'rows'	=> '5'
+		'style' => 'width: 100%; height: 100px',
 	);
 	
 	if ( !is_array( $data ) || !isset( $data['value'] ) ) {

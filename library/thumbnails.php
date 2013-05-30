@@ -174,5 +174,21 @@ function ar2_full_width_thumbnail_size() {
 	
 }
 
+/**
+ * @todo
+ * @since 2.0.1
+ */
+function ar2_logo_upload_dir() {
+	return apply_filters( 'ar2_logo_upload_dir', ABSPATH . '/wp-content/uploads/ar2/logo/' );
+}
+
+/**
+ * @todo
+ * @since 2.0.1
+ */
+function ar2_logo_upload_dir_uri() {
+	return apply_filters( 'ar2_logo_upload_dir_uri', get_bloginfo( 'home' ) . '/wp-content/uploads/ar2/logo/' );
+}
+
 /* End of file thumbnails.php */
 /* Location: ./library/thumbnails.php */

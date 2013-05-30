@@ -455,7 +455,7 @@ a.more-link:hover, .navigation a:hover, .comment-controls a:hover, a.post-edit-l
 	background: #FFF;
 }
 #branding {
-	max-height: 120px;
+	height: 120px;
 	padding-bottom: 1em;
 }
 .logo {
@@ -1676,6 +1676,7 @@ article.page .entry-header h1.entry-title {
 	body {
 		-webkit-text-size-adjust: 110%;
 		-ms-text-size-adjust: 110%;
+		min-width: 320px;
 	}
 
 	/* Structure */
@@ -1704,6 +1705,7 @@ article.page .entry-header h1.entry-title {
 	}
 	#branding {
 		float: left;
+		height: 60px;
 	}
 
 	/* Menu */
@@ -1741,7 +1743,7 @@ article.page .entry-header h1.entry-title {
 		display: none;
 	}
 	#main-nav {
-		background: #F5F5F5;
+		background: transparent;
 	}
 	#main-nav ul.menu {
 		border-width: 1px 0;

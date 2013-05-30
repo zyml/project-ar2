@@ -49,19 +49,15 @@ ar2Admin = {
 
 			curMediaUploadId = $( this ).attr( 'data-upload-field' );
 
-			if ( ar2Admin_l10n.isNewMediaManager ) {
-				var sendAttachmentBackup = wp.media.editor.send.attachment;
+			var sendAttachmentBackup = wp.media.editor.send.attachment;
 
-				wp.media.editor.send.attachment = function( props, attachment ) {
-					$( '#media-upload-' + curMediaUploadId ).val( attachment.url );
-					$( '#media-upload-img-' + curMediaUploadId ).attr( 'src', attachment.url );
+			wp.media.editor.send.attachment = function( props, attachment ) {
+				$( '#media-upload-' + curMediaUploadId ).attr( 'value', attachment.id );
+				$( '#media-upload-img-' + curMediaUploadId ).attr( 'src', attachment.url );
 
-					wp.media.editor.send.attachment = sendAttachmentBackup;
-				}
-				wp.media.editor.open( curMediaUploadId );
-			} else {
-				tb_show( ar2Admin_l10n.uploadMediaTitle, 'media-upload.php?referer=ar2-theme-options&type=image&TB_iframe=true&post_id=0', false );
+				wp.media.editor.send.attachment = sendAttachmentBackup;
 			}
+			wp.media.editor.open( curMediaUploadId );
 	
 			return false;
 		} );
@@ -69,23 +65,11 @@ ar2Admin = {
 		$( '.media-upload-remove' ).click( function() {
 
 			var id = $( this ).attr( 'data-upload-field' );
-			$( '#media-upload-' + id ).val( null );
+			$( '#media-upload-' + id ).attr( 'value', null );
 			$( '#media-upload-img-' + id ).attr( 'src', null );
 			return false;
 
 		} );
-
-		if ( !ar2Admin_l10n.isNewMediaManager ) {
-			window.send_to_editor = function( html ) {
-				var imageUrl = $( 'img', html ).attr( 'src' );
-
-				$( '#media-upload-' + curMediaUploadId ).val( imageUrl );
-				$( '#media-upload-img-' + curMediaUploadId ).attr( 'src', imageUrl );
-
-				tb_remove();
-				curMediaUploadId = null;
-			}
-		}
 
 	},
 	

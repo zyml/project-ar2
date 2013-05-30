@@ -171,6 +171,7 @@ function ar2_reset_theme_options() {
 	
 	delete_option( 'ar2_theme_options' );
 	$ar2_options = ar2_get_default_theme_options();
+
 	ar2_flush_theme_options();	
 	
 }
@@ -258,6 +259,56 @@ function ar2_theme_options_validate( $input ) {
 					case 'switch' :
 						$sanitized_val = ( 1 == $value ) ? true : false;
 					break;
+
+					case 'media-upload' :
+						$sanitized_val = intval( $value );
+
+					case 'logo-upload' :
+						$sanitized_val = $output[ $id ];
+
+						if ( !empty( $value ) ) {
+							
+							$attachment_id = intval( $value );
+
+							// if attachment ID has changed, upload new logo to AR2 logo folder
+							if ( !is_array( $sanitized_val ) || $sanitized_val[ 'id' ] != $attachment_id ) {
+								$image = wp_get_image_editor( get_attached_file( $attachment_id ) );
+								if ( !is_wp_error( $image ) ) {
+									$saved = $image->save( ar2_logo_upload_dir() . $id . '.png', 'image/png' );
+
+									$sanitized_val[ 'id' ] = $attachment_id;
+									$sanitized_val[ 'width' ] = $saved[ 'width' ];
+									$sanitized_val[ 'height' ] = $saved[ 'height' ];
+								}
+							}
+
+						} else {
+							$sanitized_val = array();
+						}
+
+					break;
+
+					case 'logo-resize' :
+						$sanitized_val = ( 1 == $value ) ? true : false;
+
+						if ( $sanitized_val && is_array( $output[ $setting_fields[ $id ][ 'logo-setting' ] ] ) && 
+								file_exists( ar2_logo_upload_dir() . $setting_fields[ $id ][ 'logo-setting' ] . '.png' ) ) {
+
+							$image = wp_get_image_editor( ar2_logo_upload_dir() . $setting_fields[ $id ][ 'logo-setting' ] . '.png' );
+							if ( !is_wp_error( $image ) ) {
+								$image->resize( AR2_MAX_LOGO_WIDTH, AR2_MAX_LOGO_HEIGHT, false );
+								$saved = $saved = $image->save( ar2_logo_upload_dir() . $setting_fields[ $id ][ 'logo-setting' ] . '.png', 'image/png' );
+
+								$output[ $setting_fields[ $id ][ 'logo-setting' ] ][ 'width' ] = $saved[ 'width' ];
+								$output[ $setting_fields[ $id ][ 'logo-setting' ] ][ 'height' ] = $saved[ 'height' ];
+							}
+
+						}
+
+						// Make it always false to prevent theme options from resizing the next time unless user checks on option.
+						$sanitized_val = false;
+						
+					break;
 					
 					case 'custom' :
 						$sanitized_val = $value; // do nothing
@@ -267,10 +318,9 @@ function ar2_theme_options_validate( $input ) {
 						$sanitized_val = esc_attr( $value );
 						
 				endswitch;
-				
-				$sanitized_val = apply_filters( 'ar2_theme_options_validate_setting-' . $id, $sanitized_val, $value, $output );
+
+				$sanitized_val = apply_filters( 'ar2_theme_options_validate_setting-' . $id, $sanitized_val, $setting_fields[ $id ] );
 				$output = ar2_multidimensional_replace( $output, $setting_fields[ $id ][ '_id_data' ][ 'keys' ], $sanitized_val );
-				
 			}
 		
 		}
@@ -290,7 +340,7 @@ function ar2_theme_options_validate( $input ) {
 	echo '<pre><code>';
 	print_r( $input );
 	echo '</code></pre>';
-	
+
 	echo '<pre><code>';
 	print_r( $output );
 	echo '</code></pre>';
@@ -304,9 +354,11 @@ function ar2_theme_options_validate( $input ) {
  * @todo
  * @since 2.0
  */
-function ar2_theme_options_validate_single_posts_display( $sanitized, $value, $output ) {
+function ar2_theme_options_validate_single_posts_display( $value, $settings ) {
 	
-	$single_post_opts = $output[ 'post_display' ];
+	$default_theme_options = ar2_get_default_theme_options();
+	$single_post_opts = $default_theme_options[ 'post_display' ];
+
 	foreach( $single_post_opts as $id => $val )
 		$single_post_opts[ $id ] = ( isset( $value[ $id ] ) && 1 == $value[ $id ] ) ? true : false;
 

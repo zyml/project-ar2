@@ -51,6 +51,7 @@
 
 #ar2-theme-options .form-table select {
 	min-width: 250px;
+    height: auto;
 }
 
 #ar2-theme-options a.delete {
@@ -202,10 +203,13 @@
 	font-style: normal;
 }
 
+#ar2-theme-options .media-upload {
+    margin: 0 0 1.5em;
+}
 #ar2-theme-options .media-upload img {
     display: block;
     margin: 0 0 1em;
-    width: 50%;
+    max-width: 50%;
     border: 1px solid #F5F5F5;
     height: auto;
     border-radius: 3px;

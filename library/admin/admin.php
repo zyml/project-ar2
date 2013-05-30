@@ -196,7 +196,19 @@ function ar2_theme_options_default_fields() {
 			'title'			=> __( 'No of Columns', 'ar2' ),
 			'section'		=> 'ar2_design_overall',
 			'options'		=> $ar2_styles->get_layouts(),
-		),	
+		),
+		'logo' => array (
+			'type'			=> 'logo-upload',
+			'title'			=> __( 'Custom Logo', 'ar2' ),
+			'section'		=> 'ar2_design_overall',
+		),
+		'logo_resize' => array (
+			'type'			=> 'logo-resize',
+			'title'			=> __( 'Resize Logo', 'ar2' ),
+			'section'		=> 'ar2_design_overall',
+			'logo-setting'	=> 'logo',
+			'description'	=> sprintf( __( 'Resize the logo to at least <strong>%1$spx</strong> in width or <strong>%2$spx</strong> in height, depending on the image size.', 'ar2' ), AR2_MAX_LOGO_WIDTH, AR2_MAX_LOGO_HEIGHT ),
+		),
 		
 		/* Import / Export Options */
 		'import_theme_options' => array (
@@ -401,9 +413,6 @@ function ar2_theme_options_localize_vars() {
 		'uploadMediaTitle'		=> __( 'Upload Media', 'ar2' ),
 		'isNewMediaManager'		=> false,
 	);
-
-	if ( function_exists( 'wp_enqueue_media' ) )
-		$_vars[ 'isNewMediaManager' ] = true;
 	
 	$_fields = ar2_theme_options_default_fields();
 	
@@ -854,12 +863,36 @@ function ar2_theme_options_render_field( $args = array() ) {
 		break;
 
 		case 'media-upload' :
+			$attachment_url = ( isset( $value ) ) ? wp_get_attachment_url( $value ) : '';
+
 			echo '<div class="media-upload">';
-			echo '<p><img id="media-upload-img-' . $id . '" src="' . $value . '" alt="" /></p>';
+			echo '<p><img id="media-upload-img-' . $id . '" src="' . $attachment_url . '" alt="" /></p>';
 			echo ar2_form_input( 'ar2_theme_options[' . $id . ']', $value, 'id="media-upload-' . $id . '"' );
 			echo '<input type="button" data-upload-field="' . $id . '" class="button media-upload-add" value="' . __( 'Add Image', 'ar2' ) . '" />';
 			echo '<a href="#" data-upload-field="' . $id . '" class="media-upload-remove">' . __( 'Remove', 'ar2' ) . '</a>';
 			echo '</div>';
+		break;
+
+		case 'logo-upload' :
+			$attachment_url = ( is_array( $value ) && isset( $value[ 'id' ] ) ) ? ar2_logo_upload_dir_uri() . $id . '.png' : '';
+
+			echo '<div class="media-upload">';
+			echo '<p><img id="media-upload-img-' . $id . '" src="' . $attachment_url . '" alt="" /></p>';
+			echo ar2_form_input( 'ar2_theme_options[' . $id . ']', $value[ 'id' ], 'id="media-upload-' . $id . '"' );
+			echo '<input type="button" data-upload-field="' . $id . '" class="button media-upload-add" value="' . __( 'Add Image', 'ar2' ) . '" />';
+			echo '<a href="#" data-upload-field="' . $id . '" class="media-upload-remove">' . __( 'Remove', 'ar2' ) . '</a>';
+			echo '</div>';
+		break;
+
+		case 'logo-resize' :
+			$resize_supported = wp_image_editor_supports( array (
+				'mime_type' => 'image/png',
+				'methods' => array ( 'resize', 'save' ),
+			) );
+			if ( !$resize_supported ) $extras .= ' disabled';
+
+			echo '<input type="hidden" value="0" name="ar2_theme_options[' . $id . ']" />';
+			echo ar2_form_checkbox( 'ar2_theme_options[' . $id . ']', true, $value, $extras );
 		break;
 		
 		case 'input' :
@@ -894,7 +927,7 @@ function ar2_theme_options_render_field( $args = array() ) {
 	endswitch;
 	
 	if ( isset( $description ) ) {
-		if ( $type == 'checkbox' )
+		if ( $type == 'checkbox' || $type == 'logo-resize' )
 			echo '&nbsp;';
 		else
 			echo '<br />';
