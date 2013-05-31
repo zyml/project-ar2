@@ -25,22 +25,7 @@
 		</div>
 
       <footer class="entry-footer clearfix">
-          <?php if ( ar2_get_theme_option( 'post_display[post_social]' ) ) : ?>
-          <div class="entry-social">
-            <div class="addthis_toolbox addthis_default_style" >
-              <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
-              <span class="bds_more">分享到：</span>
-                <a class="bds_qzone"></a>
-                <a class="bds_tsina"></a>
-                <a class="bds_tqq"></a>
-                <a class="bds_renren"></a>
-                <a class="bds_t163"></a>
-                <a class="shareCount"></a>
-              </div>
-            </div>
-           </div>
-           <?php endif ?>   
-      
+        
       </footer><!-- .entry-footer -->
     </article>
     
