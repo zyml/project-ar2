@@ -161,8 +161,8 @@ function ar2_footer_nav_fallback_cb() {
 
 function ar2_load_social_js() {
 
-	if ( ar2_get_theme_option( 'post_display[post_social]' ) )
-		wp_enqueue_script( 'addthis_js', 'http://s7.addthis.com/js/250/addthis_widget.js' );
+	//if ( ar2_get_theme_option( 'post_display[post_social]' ) )
+	//	wp_enqueue_script( 'addthis_js', 'http://s7.addthis.com/js/250/addthis_widget.js' );
 	
 }
 add_action( 'wp_head', 'ar2_load_social_js' );

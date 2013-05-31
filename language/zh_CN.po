@@ -1,0 +1,1210 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Project AR2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 23:00+0730\n"
+"PO-Revision-Date: \n"
+"Last-Translator: abanger <abangercn@gmail.com>\n"
+"Language-Team:  <zy@zy.sg>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"Language: en_SG\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../archive.php:10 ../archive.php:12 ../archive.php:14
+#, php-format
+msgid "%s Archive"
+msgstr "%s 存档"
+
+#: ../archive.php:16 ../archive.php:18 ../archive.php:20
+#, php-format
+msgid "Archive for %s"
+msgstr "存档 %s"
+
+#: ../archive.php:16
+msgid "F jS, Y"
+msgstr "F jS, Y"
+
+#: ../archive.php:18
+msgid "F, Y"
+msgstr "F, Y"
+
+#: ../archive.php:20
+msgid "Y"
+msgstr "Y"
+
+#: ../archive.php:22
+msgid "Author Archive"
+msgstr "按作者存档"
+
+#: ../archive.php:24 ../blog-archives.php:20 ../home.php:36
+msgid "Blog Archives"
+msgstr "博客存档"
+
+#: ../author.php:10
+#, php-format
+msgid "About Author: %s"
+msgstr "关于作者: %s"
+
+#: ../author.php:20 ../content-audio.php:85 ../content-image.php:85
+#: ../content-video.php:85 ../content.php:92 ../image.php:83
+msgid "No information is provided by the author."
+msgstr "作者没有提供任何信息。"
+
+#: ../author.php:29
+#, php-format
+msgid "Posts by %s"
+msgstr "发布者 %s"
+
+#: ../comments.php:12
+msgid "Password Required"
+msgstr "要求密码"
+
+#: ../comments.php:13
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "这发布有密码保护，请输入密码查看评论。"
+
+#: ../comments.php:26
+msgid "No Comments"
+msgstr "没有评论"
+
+#: ../comments.php:26
+msgid "1 Comment"
+msgstr "1 评论"
+
+#: ../comments.php:39
+msgid "Trackbacks / Pings"
+msgstr "引用通告/执行Ping"
+
+#: ../comments.php:44
+msgid "Comments Closed"
+msgstr "评论关闭"
+
+#: ../comments.php:45
+msgid ""
+"Comments are closed. You will not be able to post a comment in this post."
+msgstr "评论被关闭,您将无法在这篇文章发表评论。"
+
+#: ../content-audio.php:11 ../content-image.php:11 ../content-video.php:11
+#: ../content.php:70 ../full-width-page.php:40 ../image.php:50
+msgid "<p>Read the rest of this entry &raquo;</p>"
+msgstr "<p>请阅读其余条目 &raquo;</p>"
+
+#: ../content-audio.php:12 ../content-image.php:12 ../content-video.php:12
+#: ../content.php:71 ../image.php:51
+msgid "Pages:"
+msgstr "页:"
+
+#: ../content-audio.php:36 ../content-image.php:36 ../content-video.php:36
+#: ../content.php:32 ../image.php:15
+#, php-format
+msgid "Posted by %1$s %2$s"
+msgstr "发布者 %1$s %2$s"
+
+#: ../content-audio.php:40 ../content-audio.php:45 ../content-image.php:40
+#: ../content-image.php:45 ../content-video.php:40 ../content-video.php:45
+#: ../content.php:36 ../content.php:41 ../image.php:19 ../image.php:24
+msgid "Edit"
+msgstr "编辑"
+
+#: ../content-audio.php:44 ../content-image.php:44 ../content-video.php:44
+#: ../content.php:40 ../image.php:23
+#, php-format
+msgid "Posted %s"
+msgstr "发布 %s"
+
+#: ../content-audio.php:72 ../content-image.php:72 ../content-video.php:72
+#: ../content.php:79 ../image.php:70
+msgid "Tags: "
+msgstr "标签:"
+
+#: ../content-audio.php:82 ../content-image.php:82 ../content-video.php:82
+#: ../content.php:89 ../image.php:80
+#, php-format
+msgid "About %s"
+msgstr "关于 %s"
+
+#: ../footer.php:33
+msgid "Back to Top"
+msgstr "返回页首"
+
+#: ../full-width-page.php:41
+msgid "<p><strong>Pages:</strong> "
+msgstr "<p><strong>页:</strong> "
+
+#: ../functions.php:74
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: ../functions.php:75
+msgid "Top Menu"
+msgstr "置顶菜单"
+
+#: ../functions.php:76
+msgid "Footer Navigation"
+msgstr "页脚导航"
+
+#: ../functions.php:113
+msgid "Primary Sidebar"
+msgstr "主要侧边栏"
+
+#: ../functions.php:121
+msgid "Bottom Content #1"
+msgstr "底部内容 #1"
+
+#: ../functions.php:129
+msgid "Bottom Content #2"
+msgstr "底部内容 #2"
+
+#: ../functions.php:142
+#, php-format
+msgid "Footer Sidebar #%s"
+msgstr "页脚侧边栏 #%s"
+
+#: ../search.php:6
+msgid "Search Results"
+msgstr "搜索结果"
+
+#: ../search.php:17
+msgid "Sorry, we couldn't find any results based on your search query."
+msgstr "很抱歉，我们找不到任何结果基于您的搜索查询。"
+
+#: ../section-404.php:10
+msgid "Error 404 - Not Found"
+msgstr "404 错误 - 找不到"
+
+#: ../section-404.php:13
+msgid "We're very sorry, but that page doesn't exist or has been moved."
+msgstr "我们很抱歉，页面不存在或者已经被转移。"
+
+#: ../section-404.php:14
+msgid ""
+"If you still can't find what you're looking for, try using the search form "
+"below."
+msgstr "如果你仍然不能找到你要找的东西，尝试使用下面的搜索表单。"
+
+#: ../section-line.php:10 ../section-quick.php:25
+#, php-format
+msgid "Permalink to %s"
+msgstr "固定链接到 %s"
+
+#: ../section-quick.php:26
+msgid "Continue Reading"
+msgstr "继续阅读"
+
+#: ../section.php:56
+msgid "Read the rest of this entry"
+msgstr "阅读其余本条目"
+
+#: ../sidebar.php:11
+msgid "Welcome to Project AR2!"
+msgstr "欢迎来到项目 AR2!"
+
+#: ../sidebar.php:12
+msgid ""
+"To remove this widget, simply go to the Widgets page in your WordPress admin "
+"and add a widget into this sidebar."
+msgstr ""
+"要删除此插件，只需转到您的WordPress管理的Widget页面，到这个侧边栏添加一个小部"
+"件。"
+
+#: ../sidebar.php:16
+msgid "Recent Posts"
+msgstr "最近发布"
+
+#: ../sidebar.php:42
+msgid "Tag Cloud"
+msgstr "标签云"
+
+#: ../library/options.php:33
+#, php-format
+msgid "Copyright %s."
+msgstr "版权所有 %s."
+
+#: ../library/options.php:34
+#, php-format
+msgid "Powered by %s and %s."
+msgstr "技术提供 %s and %s."
+
+#: ../library/options.php:35
+msgid "http://www.arrastheme.com/project-ar2/"
+msgstr "http://www.arrastheme.com/project-ar2/"
+
+#: ../library/options.php:35
+msgid "Project AR2"
+msgstr "项目 AR2"
+
+#: ../library/options.php:36
+msgid "http://www.wordpress.org/"
+msgstr "http://www.wordpress.org/"
+
+#: ../library/options.php:36
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../library/options.php:61
+msgid "Slideshow"
+msgstr "幻灯片放映"
+
+#: ../library/options.php:71
+msgid "Featured Posts"
+msgstr "精选文章"
+
+#: ../library/options.php:81
+msgid "Editors' Picks"
+msgstr "编辑推荐"
+
+#: ../library/options.php:91
+msgid "Latest News"
+msgstr "最新消息"
+
+#: ../library/options.php:192
+msgid "Your settings have been reverted to the defaults."
+msgstr "您的设置已被恢复为默认值。"
+
+#: ../library/options.php:200
+msgid "Your settings have been successfully imported."
+msgstr "您的设置已成功导入。"
+
+#: ../library/options.php:278
+msgid "Your settings have been successfully saved."
+msgstr "您的设置已成功保存。"
+
+#: ../library/postviews.php:263
+msgid "Featured Posts #1"
+msgstr "精选文章 #1"
+
+#: ../library/postviews.php:272
+msgid "Featured Posts #2"
+msgstr "精选文章 #2"
+
+#: ../library/postviews.php:281
+msgid "News Posts"
+msgstr "最新发布"
+
+#: ../library/postviews.php:306
+msgid "Home"
+msgstr "首页"
+
+#: ../library/postviews.php:307
+msgid ""
+"Handles all content being displayed in the front page (excluding the "
+"slideshow)."
+msgstr "处理所有的内容被显示在前台页面中（不包括幻灯片）。"
+
+#: ../library/styles.php:87 ../library/styles.php:161
+msgid "Default"
+msgstr "默认"
+
+#: ../library/styles.php:109
+msgid "Unknown Font"
+msgstr "未知字体"
+
+#: ../library/styles.php:184
+msgid "Unknown Color"
+msgstr "未知颜色"
+
+#: ../library/styles.php:246
+msgid "2 Column Layout (Right Sidebar)"
+msgstr "2栏布局（右侧栏）"
+
+#: ../library/styles.php:247
+msgid "2 Column Layout (Left Sidebar)"
+msgstr "2栏布局（左侧栏）"
+
+#: ../library/styles.php:259
+msgid "Primary Font"
+msgstr "首选字体"
+
+#: ../library/styles.php:260
+msgid "Secondary Font"
+msgstr "辅助字体"
+
+#: ../library/styles.php:304
+msgid "Primary Color"
+msgstr "首选颜色"
+
+#: ../library/styles.php:311
+msgid "Orange"
+msgstr "橙色"
+
+#: ../library/styles.php:315
+msgid "Yellow"
+msgstr "黄色"
+
+#: ../library/styles.php:319
+msgid "Red"
+msgstr "红色"
+
+#: ../library/styles.php:323
+msgid "Blue"
+msgstr "蓝色"
+
+#: ../library/styles.php:327
+msgid "Pink"
+msgstr "粉红色"
+
+#: ../library/styles.php:365
+msgid "Custom Fonts"
+msgstr "自定义字体"
+
+#: ../library/styles.php:372
+msgid "Color Schemes"
+msgstr "配色方案"
+
+#: ../library/styles.php:502 ../library/admin/admin.php:18
+msgid "Layout"
+msgstr "布局"
+
+#: ../library/styles.php:514
+msgid "No. of Columns"
+msgstr "列数"
+
+#: ../library/styles.php:522
+msgid "Fonts"
+msgstr "字体"
+
+#: ../library/template.php:23
+#, php-format
+msgid "Page %s"
+msgstr "页 %s"
+
+#: ../library/template.php:52
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../library/template.php:73
+#, php-format
+msgid "on %s"
+msgstr "on %s"
+
+#: ../library/template.php:78
+#, php-format
+msgid "%s weeks ago"
+msgstr "%s 周以前"
+
+#: ../library/template.php:80
+msgid "1 week ago"
+msgstr "1 周以前"
+
+#: ../library/template.php:84
+#, php-format
+msgid "%s days ago"
+msgstr "%s 天以前"
+
+#: ../library/template.php:86
+msgid "1 day ago"
+msgstr "1 天以前"
+
+#: ../library/template.php:90
+#, php-format
+msgid "%s hours ago"
+msgstr "%s 小时以前"
+
+#: ../library/template.php:92
+msgid "1 hour ago"
+msgstr "1小时以前"
+
+#: ../library/template.php:96
+#, php-format
+msgid "%s minutes ago"
+msgstr "%s 分钟以前"
+
+#: ../library/template.php:98
+msgid "1 minute ago"
+msgstr "1分钟以前"
+
+#: ../library/template.php:101
+msgid "less than a minute ago"
+msgstr "不到一分钟前"
+
+#: ../library/template.php:136
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正在等待审核。"
+
+#: ../library/template.php:139
+#, php-format
+msgid "Posted %1$s at %2$s"
+msgstr "发布 %1$s 在 %2$s"
+
+#: ../library/template.php:139
+msgid "c"
+msgstr "c"
+
+#: ../library/template.php:139
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#: ../library/template.php:139
+msgid "g:i A"
+msgstr "g:i A"
+
+#: ../library/thumbnails.php:16
+msgid "Single Post"
+msgstr "单个文章"
+
+#: ../library/thumbnails.php:19
+msgid "Sidebar Widgets"
+msgstr "侧边栏小工具"
+
+#: ../library/thumbnails.php:22
+msgid "Post Sections"
+msgstr "发布部分"
+
+#: ../library/widgets.php:25
+msgid "Sidebar containing tabs that displays posts, comments and tags."
+msgstr "边栏选项卡包括显示发布的、评论的和标签。"
+
+#: ../library/widgets.php:27
+#, php-format
+msgid "%s - Tabbed Sidebar"
+msgstr "%s - 标签式边栏"
+
+#: ../library/widgets.php:68
+msgid "Latest"
+msgstr "最新"
+
+#: ../library/widgets.php:69
+msgid "Random"
+msgstr "随机"
+
+#: ../library/widgets.php:70
+msgid "Comments"
+msgstr "评论"
+
+#: ../library/widgets.php:71 ../library/admin/admin.php:568
+msgid "Tags"
+msgstr "标签"
+
+#: ../library/widgets.php:201
+msgid "Tabbed Sidebar Order:"
+msgstr "标签式侧边栏选择："
+
+#: ../library/widgets.php:208
+msgid "Post Count:"
+msgstr "发布数:"
+
+#: ../library/widgets.php:216
+msgid "Comments Count:"
+msgstr "评论数:"
+
+#: ../library/widgets.php:227
+msgid "Display only in homepage"
+msgstr "仅显示在主页"
+
+#: ../library/widgets.php:229
+msgid "Display thumbnails"
+msgstr "显示缩略图"
+
+#: ../library/widgets.php:280
+msgid ""
+"Featured stories containing post thumbnails and the excerpt based on "
+"categories."
+msgstr "精选的文章包含缩略图和基于类别的摘录。"
+
+#: ../library/widgets.php:282
+#, php-format
+msgid "%s - Featured Stories"
+msgstr "%s - 精选文章"
+
+#: ../library/widgets.php:334
+msgid "Featured Stories"
+msgstr "精选文章"
+
+#: ../library/widgets.php:345 ../library/widgets.php:447
+#: ../library/widgets.php:529 ../library/widgets.php:610
+#: ../library/widgets.php:684 ../library/widgets.php:836
+#: ../library/widgets.php:948
+msgid "Title:"
+msgstr "标题:"
+
+#: ../library/widgets.php:349
+msgid "Featured Categories:"
+msgstr "精选分类:"
+
+#: ../library/widgets.php:351
+msgid "All Categories"
+msgstr "所有分类"
+
+#: ../library/widgets.php:361
+msgid "How many items would you like to display?"
+msgstr "您想显示多少项目？"
+
+#: ../library/widgets.php:372
+msgid "Do not display in homepage"
+msgstr "不显示在主页"
+
+#: ../library/widgets.php:375
+msgid "Show post excerpts"
+msgstr "显示文章摘录"
+
+#: ../library/widgets.php:378
+msgid "Show thumbnails"
+msgstr "显示缩略图"
+
+#: ../library/widgets.php:401
+msgid ""
+"The Activity Feed plugin displays the most interesting recent activity from "
+"Facebook taking place on your site."
+msgstr "变化的Feed插件显示在您的网站上来自Facebook的近来发生最有趣的活动。"
+
+#: ../library/widgets.php:404
+#, php-format
+msgid "%s - Facebook Activity Feed"
+msgstr "%s - Facebook Feed"
+
+#: ../library/widgets.php:442
+msgid "Facebook Activity"
+msgstr "Facebook动态"
+
+#: ../library/widgets.php:453
+msgid "Show Recommendations"
+msgstr "显示推荐"
+
+#: ../library/widgets.php:477
+msgid ""
+"Widget that enables Facebook Page owners to attract and gain Likes from "
+"their own website."
+msgstr "小工具能使Facebook专页的拥有者从自己的网站吸引和获得粉丝。"
+
+#: ../library/widgets.php:480
+#, php-format
+msgid "%s - Facebook Like Box"
+msgstr "%s - Facebook"
+
+#: ../library/widgets.php:523
+msgid "Like our Facebook Page!"
+msgstr "喜欢我们的Facebook专页！"
+
+#: ../library/widgets.php:535
+msgid "Show Faces"
+msgstr "显示头像"
+
+#: ../library/widgets.php:538
+msgid "Show Stream"
+msgstr "显示流"
+
+#: ../library/widgets.php:541
+msgid ""
+"Your Facebook Page username must be specified via the theme options page for "
+"this widget to work."
+msgstr ""
+"您的Facebook页面的用户名必须指定通过主题选项页面设置，这个小工具才能正常工"
+"作。"
+
+#: ../library/widgets.php:564
+msgid "Widget that shows a Google+ Badge for your Google+ page."
+msgstr "小工具显示了你的Google+页面Google+徽章。"
+
+#: ../library/widgets.php:567
+#, php-format
+msgid "%s - Google+ Badge"
+msgstr "%s - Google+徽章"
+
+#: ../library/widgets.php:606
+msgid "Like our Google+ Page!"
+msgstr "喜欢我们的Google+专页！"
+
+#: ../library/widgets.php:614
+msgid ""
+"Your Google+ Page ID must be specified via the theme options page for this "
+"widget to work."
+msgstr ""
+"您的Google+专页ID必须指定通过主题选项页面设置，以便这个小工具正常工作。"
+
+#: ../library/widgets.php:637
+msgid "Widget that embeds a video from any supported video sites."
+msgstr "小工具将支持从任何视频网站的视频。"
+
+#: ../library/widgets.php:641
+#, php-format
+msgid "%s - Video"
+msgstr "%s - 视频"
+
+#: ../library/widgets.php:679
+msgid "Video"
+msgstr "视频"
+
+#: ../library/widgets.php:688
+msgid "Video URL:"
+msgstr "视频 URL:"
+
+#: ../library/widgets.php:692
+msgid "Supported Video Sites"
+msgstr "支持视频网站"
+
+#: ../library/widgets.php:725
+msgid "Widget that shows a selected number of tweets."
+msgstr "小工具会显示选定的tweet数量。"
+
+#: ../library/widgets.php:728
+#, php-format
+msgid "%s - Twitter Feed"
+msgstr "%s - Twitter Feed"
+
+#: ../library/widgets.php:743
+#, php-format
+msgid " (%s)"
+msgstr " (%s)"
+
+#: ../library/widgets.php:750
+#, php-format
+msgid "%s ago"
+msgstr "%s 以前"
+
+#: ../library/widgets.php:754
+msgid ""
+"There seems to be a problem communicating with Twitter at the moment. Please "
+"try again later."
+msgstr "在时刻似乎与Twitter通信有一个问题。请稍后再试。"
+
+#: ../library/widgets.php:829
+msgid "Twitter Feed"
+msgstr "Twitter Feed"
+
+#: ../library/widgets.php:840
+msgid "Number of Tweets:"
+msgstr "Tweets的数量"
+
+#: ../library/widgets.php:851
+msgid "Exclude Replies"
+msgstr "排除回复"
+
+#: ../library/widgets.php:856
+msgid "Include RTs"
+msgstr "包括RTs"
+
+#: ../library/widgets.php:859
+msgid ""
+"Your Twitter username must be specified via the theme options page for this "
+"widget to work."
+msgstr ""
+"您的Twitter用户名必须指定通过主题选项页面设置，以便这个小工具正常工作。"
+
+#: ../library/widgets.php:860
+msgid ""
+"Any changes to the settings will take up to 5 minutes for it to take effect."
+msgstr "任何更改设置使其生效需要5分钟。"
+
+#: ../library/widgets.php:883
+msgid ""
+"Widget that shows all social media icons specified in the theme options."
+msgstr "小工具显示所有社交媒体图标在指定主题选项。"
+
+#: ../library/widgets.php:886
+#, php-format
+msgid "%s - Social Buttons"
+msgstr "%s - 社交按钮"
+
+#: ../library/widgets.php:902 ../library/admin/admin.php:108
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: ../library/widgets.php:905
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../library/widgets.php:909
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../library/widgets.php:913
+msgid "Google+"
+msgstr "Google+"
+
+#: ../library/widgets.php:917
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../library/widgets.php:921
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../library/widgets.php:944
+msgid "Social Buttons"
+msgstr "社交按钮"
+
+#: ../library/widgets.php:952
+msgid ""
+"Social network IDs must be specified for their respective buttons to appear."
+msgstr "社会网络ID必须指定在相应的按钮以显示。"
+
+#: ../library/widgets.php:1017
+msgid "No posts at the moment. Check back again later!"
+msgstr "这时没有文章。以后再回来查看！"
+
+#: ../library/admin/admin.php:12
+msgid "General"
+msgstr "基本信息"
+
+#: ../library/admin/admin.php:19
+msgid "Design"
+msgstr "设置"
+
+#: ../library/admin/admin.php:20
+msgid "Thumbnails"
+msgstr "缩略图"
+
+#: ../library/admin/admin.php:21
+msgid "Tools"
+msgstr "工具"
+
+#: ../library/admin/admin.php:36
+msgid "Theme Information"
+msgstr "主题信息"
+
+#: ../library/admin/admin.php:40
+msgid "Social Networks"
+msgstr "社交网络"
+
+#: ../library/admin/admin.php:44
+msgid "Footer Information"
+msgstr "页脚信息"
+
+#: ../library/admin/admin.php:49
+msgid "Excerpts"
+msgstr "摘录"
+
+#: ../library/admin/admin.php:53
+msgid "Archive / Search"
+msgstr "存档/搜索"
+
+#: ../library/admin/admin.php:57
+msgid "Posts"
+msgstr "发布"
+
+#: ../library/admin/admin.php:62
+msgid "Overall Design"
+msgstr "整体设计"
+
+#: ../library/admin/admin.php:67
+msgid "Thumbnail Options"
+msgstr "缩略图选项"
+
+#: ../library/admin/admin.php:72
+msgid "Thumbnail Sizes"
+msgstr "缩略图的大小"
+
+#: ../library/admin/admin.php:77
+msgid "Import / Export Options"
+msgstr "导入/导出选项"
+
+#: ../library/admin/admin.php:99
+msgid "Version"
+msgstr "版本"
+
+#: ../library/admin/admin.php:102
+msgid ""
+"If you have recently upgraded Project AR2 to a new release, it is <span "
+"style=\"color: red\">highly recommended</span> that you reset your theme "
+"options, clear your browser cache and restart your browser before proceeding."
+msgstr ""
+"如果您最近已经升级项目AR2到一个新的版本，<span style=\"color: red\">强烈推荐"
+"</span>您重设主题选项，清除浏览器缓存，并重新启动浏览器，然后再继续。"
+
+#: ../library/admin/admin.php:111
+msgid ""
+"Custom feed URLs are no longer allowed due to support for automatic feed "
+"links."
+msgstr "自定义Feed网址不再允许，因支持自动Feed链接。"
+
+#: ../library/admin/admin.php:115
+msgid "Twitter Username"
+msgstr "Twitter 用户名"
+
+#: ../library/admin/admin.php:120
+msgid "Facebook Username"
+msgstr "Facebook 用户名"
+
+#: ../library/admin/admin.php:125
+msgid "Flickr ID"
+msgstr "Flickr ID"
+
+#: ../library/admin/admin.php:130
+msgid "Google+ ID"
+msgstr "Google+ ID"
+
+#: ../library/admin/admin.php:135
+msgid "YouTube Channel ID"
+msgstr "YouTube Channel ID"
+
+#: ../library/admin/admin.php:142
+msgid "Footer Message"
+msgstr "页脚信息"
+
+#: ../library/admin/admin.php:144
+msgid ""
+"Usually your website's copyright information would go here.<br /> It would "
+"be great if you could include a link to WordPress or the theme website. :)"
+msgstr ""
+"通常您的网站的版权信息在这里。<br/>如果您能包含一个链接到WordPress或主题网"
+"站，这是伟大。:)"
+
+#: ../library/admin/admin.php:151
+msgid "Show Excerpts"
+msgstr "显示摘录"
+
+#: ../library/admin/admin.php:156
+msgid "Excerpt Limit"
+msgstr "摘录限制"
+
+#: ../library/admin/admin.php:159
+msgid ""
+"Excerpts will only be trimmed to the limit if no excerpt is specified for "
+"the respective post."
+msgstr "如果没有的摘录将被指定为各自的文章的内容，摘录只会被修剪到限制的大小。"
+
+#: ../library/admin/admin.php:165
+msgid "Display Type"
+msgstr "显示类型"
+
+#: ../library/admin/admin.php:173
+msgid "Display in Single Posts"
+msgstr "显示在单个文章"
+
+#: ../library/admin/admin.php:180
+msgid "Display Relative Post Dates"
+msgstr "显示相对发布日期"
+
+#: ../library/admin/admin.php:182
+msgid ""
+"Check this to display post dates relative to current time (eg. 2 days ago )."
+msgstr "勾选文章显示相对当前日期（如2天前）。"
+
+#: ../library/admin/admin.php:188
+msgid "Auto Thumbnails"
+msgstr "自动缩略图"
+
+#: ../library/admin/admin.php:190
+msgid ""
+"Check this to allow the theme to automatically retrieve the first attached "
+"image from the post as featured image when no image is specified."
+msgstr "勾选在没有指定图像时允许主题自动附加从发布作为精选图片的第一个图像。"
+
+#: ../library/admin/admin.php:196
+msgid "No of Columns"
+msgstr "列"
+
+#: ../library/admin/admin.php:205
+msgid "Import Theme Options"
+msgstr "导入主题选项"
+
+#: ../library/admin/admin.php:207
+msgid ""
+"Import your theme settings by pasting the exported code in the textbox above."
+msgstr "导入您的主题设置是通过导出的代码粘贴在上面的文本框。"
+
+#: ../library/admin/admin.php:212
+msgid "Export Theme Options"
+msgstr "导出主题设置"
+
+#: ../library/admin/admin.php:214
+msgid ""
+"You can save the code above into a text file and use it when you need to "
+"import them into another installation. Note that not all options (custom "
+"background, child theme settings, etc.) will be exported."
+msgstr ""
+"您可以保存到一个文本文件中，上面的代码中使用它时，你需要将它们导入到另一个安"
+"装。请注意，并不是所有的选项（自定义背景，子主题设置等）将用于导出。"
+
+#: ../library/admin/admin.php:237
+msgid "Custom Stylesheet"
+msgstr "自定义样式表"
+
+#: ../library/admin/admin.php:240
+#, php-format
+msgid "Stylesheets can be placed in %s."
+msgstr "样式表可以被放置在 %s."
+
+#: ../library/admin/admin.php:341
+msgid "Theme Options"
+msgstr "主题设置"
+
+#: ../library/admin/admin.php:342
+msgid "Options"
+msgstr "设置"
+
+#: ../library/admin/admin.php:388
+msgid ""
+"If you have made any changes in the fields without submitting, all changes "
+"will be lost."
+msgstr "如果你在该领域的任何变化没有提交，所有的变化都将丢失。"
+
+#: ../library/admin/admin.php:393
+msgid "Start by entering a term here."
+msgstr "开始进入此处。"
+
+#: ../library/admin/admin.php:394
+msgid "No results."
+msgstr "没有结果。"
+
+#: ../library/admin/admin.php:395
+msgid "Searching..."
+msgstr "搜索..."
+
+#: ../library/admin/admin.php:449
+#, php-format
+msgid "%s Theme Options"
+msgstr "%s 主题设置"
+
+#: ../library/admin/admin.php:464
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: ../library/admin/admin.php:465
+msgid "Reset Settings"
+msgstr "重置配置"
+
+#: ../library/admin/admin.php:472
+msgid "Need Support?"
+msgstr "需要支持？"
+
+#: ../library/admin/admin.php:473
+msgid ""
+"Ask questions and share tips and tricks with fellow theme users all over the "
+"world at the theme community forums."
+msgstr "提出问题，并与同系的主题在世界各地的用户在主题社区论坛分享技巧与诀窍。"
+
+#: ../library/admin/admin.php:474 ../library/admin/admin.php:482
+msgid "http://forums.arrastheme.com/"
+msgstr "http://forums.arrastheme.com/"
+
+#: ../library/admin/admin.php:474
+msgid "Community Forums"
+msgstr "社区论坛"
+
+#: ../library/admin/admin.php:477
+msgid "Like this Theme?"
+msgstr "喜欢这个主题？"
+
+#: ../library/admin/admin.php:478
+msgid ""
+"Arras & Project AR2 are open-source projects developed in my free time since "
+"2009 for the benefit of the WordPress community. Your donations will support "
+"the on-going development of these themes in many years to come."
+msgstr ""
+"Arras项目AR2是开源项目，自2009年以来在我的空闲时间开发的WordPress社区的利益。"
+"多年来，你的捐款将支持这些主题上的持续发展。"
+
+#: ../library/admin/admin.php:479
+msgid "http://www.arrastheme.com/donate/"
+msgstr "http://www.arrastheme.com/donate/"
+
+#: ../library/admin/admin.php:479
+msgid "Donate to Theme Author"
+msgstr "捐赠主题作者"
+
+#: ../library/admin/admin.php:480
+msgid "There are other ways you can support these themes too:"
+msgstr "还有其他的方法可以支持这些主题："
+
+#: ../library/admin/admin.php:482
+msgid "Forums"
+msgstr "论坛"
+
+#: ../library/admin/admin.php:482
+msgid "Ask questions and share tips and tricks with others."
+msgstr "提出问题并与他人分享技巧与诀窍。"
+
+#: ../library/admin/admin.php:483
+msgid "https://www.transifex.net/projects/p/project-ar2/"
+msgstr "https://www.transifex.net/projects/p/project-ar2/"
+
+#: ../library/admin/admin.php:483
+msgid "Translations"
+msgstr "翻译"
+
+#: ../library/admin/admin.php:483
+msgid ""
+"Fluent in other languages? Translate the theme for other users around the "
+"world."
+msgstr "熟悉其他语言？翻译主题为世界各地的其他用户服务。"
+
+#: ../library/admin/admin.php:484
+msgid "https://github.com/zyml/project-ar2"
+msgstr "https://github.com/zyml/project-ar2"
+
+#: ../library/admin/admin.php:484
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../library/admin/admin.php:484
+msgid "Aid development by sending in bug reports and issuing patches."
+msgstr "通过发送bug报告和发行补丁帮助发展。"
+
+#: ../library/admin/admin.php:548
+msgid "Author & Publish Date"
+msgstr "作者和发布日期"
+
+#: ../library/admin/admin.php:553
+msgid "Post Excerpt (if available)"
+msgstr "发布摘录（如果可用）"
+
+#: ../library/admin/admin.php:558
+msgid "Facebook, Twitter, Google+ Buttons (English Only)"
+msgstr "Facebook, Twitter, Google+ Buttons (English Only)"
+
+#: ../library/admin/admin.php:563
+msgid "Categories"
+msgstr "分类"
+
+#: ../library/admin/admin.php:573
+msgid "Post Thumbnail"
+msgstr "发布缩略图"
+
+#: ../library/admin/admin.php:578
+msgid "Author Information"
+msgstr "作者信息"
+
+#: ../library/admin/admin.php:601 ../library/admin/admin.php:689
+msgid "No Taxonomies Available"
+msgstr "没有可用的分类"
+
+#: ../library/admin/admin.php:626 ../library/classes/postviews-section.php:423
+msgid "Taxonomy"
+msgstr "分类"
+
+#: ../library/admin/admin.php:769
+msgid "Width"
+msgstr "宽"
+
+#: ../library/admin/admin.php:773
+msgid "Height"
+msgstr "高"
+
+#: ../library/admin/admin.php:777
+msgid "Reset to Defaults"
+msgstr "重置为默认值"
+
+#: ../library/admin/admin.php:794
+msgid "Please choose your taxonomy before proceeding."
+msgstr "请选择分类，然后再继续。"
+
+#: ../library/admin/admin.php:810
+msgid "Loading"
+msgstr "加载中"
+
+#: ../library/admin/admin.php:827
+msgid "On"
+msgstr "开"
+
+#: ../library/admin/admin.php:828
+msgid "Off"
+msgstr "关"
+
+#: ../library/admin/admin.php:893
+msgid "Default Stylesheet (style.css)"
+msgstr "默认样式 (style.css)"
+
+#: ../library/classes/postviews-section.php:42
+msgid "Node Based"
+msgstr "基于节点"
+
+#: ../library/classes/postviews-section.php:43
+msgid "Quick Preview"
+msgstr "快速预览"
+
+#: ../library/classes/postviews-section.php:44
+msgid "Per Line"
+msgstr "每行"
+
+#: ../library/classes/postviews-section.php:45
+msgid "Traditional"
+msgstr "传统的"
+
+#: ../library/classes/postviews-section.php:159
+#, php-format
+msgid "Post Section ID: %s"
+msgstr "发布节 ID: %s"
+
+#: ../library/classes/postviews-section.php:393
+#: ../library/classes/postviews-section.php:491
+#, php-format
+msgid "Enable %s"
+msgstr "启用 %s"
+
+#: ../library/classes/postviews-section.php:401
+#: ../library/classes/postviews-section.php:503
+msgid "Type"
+msgstr "类型"
+
+#: ../library/classes/postviews-section.php:409
+#: ../library/classes/postviews-section.php:497
+msgid "Title"
+msgstr "标题"
+
+#: ../library/classes/postviews-section.php:416
+msgid "Post Type"
+msgstr "发布类型"
+
+#: ../library/classes/postviews-section.php:430
+#: ../library/classes/postviews-section.php:510
+msgid "Terms"
+msgstr "条款"
+
+#: ../library/classes/postviews-section.php:437
+#: ../library/classes/postviews-section.php:517
+msgid "Post Count"
+msgstr "发帖数"
+
+#: ../library/classes/postviews-zone.php:67
+#, php-format
+msgid "ID: %s"
+msgstr "ID: %s"
+
+#: ../library/classes/postviews-zone.php:179
+#, php-format
+msgid "%s: Post Options"
+msgstr "%s: 发布选项"
+
+#: ../library/classes/postviews-zone.php:184
+#, php-format
+msgid "Zone %s: Post Options"
+msgstr "Zone %s: 发布选项"
+
+#: ../library/classes/postviews-zone.php:202
+#: ../library/classes/postviews-zone.php:274
+msgid "Hide Duplicate Posts"
+msgstr "隐藏重复的帖子"
+
+#: ../library/classes/postviews-zone.php:208
+#: ../library/classes/postviews-zone.php:282
+msgid "Ignore Sticky Posts"
+msgstr "忽略置顶文章"
+
+#: ../library/classes/postviews-zone.php:244
+#, php-format
+msgid "%s (Zone)"
+msgstr "%s (Zone)"
+
+#: ../library/classes/postviews-zone.php:258
+msgid "Post Options"
+msgstr "发布选项"
+
+#: ../library/classes/postviews-zone.php:276
+msgid ""
+"Check this to prevent duplicate posts from displaying within sections from "
+"this zone. This may increase your server load."
+msgstr "勾选以从展示这个区域内检查防止重复的发布。这可能会增加服务器的负载。"
+
+#: ../library/classes/postviews-zone.php:284
+msgid ""
+"Check this to ignore sticky posts from being displayed on every top of each "
+"section in this zone."
+msgstr "勾选这个来忽略在这个区域被显示在每一节的每一个顶部置顶文章。"
+
+#: ../library/classes/customize/color-switcher-control.php:66
+msgid "Previewing hovered colors will not work at the moment."
+msgstr "预览悬停的颜色将无法正常工作的时候。"
+
+#: ../library/classes/customize/terms-control.php:78
+msgid ""
+"The section's post type and taxonomy can be changed via the theme options "
+"page."
+msgstr "这节发布的类型和分类可通过改变主题选项页。"

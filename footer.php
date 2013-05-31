@@ -1,7 +1,7 @@
 	</div><!-- #main -->
 
 	<?php ar2_before_footer() ?>
-   
+  <div class="clearfix"></div>
 	<footer id="footer" class="clearfix" role="contentinfo">
 	
 		<div class="footer-sidebar-container clearfix">
@@ -41,6 +41,16 @@
 </div><!-- #wrapper -->
 
 <?php wp_footer() ?>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2763062" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=19392753" charset="UTF-8"></script>
 </body>
 </html>
    

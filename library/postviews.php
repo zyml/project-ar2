@@ -254,7 +254,7 @@ final class AR2_PostViews {
 			'title'		=> __( 'Slideshow', 'ar2' ),
 			'type'		=> 'slideshow',
 			'count'		=> 3,
-			'priority'	=> 5,
+			'priority'	=> 1,
 			'display_types' => array( 'slideshow' ),
 			'enabled'	=> true,
 		) ) );

@@ -44,5 +44,18 @@
 	</aside>
 	
 	<?php endif ?>
-	
+
+        <aside class="widget  clearfix">
+                <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-5620859237754405";
+                /* side2 */
+                google_ad_slot = "4513680352";
+                google_ad_width = 250;
+                google_ad_height = 250;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+        </aside	
 </div><!-- #primary-sidebar -->
