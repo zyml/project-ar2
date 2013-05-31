@@ -1,7 +1,7 @@
 	</div><!-- #main -->
 
 	<?php ar2_before_footer() ?>
-   
+  <div class="clearfix"></div>
 	<footer id="footer" class="clearfix" role="contentinfo">
 	
 		<div class="footer-sidebar-container clearfix">

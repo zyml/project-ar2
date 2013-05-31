@@ -1543,9 +1543,11 @@ article.page .entry-header h1.entry-title {
 /* =Footer
 -------------------------------------------------------------- */
 #footer {
+  border-top:1px solid #f5f5f5;
+  background:#ffffff;
 	margin: 0 auto;
 	max-width: 980px;
-	background: #F5F5F5;
+	/*background: #F5F5F5; */
 }
 #footer .footer-meta {
 	margin: 0;
@@ -1572,6 +1574,7 @@ article.page .entry-header h1.entry-title {
 
 .footer-sidebar-container {
 	margin: 1% 0 0;
+  background:#ffffff;
 }
 .footer-sidebar {
 	overflow: hidden;

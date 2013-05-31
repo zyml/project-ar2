@@ -15,16 +15,6 @@
 				<div class="entry-photo"><?php echo ar2_get_thumbnail( 'single-thumb' ) ?></div>
 			<?php endif ?>
 			
-			<?php if ( ar2_get_theme_option( 'post_display[post_social]' ) ) : ?>
-			<div class="entry-social">
-					<div class="addthis_toolbox addthis_default_style">
-						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-						<a class="addthis_button_tweet"></a>
-						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-						<a class="addthis_counter addthis_pill_style"></a>
-					</div>
-			</div>
-			<?php endif ?>
 				
 		</header><!-- .entry-header -->
         
@@ -34,20 +24,9 @@
 			'after' => '</p>', 'next_or_number' => 'number' ) ); ?>
 		</div>
 
-		<footer class="entry-footer clearfix">
-		
-			<?php if ( ar2_get_theme_option( 'post_display[post_social]' ) ) : ?>
-			<div class="entry-social">
-					<div class="addthis_toolbox addthis_default_style">
-						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-						<a class="addthis_button_tweet"></a>
-						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-						<a class="addthis_counter addthis_pill_style"></a>
-					</div>
-			</div>
-			<?php endif ?>
-		
-        </footer><!-- .entry-footer -->
+      <footer class="entry-footer clearfix">
+        
+      </footer><!-- .entry-footer -->
     </article>
     
 	<?php ar2_below_post() ?>

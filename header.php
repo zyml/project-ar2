@@ -76,13 +76,18 @@ if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comm
 <?php ar2_above_nav() ?>
 <nav id="main-nav" role="navigation">
 	<?php 
-	wp_nav_menu( array( 
+/*	wp_nav_menu( array( 
 		'sort_column'	=> 'menu_order', 
 		'menu_class' 	=> 'menu clearfix', 
 		'theme_location'=> 'main-menu',
 		'container'		=> false,
 		'fallback_cb'	=> 'ar2_nav_fallback_cb' 
 	) );
+*/
+	 echo "<ul class='menu clearfix l_tinynav1'> <li><a href='".home_url()."' >Home</a><li>";        
+	 wp_list_pages('title_li=&depth=4&sort_column=menu_order');
+	 echo "</ul>";
+   
 	?>
 </nav><!-- #nav -->
 <?php ar2_below_nav() ?>

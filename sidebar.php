@@ -25,7 +25,7 @@
 		) );
 		
 		if ( $r->have_posts() ) :
-		
+
 		?>
 		<ul>
 		<?php while ( $r->have_posts() ) : $r->the_post() ?>
@@ -44,5 +44,4 @@
 	</aside>
 	
 	<?php endif ?>
-	
 </div><!-- #primary-sidebar -->
