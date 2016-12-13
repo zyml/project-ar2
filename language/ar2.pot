@@ -227,6 +227,11 @@ msgstr ""
 msgid "Permalink to %s"
 msgstr ""
 
+#: ../section-node.php:18
+#: ../section-quick.php:22
+msgid "Posted on %s"
+msgstr ""
+
 #: ../section-quick.php:26
 msgid "Continue Reading"
 msgstr ""
