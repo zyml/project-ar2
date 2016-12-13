@@ -795,7 +795,7 @@ nav ul.menu li a:only-child:after {
 }
 
 /* Twitter Widget */
-.tweet-time {
+.tweet-time a {
 	color: #999;
 	font-size: 95%;
 	margin-left: .3em;
